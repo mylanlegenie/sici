@@ -1,8 +1,17 @@
 import NavBar from "../app/component/NavBar";
-export default function Home() {
+import Menu from "../app/component/Menu";
+
+export default async function Home({
+  searchParams,
+}: {
+  searchParams: Promise<{ [key: string]: string | string[] | undefined }>;
+}) {
+  const { section } = await searchParams;
+
   return (
-    <main className="bg-red-500">
+    <main className="bg-red-500 h-screen">
       <NavBar />
+      {section === "menu" && <Menu />}
     </main>
   );
 }
