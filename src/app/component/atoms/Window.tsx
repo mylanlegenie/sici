@@ -12,7 +12,7 @@ export default function Window({
 }) {
   const RUBRIQUES = [
     { title: "Home", link: "/" },
-    { title: "Projects", link: "/projects" },
+    { title: "Menu", link: "/?section=menu" },
     { title: "About", link: "/about" },
   ];
 
@@ -34,13 +34,9 @@ export default function Window({
       <div className="flex flex-col gap-10 m-20">
         {RUBRIQUES.map((rubrique, index) => {
           return (
-            <Link
-              href={`?section=${rubrique.title.toLowerCase()}`}
-              key={index}
-              scroll={false}
-            >
+            <Link href={rubrique.link} key={index} scroll={false}>
               <span
-                onClick={() => setIsClicked(false)}
+                onClick={() => setIsClicked?.(false)}
                 className="w-fit text-white text-7xl font-bold underline-animation relative cursor-pointer select-none"
               >
                 {rubrique.title}
