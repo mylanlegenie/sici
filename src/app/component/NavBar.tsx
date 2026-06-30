@@ -11,7 +11,7 @@ export default function NavBar() {
     <>
       <header className="h-20 flex w-full justify-between items-center mt-10">
         <motion.nav
-          className=" border-b-2 border-white rounded-xs"
+          className=" border-b-2 border-white rounded-xs ml-10"
           initial={{ width: 0 }}
           animate={{ width: "70vw" }}
           transition={{ ease: "easeOut", duration: 1 }}
@@ -34,7 +34,7 @@ export default function NavBar() {
                   delay: index * 0.2,
                   type: "spring",
                 }}
-                className="inline-block"
+                className={`inline-block ${letter === " " ? "mx-2" : ""}`}
               >
                 {letter}
               </motion.span>
