@@ -8,7 +8,7 @@ export default function Burger({
 }) {
   return (
     <div
-      className="flex flex-col gap-2 cursor-pointer select-none border border-white rounded-full p-5 hover:bg-red-500 transition-colors z-50"
+      className="flex flex-col gap-2 cursor-pointer select-none border mr-10 border-white rounded-full p-5 hover:bg-red-500fff transition-colors z-50"
       onClick={onClick}
     >
       <motion.span
