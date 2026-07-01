@@ -1,6 +1,6 @@
 import NavBar from "./component/atoms/NavBar";
 import Menu from "./component/MenuPage";
-import PlatPage from "./component/PlatPage";
+import PlatPage from "./component/PlatDetailsPage";
 
 export default async function Home({
   searchParams,

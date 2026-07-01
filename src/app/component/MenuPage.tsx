@@ -1,7 +1,7 @@
 "use client";
 import { useRouter } from "next/navigation";
 import { useState } from "react";
-import Plats from "./atoms/Plats";
+import Plats from "./atoms/ListePlats";
 
 type PlatType = "Pizza" | "Salad" | "Dessert";
 export default function Menu() {
