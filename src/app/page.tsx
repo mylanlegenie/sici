@@ -1,6 +1,5 @@
 import NavBar from "./component/atoms/NavBar";
-import Menu from "./component/MenuPage";
-import PlatPage from "./component/PlatDetailsPage";
+import MenuPage from "./component/MenuPage";
 
 export default async function Home({
   searchParams,
@@ -13,11 +12,7 @@ export default async function Home({
   return (
     <main className="bg-red-500">
       <NavBar />
-      {selectedName ? (
-        <PlatPage name={selectedName} />
-      ) : section === "menu" ? (
-        <Menu />
-      ) : null}
+      <MenuPage selectedName={selectedName} section={section} />
     </main>
   );
 }

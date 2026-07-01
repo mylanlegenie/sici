@@ -2,9 +2,11 @@
 import { useRouter } from "next/navigation";
 import { useState } from "react";
 import Plats from "./atoms/ListePlats";
+import { motion } from "motion/react";
+import PlatPage from "./PlatDetailsPage";
 
 type PlatType = "Pizza" | "Salad" | "Dessert";
-export default function Menu() {
+function MenuComponent() {
   const TYPE_PLATS: PlatType[] = ["Pizza", "Salad", "Dessert"];
   const [selectedPlat, setSelectedPlat] = useState<PlatType>("Pizza");
   const router = useRouter();
@@ -33,5 +35,28 @@ export default function Menu() {
       </div>
       <Plats platType={selectedPlat} />
     </section>
+  );
+}
+
+export default function MenuPage({
+  selectedName,
+  section,
+}: {
+  selectedName: string | undefined;
+  section: string | string[] | undefined;
+}) {
+  return (
+    <main className="bg-red-500">
+      {selectedName ? (
+        <motion.div
+          initial={{ opacity: 0, y: -20 }}
+          animate={{ opacity: 1, y: 0 }}
+        >
+          <PlatPage name={selectedName} />
+        </motion.div>
+      ) : section === "menu" ? (
+        <MenuComponent />
+      ) : null}
+    </main>
   );
 }
