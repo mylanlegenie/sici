@@ -1,5 +1,5 @@
-import NavBar from "../app/component/NavBar";
-import Menu from "../app/component/Menu";
+import NavBar from "./component/atoms/NavBar";
+import Menu from "./component/MenuPage";
 
 export default async function Home({
   searchParams,
