@@ -2,6 +2,7 @@ import { pizzas } from "../../plat";
 import { desserts } from "../../plat";
 import { salades } from "../../plat";
 import Image from "next/image";
+import { useRouter } from "next/navigation";
 
 interface PlatsProps {
   platType: "Pizza" | "Salad" | "Dessert";
@@ -16,6 +17,8 @@ function Card({
   price: number;
   platType: string;
 }) {
+  const router = useRouter();
+
   return (
     <div className="mt-10 min-h-90 w-full border-2 border-white bg-white rounded-xl flex items-center justify-center px-4 py-6 text-center">
       <div>
@@ -29,18 +32,14 @@ function Card({
           alt={name}
           width={200}
           height={200}
-          className="mx-auto mb-4 rounded-full bg-black"
+          className="mx-auto mb-4 rounded-full cursor-pointer bg-black"
           onClick={() => {
-            if (typeof window !== "undefined") {
-              window.history.pushState(
-                {},
-                "",
-                "?section=menu&plat=" +
-                  platType.toLowerCase() +
-                  "&name=" +
-                  name.toLowerCase(),
-              );
-            }
+            router.push(
+              "?section=menu&plat=" +
+                platType.toLowerCase() +
+                "&name=" +
+                name.toLowerCase(),
+            );
           }}
         />
 
