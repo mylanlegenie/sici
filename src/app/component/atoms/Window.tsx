@@ -1,7 +1,7 @@
 "use client";
 import "../../globals.css";
 import { motion } from "framer-motion";
-import Link from "next/link";
+import { useRouter } from "next/navigation";
 export default function Window({
   isClicked,
   setIsClicked,
@@ -10,6 +10,7 @@ export default function Window({
   setIsClicked?: React.Dispatch<React.SetStateAction<boolean>>;
   onSendValue?: (value: string) => void;
 }) {
+  const router = useRouter();
   const RUBRIQUES = [
     { title: "Home", link: "/" },
     { title: "Menu", link: "/?section=menu" },
@@ -34,14 +35,16 @@ export default function Window({
       <div className="flex flex-col gap-10 m-20">
         {RUBRIQUES.map((rubrique, index) => {
           return (
-            <Link href={rubrique.link} key={index} scroll={false}>
-              <span
-                onClick={() => setIsClicked?.(false)}
-                className="w-fit text-white text-7xl font-bold underline-animation relative cursor-pointer select-none"
-              >
-                {rubrique.title}
-              </span>
-            </Link>
+            <span
+              key={index}
+              onClick={() => {
+                setIsClicked?.(false);
+                router.push(rubrique.link);
+              }}
+              className="w-fit text-white text-7xl font-bold underline-animation relative cursor-pointer select-none"
+            >
+              {rubrique.title}
+            </span>
           );
         })}
       </div>
