@@ -9,7 +9,7 @@ export default async function Home({
   const { section } = await searchParams;
 
   return (
-    <main className="bg-red-500 h-screen">
+    <main className="bg-red-500">
       <NavBar />
       {section === "menu" && <Menu />}
     </main>
