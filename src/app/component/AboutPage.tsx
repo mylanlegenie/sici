@@ -1,10 +1,10 @@
 "use client";
 
-import CopyIcon from "../component/atoms/CopyIcon";
-import ClockIcon from "../component/atoms/ClockIcon";
+import CopyIcon from "./atoms/icons/CopyIcon";
+import ClockIcon from "./atoms/icons/ClockIcon";
 import LocationIcon from "../component/atoms/LocationIcon";
-import NearbyIcon from "../component/atoms/NearbyIcon";
-import PhoneIcon from "../component/atoms/PhoneIcon";
+import NearbyIcon from "./atoms/icons/NearbyIcon";
+import PhoneIcon from "./atoms/icons/PhoneIcon";
 
 export default function AboutPage() {
   const copyText = async (value: string) => {

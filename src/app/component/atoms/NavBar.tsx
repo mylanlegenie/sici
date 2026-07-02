@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 import { useState } from "react";
 import { useRouter } from "next/navigation";
 import Window from "./Window";
-import Burger from "./Burger";
+import Burger from "./icons/Burger";
 export default function NavBar() {
   const name = "La Sicilienne";
   const [isClicked, setIsClicked] = useState(false);
