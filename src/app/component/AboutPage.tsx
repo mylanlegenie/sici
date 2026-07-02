@@ -2,7 +2,7 @@
 
 import CopyIcon from "./atoms/icons/CopyIcon";
 import ClockIcon from "./atoms/icons/ClockIcon";
-import LocationIcon from "../component/atoms/LocationIcon";
+import LocationIcon from "./atoms/icons/LocationIcon";
 import NearbyIcon from "./atoms/icons/NearbyIcon";
 import PhoneIcon from "./atoms/icons/PhoneIcon";
 
