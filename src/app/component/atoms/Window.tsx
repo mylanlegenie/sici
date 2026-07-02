@@ -14,7 +14,7 @@ export default function Window({
   const RUBRIQUES = [
     { title: "Home", link: "/" },
     { title: "Menu", link: "/?section=menu" },
-    { title: "About", link: "/about" },
+    { title: "About", link: "/?section=about" },
   ];
 
   return (
