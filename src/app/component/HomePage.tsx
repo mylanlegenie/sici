@@ -39,7 +39,12 @@ export default function HomePage() {
             LA Pizzeria du 12ème
           </motion.h1>
         </div>
-        <button className="button-3d">Mettez un avis !</button>
+        <a
+          target="_blank"
+          href="https://www.tripadvisor.fr/Restaurant_Review-g187147-d12326598-Reviews-La_Sicilienne_Pizzeria-Paris_Ile_de_France.html"
+        >
+          <button className="button-3d">Mettez un avis !</button>
+        </a>
       </motion.section>
       <motion.section
         initial={{ opacity: 0, y: 22 }}
