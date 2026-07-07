@@ -19,7 +19,7 @@ export default function NavBar() {
           transition={{ ease: "easeOut", duration: 1 }}
         >
           <h1
-            className="text-white font-bold tracking-widest p-2 md:text-6xl text-3xl select-none cursor-pointer"
+            className="text-white font-bold tracking-widest p-2 md:text-7xl text-4xl select-none cursor-pointer"
             onClick={() => {
               router.push("/");
             }}
