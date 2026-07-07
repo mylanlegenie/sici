@@ -2,6 +2,7 @@ import Image from "next/image";
 import { cn } from "@/lib/utils";
 import { Marquee } from "../../../magicui/marquee";
 import { pizzas, salades } from "../../plat";
+import { useRouter } from "next/navigation";
 
 const reviews = [...pizzas, ...salades].filter((x) => x.bestsellers === true);
 const firstRow = reviews.slice(0, reviews.length / 2);
@@ -10,6 +11,7 @@ const secondRow = reviews.slice(reviews.length / 2);
 const ReviewCard = ({
   name,
   image,
+  type,
   category,
   prix,
   body,
@@ -17,6 +19,7 @@ const ReviewCard = ({
   name: string;
   image?: string;
   category: string;
+  type: string;
   prix?: {
     junior: number | null;
     senior: number | null;
@@ -25,12 +28,21 @@ const ReviewCard = ({
   body?: string;
 }) => {
   const description = body?.trim() || `${category} signature de la maison`;
+  const router = useRouter();
 
   return (
     <figure
       className={cn(
-        "relative flex min-h-60 w-56 flex-col items-center rounded-[1.75rem] border border-neutral-200 bg-white px-5 py-5 text-center shadow-[0_14px_34px_rgba(15,23,42,0.08)] ring-1 ring-black/4 sm:w-64",
+        "relative cursor-pointer flex min-h-60 w-56 flex-col items-center rounded-[1.75rem] border border-neutral-200 bg-white px-5 py-5 text-center shadow-[0_14px_34px_rgba(15,23,42,0.08)] ring-1 ring-black/4 sm:w-64",
       )}
+      onClick={() => {
+        router.push(
+          "?section=menu&plat=" +
+            type.toLowerCase() +
+            "&name=" +
+            name.toLowerCase(),
+        );
+      }}
     >
       <div className="flex flex-col items-center">
         <Image
@@ -60,13 +72,18 @@ const ReviewCard = ({
 export default function MarqueeHome() {
   return (
     <div className="relative flex h-[34rem] w-full max-w-2xl flex-row items-center justify-center overflow-hidden rounded-[2rem] border border-white/15 bg-white/95 p-3 shadow-[0_24px_80px_rgba(15,23,42,0.18)] ring-1 ring-black/5">
-      <Marquee pauseOnHover vertical className="[--duration:10s] [--gap:1.25rem]">
+      <Marquee
+        pauseOnHover
+        vertical
+        className="[--duration:10s] [--gap:1.25rem]"
+      >
         {firstRow.map((review) => (
           <ReviewCard
+            type={review.type}
             key={review.name}
             name={review.name}
             image={review.image}
-            category={"prices" in review ? "Pizza" : "Salade"}
+            category={review.type}
             prix={"prices" in review ? review.prices : undefined}
             body={"description" in review ? review.description : undefined}
           />
@@ -80,6 +97,7 @@ export default function MarqueeHome() {
       >
         {secondRow.map((review) => (
           <ReviewCard
+            type={review.type}
             key={review.name}
             name={review.name}
             image={review.image}
