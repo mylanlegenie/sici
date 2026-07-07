@@ -1,20 +1,11 @@
 import type { Metadata } from "next";
 import InfoPageLayout from "../component/InfoPageLayout";
+import { horaires } from "../horraire";
 
 export const metadata: Metadata = {
   title: "Contact | La Sicilienne",
   description: "Coordonnées et horaires de La Sicilienne.",
 };
-
-const horaires = [
-  ["Lundi", "12h - 22h30"],
-  ["Mardi", "12h - 22h30"],
-  ["Mercredi", "12h - 22h30"],
-  ["Jeudi", "12h - 22h30"],
-  ["Vendredi", "12h - 22h30"],
-  ["Samedi", "12h - 22h30"],
-  ["Dimanche", "12h - 22h30"],
-];
 
 export default function ContactPage() {
   return (
