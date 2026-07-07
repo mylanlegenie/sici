@@ -1,6 +1,6 @@
 "use client";
 import "../../globals.css";
-import { motion } from "framer-motion";
+import { motion } from "motion/react";
 import { useRouter } from "next/navigation";
 export default function Window({
   isClicked,

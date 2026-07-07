@@ -1,5 +1,5 @@
 "use client";
-import { motion } from "framer-motion";
+import { motion } from "motion/react";
 import { useState } from "react";
 import { useRouter } from "next/navigation";
 import Window from "./Window";
@@ -13,7 +13,7 @@ export default function NavBar() {
     <>
       <header className="h-20 flex w-full justify-between items-center mt-10">
         <motion.nav
-          className=" border-b-2 border-white rounded-xs ml-"
+          className="border-b-2 border-white rounded-xs"
           initial={{ width: 0 }}
           animate={{ width: "70vw" }}
           transition={{ ease: "easeOut", duration: 1 }}
