@@ -194,11 +194,9 @@
   transition: transform 0.15s ease, box-shadow 0.15s ease, background-color 0.2s ease;
   overflow: hidden;
   cursor: pointer;
-  /* Ombre du bouton */
   box-shadow: 0 6px 0 #991b1b, 0 8px 15px rgba(0, 0, 0, 0.2);
 }
 
-/* Texture bruit */
 .btn-noise::before {
   content: "";
   position: absolute;
@@ -212,7 +210,6 @@
   pointer-events: none;
 }
 
-/* Effet au clic */
 .btn-noise:active {
   transform: translateY(4px);
   box-shadow: 0 2px 0 #991b1b, 0 4px 10px rgba(0, 0, 0, 0.2);
