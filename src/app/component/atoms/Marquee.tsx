@@ -1,57 +1,57 @@
+import Image from "next/image";
 import { cn } from "@/lib/utils";
 import { Marquee } from "../../../magicui/marquee";
+import { pizzas, salades } from "../../plat";
 
-const reviews = [
-  {
-    name: "Jack",
-    username: "@jack",
-    body: "I've never seen anything like this before. It's amazing. I love it.",
-  },
-  {
-    name: "Jill",
-    username: "@jill",
-    body: "I don't know what to say. I'm speechless. This is amazing.",
-  },
-  {
-    name: "John",
-    username: "@john",
-    body: "I'm at a loss for words. This is amazing. I love it.",
-  },
-];
-
+const reviews = [...pizzas, ...salades].filter((x) => x.bestsellers === true);
 const firstRow = reviews.slice(0, reviews.length / 2);
 const secondRow = reviews.slice(reviews.length / 2);
 
 const ReviewCard = ({
   name,
-  username,
+  image,
+  category,
+  prix,
   body,
 }: {
   name: string;
-  username: string;
-  body: string;
+  image?: string;
+  category: string;
+  prix?: {
+    junior: number | null;
+    senior: number | null;
+    mega: number | null;
+  };
+  body?: string;
 }) => {
+  const description = body?.trim() || `${category} signature de la maison`;
+
   return (
     <figure
       className={cn(
-        "relative h-full w-52 cursor-pointer overflow-hidden rounded-2xl border border-black/10 bg-white/80 p-4 shadow-sm backdrop-blur dark:border-white/10 dark:bg-white/5 sm:w-56",
+        "relative flex min-h-60 w-56 flex-col items-center rounded-[1.75rem] border border-neutral-200 bg-white px-5 py-5 text-center shadow-[0_14px_34px_rgba(15,23,42,0.08)] ring-1 ring-black/4 sm:w-64",
       )}
     >
-      <div className="flex flex-row items-center gap-2">
-        <div className="flex h-8 w-8 items-center justify-center rounded-full bg-neutral-900 text-xs font-semibold text-white dark:bg-white dark:text-neutral-900">
-          {name.slice(0, 1)}
-        </div>
-        <div className="flex flex-col">
-          <figcaption className="text-sm font-semibold text-neutral-900 dark:text-white">
-            {name}
-          </figcaption>
-          <p className="text-xs font-medium text-neutral-500 dark:text-white/50">
-            {username}
-          </p>
-        </div>
+      <div className="flex flex-col items-center">
+        <Image
+          src={image || "/pizza-facade-1.png"}
+          alt={name}
+          width={88}
+          height={88}
+          className="h-22 w-22 rounded-full border border-neutral-200 object-cover shadow-sm"
+        />
+        <p className="mt-4 text-[0.65rem] font-semibold uppercase tracking-[0.22em] text-neutral-500">
+          {category}
+        </p>
+        <figcaption className="mt-2 text-xl font-semibold leading-tight text-neutral-950">
+          {name}
+        </figcaption>
+        <p className="mt-3 rounded-full border border-neutral-200 px-3 py-1 text-sm font-medium text-neutral-700">
+          {prix?.junior != null ? `${prix.junior.toFixed(2)} €` : "N/A"}
+        </p>
       </div>
-      <blockquote className="mt-3 text-sm leading-6 text-neutral-700 dark:text-white/80">
-        {body}
+      <blockquote className="mt-4 line-clamp-3 text-sm leading-6 text-neutral-600">
+        {description}
       </blockquote>
     </figure>
   );
@@ -59,15 +59,34 @@ const ReviewCard = ({
 
 export default function MarqueeHome() {
   return (
-    <div className="relative flex h-120 w-lg flex-row items-center justify-center overflow-hidden rounded-3xl border-2 border-neutral-900 bg-white/95 p-1.5 shadow-lg shadow-neutral-950/5 ring-1 ring-inset ring-neutral-200">
-      <Marquee pauseOnHover vertical className="[--duration:5s]">
+    <div className="relative flex h-[34rem] w-full max-w-2xl flex-row items-center justify-center overflow-hidden rounded-[2rem] border border-white/15 bg-white/95 p-3 shadow-[0_24px_80px_rgba(15,23,42,0.18)] ring-1 ring-black/5">
+      <Marquee pauseOnHover vertical className="[--duration:10s] [--gap:1.25rem]">
         {firstRow.map((review) => (
-          <ReviewCard key={review.username} {...review} />
+          <ReviewCard
+            key={review.name}
+            name={review.name}
+            image={review.image}
+            category={"prices" in review ? "Pizza" : "Salade"}
+            prix={"prices" in review ? review.prices : undefined}
+            body={"description" in review ? review.description : undefined}
+          />
         ))}
       </Marquee>
-      <Marquee reverse pauseOnHover vertical className="[--duration:5s]">
+      <Marquee
+        reverse
+        pauseOnHover
+        vertical
+        className="[--duration:10s] [--gap:1.25rem]"
+      >
         {secondRow.map((review) => (
-          <ReviewCard key={review.username} {...review} />
+          <ReviewCard
+            key={review.name}
+            name={review.name}
+            image={review.image}
+            category={"prices" in review ? "Pizza" : "Salade"}
+            prix={"prices" in review ? review.prices : undefined}
+            body={"description" in review ? review.description : undefined}
+          />
         ))}
       </Marquee>
       <div className="from-background pointer-events-none absolute inset-x-0 top-0 h-1/4 bg-linear-to-b"></div>

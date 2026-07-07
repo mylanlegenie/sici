@@ -1,15 +1,20 @@
 export const pizzas = [
   {
     name: "CLASSICA",
+    image: "",
+    bestsellers: true,
     allergenes: ["gluten", "lait"],
     prices: {
       junior: 8.0,
       senior: 10.0,
       mega: 15.0,
     },
+    
   },
   {
     name: "REGINA",
+    image: "",
+    bestsellers: true,
     allergenes: ["gluten", "lait"],
     prices: {
       junior: 9.5,
@@ -19,6 +24,8 @@ export const pizzas = [
   },
   {
     name: "SICILIENNE",
+    image: "",
+    bestsellers: true,
     allergenes: ["gluten", "lait"],
     prices: {
       junior: 9.5,
@@ -28,6 +35,8 @@ export const pizzas = [
   },
   {
     name: "CALZONE (soufflée)",
+    image: "",
+    bestsellers: false,
     allergenes: ["gluten", "lait"],
     prices: {
       junior: 9.5,
@@ -37,6 +46,8 @@ export const pizzas = [
   },
   {
     name: "ORIENTALE",
+    image: "",
+    bestsellers: true,
     allergenes: ["gluten", "lait"],
     prices: {
       junior: 9.5,
@@ -46,6 +57,8 @@ export const pizzas = [
   },
   {
     name: "4 SAISONS",
+    image: "",
+    bestsellers: false,
     allergenes: ["gluten", "lait"],
     prices: {
       junior: 9.5,
@@ -55,6 +68,8 @@ export const pizzas = [
   },
   {
     name: "PAYSANNE",
+    image: "",
+    bestsellers: true,
     allergenes: ["gluten", "lait"],
     prices: {
       junior: 9.5,
@@ -64,6 +79,8 @@ export const pizzas = [
   },
   {
     name: "RIMINI",
+    image: "",
+    bestsellers: false,
     allergenes: ["gluten", "lait"],
     prices: {
       junior: 9.5,
@@ -76,6 +93,8 @@ export const pizzas = [
 export const salades = [
   {
     name: "PALERMO",
+    image: "",
+    bestsellers: false,
     description:
       "Salade de saison, tomates fraîches, poivrons grillés, artichauts, mozzarella",
     allergenes: ["lait"],
@@ -83,24 +102,32 @@ export const salades = [
   },
   {
     name: "PARIGI",
+    image: "",
+    bestsellers: false,
     description: "Salade de saison, tomates fraîches, jambon, champignons",
     allergenes: [],
     price: 8.0,
   },
   {
     name: "ITALIENNE",
+    image: "",
+    bestsellers: false,
     description: "Salade de saison, tomates fraîches, thon, œuf dur, olives",
     allergenes: ["poisson", "œuf"],
     price: 8.0,
   },
   {
     name: "FERMIÈRE",
+    image: "",
+    bestsellers: false,
     description: "Salade de saison, tomates fraîches, poulet, maïs",
     allergenes: [],
     price: 8.0,
   },
   {
     name: "CHAVIGNOL",
+    image: "",
+    bestsellers: false,
     description:
       "Salade de saison, tomates fraîches, crottin en toast, lardons",
     allergenes: ["gluten", "lait"],
@@ -108,6 +135,8 @@ export const salades = [
   },
   {
     name: "NORVÉGIENNE",
+    image: "",
+    bestsellers: false,
     description:
       "Salade de saison, tomates fraîches, crevettes, saumon fumé",
     allergenes: ["crustacés", "poisson"],
@@ -118,24 +147,32 @@ export const salades = [
 export const desserts = [
   {
     name: "TARTE AU DAIM",
+    image: "",
+    bestsellers: false,
     type: "dessert",
     allergenes: ["gluten", "lait", "fruits à coque"],
     price: null,
   },
   {
     name: "BROWNIE",
+    image: "",
+    bestsellers: false,
     type: "dessert",
     allergenes: ["gluten", "lait", "œuf", "fruits à coque"],
     price: null,
   },
   {
     name: "TIRAMISU",
+    image: "",
+    bestsellers: false,
     type: "dessert",
     allergenes: ["gluten", "lait", "œuf"],
     price: null,
   },
   {
     name: "PANINI NUTELLA",
+    image: "",
+    bestsellers: false,
     type: "dessert",
     allergenes: ["gluten", "lait", "fruits à coque"],
     price: null,
