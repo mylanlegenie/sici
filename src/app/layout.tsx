@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import "./globals.css";
 import { Geist } from "next/font/google";
 import { cn } from "@/lib/utils";
+import NavBar from "../app/component/atoms/NavBar";
+import Footer from "../app/component/Footer";
 
 const geist = Geist({ subsets: ["latin"], variable: "--font-sans" });
 
@@ -24,7 +26,13 @@ export default function RootLayout({
         geist.variable,
       )}
     >
-      <body className="min-h-full flex flex-col">{children}</body>
+      <body className="min-h-full flex flex-col">
+        <main className="bg-red-500 pb-6">
+          <NavBar />
+          {children}
+        </main>
+        <Footer />
+      </body>
     </html>
   );
 }

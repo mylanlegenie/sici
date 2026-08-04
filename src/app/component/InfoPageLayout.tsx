@@ -1,5 +1,4 @@
 import NavBar from "./atoms/NavBar";
-import Footer from "./Footer";
 
 export default function InfoPageLayout({
   title,
@@ -28,7 +27,6 @@ export default function InfoPageLayout({
 
         <div className="mt-10 space-y-8 text-white/85">{children}</div>
       </section>
-      <Footer />
     </main>
   );
 }
