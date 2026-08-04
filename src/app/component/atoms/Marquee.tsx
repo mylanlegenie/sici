@@ -31,7 +31,7 @@ const ReviewCard = ({
   return (
     <figure
       className={cn(
-        "relative cursor-pointer flex min-h-60 w-56 flex-col items-center rounded-[1.75rem] border border-neutral-200 bg-white px-5 py-5 text-center shadow-[0_14px_34px_rgba(15,23,42,0.08)] ring-1 ring-black/4 sm:w-64",
+        "relative flex min-h-44 max-w-50 cursor-pointer flex-col items-center rounded-xl border border-neutral-200 bg-white px-2 py-3 text-center shadow-[0_14px_34px_rgba(15,23,42,0.08)] ring-1 ring-black/4 sm:w-36 md:min-h-60 md:w-64 md:max-w-64 md:rounded-[1.75rem] md:px-5 md:py-5",
       )}
     >
       <Link
@@ -44,19 +44,19 @@ const ReviewCard = ({
             alt={name}
             width={88}
             height={88}
-            className="h-22 w-22 rounded-full border border-neutral-200 object-cover shadow-sm"
+            className="h-14 w-14 rounded-full border border-neutral-200 object-cover shadow-sm md:h-22 md:w-22"
           />
-          <p className="mt-4 text-[0.65rem] font-semibold uppercase tracking-[0.22em] text-neutral-500">
+          <p className="mt-2 text-[0.55rem] font-semibold uppercase tracking-[0.14em] text-neutral-500 md:mt-4 md:text-[0.65rem] md:tracking-[0.22em]">
             {category}
           </p>
-          <figcaption className="mt-2 text-xl font-semibold leading-tight text-neutral-950">
+          <figcaption className="mt-1 text-sm font-semibold leading-tight text-neutral-950 md:mt-2 md:text-xl">
             {name}
           </figcaption>
-          <p className="mt-3 rounded-full border border-neutral-200 px-3 py-1 text-sm font-medium text-neutral-700">
+          <p className="mt-2 rounded-full border border-neutral-200 px-2 py-0.5 text-xs font-medium text-neutral-700 md:mt-3 md:px-3 md:py-1 md:text-sm">
             {prix?.junior != null ? `${prix.junior.toFixed(2)} €` : "N/A"}
           </p>
         </div>
-        <blockquote className="mt-4 line-clamp-3 text-sm leading-6 text-neutral-600">
+        <blockquote className="mt-2 line-clamp-2 text-[0.65rem] leading-4 text-neutral-600 md:mt-4 md:line-clamp-3 md:text-sm md:leading-6">
           {description}
         </blockquote>
       </Link>
@@ -66,11 +66,11 @@ const ReviewCard = ({
 
 export default function MarqueeHome() {
   return (
-    <div className="relative flex h-136 w-full max-w-2xl flex-row items-center justify-center overflow-hidden rounded-[2rem] border border-white/15 bg-white/95 p-3 shadow-[0_24px_80px_rgba(15,23,42,0.18)] ring-1 ring-black/5">
+    <div className="relative flex h-96 w-full max-w-2xl flex-row items-center justify-center overflow-hidden rounded-xl border border-white/15 bg-white/95 p-1 shadow-[0_24px_80px_rgba(15,23,42,0.18)] ring-1 ring-black/5 md:h-136 md:rounded-[2rem] md:p-3">
       <Marquee
         pauseOnHover
         vertical
-        className="[--duration:10s] [--gap:1.25rem]"
+        className="p-1 [--duration:10s] [--gap:0.75rem] md:p-2 md:[--gap:1.25rem]"
       >
         {firstRow.map((review) => (
           <ReviewCard
@@ -88,7 +88,7 @@ export default function MarqueeHome() {
         reverse
         pauseOnHover
         vertical
-        className="[--duration:10s] [--gap:1.25rem]"
+        className="p-1 [--duration:10s] [--gap:0.75rem] md:p-2 md:[--gap:1.25rem]"
       >
         {secondRow.map((review) => (
           <ReviewCard
