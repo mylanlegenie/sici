@@ -2,7 +2,6 @@
 @import "tw-animate-css";
 @import "shadcn/tailwind.css";
 
-@custom-variant dark (&:is(.dark *));
 
 @theme inline {
   --color-background: var(--background);
@@ -146,6 +145,54 @@
     @apply font-sans;
   }
 }
+
+.home-reveal {
+  --reveal-x: 0;
+  --reveal-y: 18px;
+  --reveal-scale-x: 1;
+  animation: home-reveal 0.65s ease-out both;
+}
+
+.home-left {
+  --reveal-x: -18px;
+  --reveal-y: 0;
+}
+
+.home-right {
+  --reveal-x: 18px;
+  --reveal-y: 0;
+}
+
+.home-scale-x {
+  --reveal-y: 0;
+  --reveal-scale-x: 0;
+}
+
+.home-delay-1 {
+  animation-delay: 0.1s;
+}
+
+@keyframes home-reveal {
+  from {
+    opacity: 0;
+    transform: translate(var(--reveal-x), var(--reveal-y))
+      scaleX(var(--reveal-scale-x));
+  }
+}
+
+@supports (animation-timeline: view()) {
+  .home-on-view {
+    animation-timeline: view();
+    animation-range: entry 0% cover 30%;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .home-reveal {
+    animation: none;
+  }
+}
+
 .button-3d {
   --😀: #ef4444;
   --😀😀: #dc2626;
