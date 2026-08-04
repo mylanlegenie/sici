@@ -27,7 +27,7 @@ export default function ImageSlide() {
         referrerPolicy="no-referrer-when-downgrade"
       />
       <MotionImage
-        src="/pizza-facade-1.png"
+        src="/pizza-slide-1.webp"
         alt="Pizza margherita italienne de La Sicilienne aux tomates et au basilic"
         width={487}
         height={362}
@@ -38,7 +38,7 @@ export default function ImageSlide() {
       />
 
       <MotionImage
-        src="/pizza-facade-2.png"
+        src="/pizza-slide-2.webp"
         alt="Pizza margherita italienne de La Sicilienne aux tomates et au basilic"
         width={487}
         height={362}
