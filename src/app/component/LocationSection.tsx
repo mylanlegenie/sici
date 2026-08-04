@@ -1,16 +1,9 @@
-"use client";
-
-import Image from "next/image";
 import { useRef } from "react";
-import { motion, useInView } from "motion/react";
-
 import PerspectiveButton from "./atoms/PerspectiveButton";
-
-const MotionImage = motion.create(Image);
+import ImageSlide from "./atoms/ImageSlide";
 
 export default function LocationSection() {
   const containerRef = useRef(null);
-  const inView = useInView(containerRef, { once: true, margin: "-50px" });
 
   return (
     <section className="w-[90%] max-w-5xl mx-auto my-12 sm:my-16 relative z-10 text-center px-2 text-gray-900 dark:text-gray-100">
@@ -43,28 +36,7 @@ export default function LocationSection() {
             loading="lazy"
             referrerPolicy="no-referrer-when-downgrade"
           />
-
-          <MotionImage
-            src="/pizza-facade-1.png"
-            alt="Pizza margherita italienne de La Sicilienne aux tomates et au basilic"
-            width={487}
-            height={362}
-            className="absolute top-0 left-0 h-full w-1/2 object-cover z-10"
-            initial={{ x: "0%" }}
-            animate={inView ? { x: "-100%" } : { x: "0%" }}
-            transition={{ duration: 1.2, ease: "easeInOut" }}
-          />
-
-          <MotionImage
-            src="/pizza-facade-2.png"
-            alt="Pizza margherita italienne de La Sicilienne aux tomates et au basilic"
-            width={487}
-            height={362}
-            className="absolute top-0 right-0 h-full w-1/2 object-cover z-10"
-            initial={{ x: "0%" }}
-            animate={inView ? { x: "100%" } : { x: "0%" }}
-            transition={{ duration: 1.2, ease: "easeInOut" }}
-          />
+          <ImageSlide containerRef={containerRef} />
         </div>
 
         <div className="mx-auto mt-6 w-full max-w-[974px]">
