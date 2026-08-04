@@ -1,16 +1,21 @@
+import { useId } from "react";
+
 type IconProps = {
   className?: string;
 };
 
 export default function NearbyIcon({ className = "h-5 w-5" }: IconProps) {
+  const titleId = `nearby-icon-title-${useId()}`;
+
   return (
     <svg
       className={className}
       viewBox="0 0 24 24"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
-      aria-hidden="true"
+      aria-labelledby={titleId}
     >
+      <title id={titleId}>À proximité</title>
       <path
         d="M9 18h6"
         stroke="currentColor"

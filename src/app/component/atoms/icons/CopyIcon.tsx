@@ -1,16 +1,21 @@
+import { useId } from "react";
+
 type IconProps = {
   className?: string;
 };
 
 export default function CopyIcon({ className = "h-4 w-4" }: IconProps) {
+  const titleId = `copy-icon-title-${useId()}`;
+
   return (
     <svg
       className={className}
       viewBox="0 0 24 24"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
-      aria-hidden="true"
+      aria-labelledby={titleId}
     >
+      <title id={titleId}>Copier</title>
       <rect
         x="9"
         y="9"
