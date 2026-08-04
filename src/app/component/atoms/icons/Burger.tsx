@@ -8,20 +8,20 @@ export default function Burger({
 }) {
   return (
     <div
-      className="flex flex-col gap-2 cursor-pointer select-none border mr-10 border-white rounded-full p-5 hover:bg-red-500fff transition-colors z-50"
+      className="flex h-14 w-14 flex-col items-center justify-center gap-2 cursor-pointer select-none border sm:mr-10 mr-3 border-white rounded-full p-0 md:h-auto md:w-auto md:p-5 hover:bg-red-500fff transition-colors z-50"
       onClick={onClick}
     >
       <motion.span
-        className={`w-10 bg-white h-0.5 rounded-lg`}
+        className="h-0.5 w-7 rounded-lg bg-white md:w-10"
         animate={isClicked ? { rotate: "45deg", translateY: "10px" } : {}}
         transition={{ type: "spring" }}
       ></motion.span>
       <motion.span
-        className={`w-10 bg-white h-0.5 rounded-lg`}
-        animate={isClicked ? { width: 0 } : { width: "2.5rem" }}
+        className="h-0.5 w-7 rounded-lg bg-white md:w-10"
+        animate={isClicked ? { scaleX: 0 } : { scaleX: 1 }}
       ></motion.span>
       <motion.span
-        className={`w-10 bg-white h-0.5 rounded-lg `}
+        className="h-0.5 w-7 rounded-lg bg-white md:w-10"
         animate={isClicked ? { rotate: "-45deg", translateY: "-10px" } : {}}
         transition={{ type: "spring" }}
       ></motion.span>

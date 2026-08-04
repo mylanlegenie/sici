@@ -15,7 +15,7 @@ export default function NavBar() {
           <Link href="/">
             <button
               type="button"
-              className="text-white font-bold tracking-widest p-2 md:text-7xl text-4xl select-none cursor-pointer"
+              className="text-white font-bold tracking-widest p-2 md:text-7xl sm:text-4xl text-3xl select-none cursor-pointer"
               aria-label="Retour à l'accueil"
             >
               {name.split("").map((letter, index) => (
