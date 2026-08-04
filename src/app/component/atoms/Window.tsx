@@ -13,7 +13,7 @@ export default function Window({
   const RUBRIQUES = [
     { title: "Home", link: "/" },
     { title: "Menu", link: "/menu/pizza" },
-    { title: "About", link: "/about" },
+    { title: "Contact", link: "/contact" },
   ];
 
   return (
