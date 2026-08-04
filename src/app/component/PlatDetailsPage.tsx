@@ -15,21 +15,21 @@ export default function PlatPage({ name }: PlatPageProps) {
   const allergenes = item?.allergenes ?? [];
 
   return (
-    <section className="w-[80vw] mx-auto mt-20 flex flex-row  mb-20">
+    <section className="mx-auto mb-12 mt-10 flex w-[90vw] flex-col md:mb-20 md:mt-20 md:w-[80vw] md:flex-row">
       {item ? (
         <>
-          <div className="w-[40vw] mx-auto">
+          <div className="mx-auto w-full md:w-[40vw]">
             <Image
-              className="bg-black rounded-2xl"
+              className="mx-auto h-auto w-full max-w-125 rounded-2xl bg-black"
               src=""
               width={500}
               height={500}
               alt={item.name}
             />
           </div>
-          <div className="h-130 w-0.5 bg-white mx-10  rounded-full" />
-          <div className="w-[30vw] mx-auto flex flex-col justify-center">
-            <h2 className="text-4xl font-semibold leading-tight tracking-tight text-white">
+          <div className="my-8 h-0.5 w-full rounded-full bg-white md:mx-10 md:my-0 md:h-130 md:w-0.5" />
+          <div className="mx-auto flex w-full flex-col justify-center md:w-[30vw]">
+            <h2 className="text-3xl font-semibold leading-tight tracking-tight text-white sm:text-4xl">
               {item.name}
             </h2>
             <strong className="mt-4 text-base font-semibold text-white/90">
