@@ -1,5 +1,11 @@
 @import "tailwindcss";
 
+:root {
+  --color-white: #fff;
+  --color-red-600: #dc2626;
+  --color-red-800: #991b1b;
+}
+
 @theme inline {
   --font-sans: var(--font-sans);
   --animate-marquee: marquee var(--duration) infinite linear;
@@ -84,7 +90,6 @@
 
 .button-3d {
   --😀: #ef4444;
-  --😀😀: #dc2626;
   --😀😀😀: #ef444463;
   cursor: pointer;
   width: 250px;
@@ -96,11 +101,11 @@
   font-size: 1.125em;
   font-weight: 800;
   letter-spacing: 2px;
-  color: #fff;
+  color: var(--color-white);
   background: var(--😀);
-  border: 2px solid var(--😀😀);
+  border: 2px solid var(--color-red-600);
   border-radius: .75rem;
-  box-shadow: 0 8px 0 var(--😀😀);
+  box-shadow: 0 8px 0 var(--color-red-600);
   transform: skew(-10deg);
   transition: all .1s ease;
   filter: drop-shadow(0 15px 20px var(--😀😀😀));
@@ -117,11 +122,11 @@
 .btn-noise {
   position: relative;
   display: inline-block;
-  color: #fff;
+  color: var(--color-white);
   font-weight: bold;
   letter-spacing: 1px;
   text-align: center;
-  background-color: #dc2626;
+  background-color: var(--color-red-600);
   padding: 14px 32px;
   border-radius: 6px;
   font-family: Helvetica, sans-serif;
@@ -130,7 +135,7 @@
   transition: transform 0.15s ease, box-shadow 0.15s ease, background-color 0.2s ease;
   overflow: hidden;
   cursor: pointer;
-  box-shadow: 0 6px 0 #991b1b, 0 8px 15px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 6px 0 var(--color-red-800), 0 8px 15px rgba(0, 0, 0, 0.2);
 }
 
 .btn-noise::before {
@@ -148,6 +153,6 @@
 
 .btn-noise:active {
   transform: translateY(4px);
-  box-shadow: 0 2px 0 #991b1b, 0 4px 10px rgba(0, 0, 0, 0.2);
-  background-color: #dc2626;
+  box-shadow: 0 2px 0 var(--color-red-800), 0 4px 10px rgba(0, 0, 0, 0.2);
+  background-color: var(--color-red-600);
 }
