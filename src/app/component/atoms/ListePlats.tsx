@@ -13,7 +13,7 @@ export default function Plat({ platType }: PlatsProps) {
         ? desserts
         : pizzas;
   return (
-    <div className="mx-auto grid w-full max-w-7xl grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+    <div className="mx-auto grid w-full max-w-7xl grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 sm:gap-6">
       {data.map((item) => {
         const isPizza = "prices" in item;
         return (

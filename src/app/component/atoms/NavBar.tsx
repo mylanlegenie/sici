@@ -11,7 +11,7 @@ export default function NavBar() {
   return (
     <>
       <header className="h-20 flex w-full justify-between items-center mt-10">
-        <nav className="border-b-2 border-white rounded-xs nav-slide">
+        <nav className="nav-slide relative after:absolute after:inset-x-0 after:bottom-0 after:h-px after:bg-white">
           <Link href="/">
             <button
               type="button"

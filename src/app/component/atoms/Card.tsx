@@ -22,7 +22,7 @@ export default function Card({
     value == null ? "-" : `${value.toFixed(2)}€`;
 
   return (
-    <article className="cursor-pointer group mt-6 flex min-h-84 w-full flex-col items-center justify-between rounded-2xl border border-zinc-200 bg-white px-5 py-6 text-center shadow-sm transition duration-300 hover:-translate-y-1 hover:shadow-xl">
+    <article className="cursor-pointer group mt-6 flex min-h-84 sm:w-full w-[90%] sm:mx-0 mx-auto flex-col items-center justify-between rounded-2xl border border-zinc-200 bg-white px-5 py-6 text-center shadow-sm transition duration-300 hover:-translate-y-1 hover:shadow-xl">
       <Link
         href={`/menu/${platType.toLowerCase()}/${name.toLowerCase().replace(/\s+/g, "-")}`}
       >
