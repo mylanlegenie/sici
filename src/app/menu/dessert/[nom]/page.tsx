@@ -1,10 +1,17 @@
 import PlatDetailsPage from "../../../component/PlatDetailsPage";
+import { desserts } from "../../../plat";
 type PageProps = {
   params: {
     nom: string;
   };
 };
-export default async function Page({ params }: PageProps) {
+
+export function generateStaticParams() {
+  return desserts.map((dessert) => ({
+    name: dessert.name,
+  }));
+}
+export default async function Dessert({ params }: PageProps) {
   const { nom } = await params;
 
   return (
