@@ -1,7 +1,7 @@
-type PlatType = "Pizza" | "Salad" | "Dessert";
+type PlatType = "Pizza" | "Salade" | "Dessert";
 import Link from "next/link";
 export default function TypeList({ selectedPlat }: { selectedPlat: PlatType }) {
-  const TYPE_PLATS: PlatType[] = ["Pizza", "Salad", "Dessert"];
+  const TYPE_PLATS: PlatType[] = ["Pizza", "Salade", "Dessert"];
 
   return (
     <section className="w-[80vw] mx-auto mb-20">
