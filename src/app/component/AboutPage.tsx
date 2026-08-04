@@ -1,20 +1,10 @@
-"use client";
-
-import CopyIcon from "./atoms/icons/CopyIcon";
 import ClockIcon from "./atoms/icons/ClockIcon";
 import LocationIcon from "./atoms/icons/LocationIcon";
 import NearbyIcon from "./atoms/icons/NearbyIcon";
 import PhoneIcon from "./atoms/icons/PhoneIcon";
+import CopyButton from "./atoms/CopyButton";
 
 export default function AboutPage() {
-  const copyText = async (value: string) => {
-    try {
-      await navigator.clipboard.writeText(value);
-    } catch {
-      // Silent fail to avoid interrupting the page if clipboard is blocked.
-    }
-  };
-
   const HORRAIRES = [
     { day: "Lundi", hours: "12h-22h30" },
     { day: "Mardi", hours: "12h-22h30" },
@@ -67,15 +57,10 @@ export default function AboutPage() {
                 <LocationIcon className="h-5 w-5 text-red-200" />6 rue Dagorno,
                 75012 Paris
               </p>
-              <button
-                type="button"
-                onClick={() => copyText("6 rue Dagorno, 75012 Paris")}
-                className="inline-flex h-7 w-7 items-center justify-center rounded-md border border-white/30 bg-white/10 text-white transition hover:bg-white/20"
-                aria-label="Copier l'adresse"
-                title="Copier"
-              >
-                <CopyIcon className="h-4 w-4 cursor-pointer" />
-              </button>
+              <CopyButton
+                value="6 rue Dagorno, 75012 Paris"
+                arialabel="Copier l'adresse"
+              />
             </div>
 
             <div className="flex items-center gap-2 font-medium text-white">
@@ -83,15 +68,10 @@ export default function AboutPage() {
                 <PhoneIcon className="h-5 w-5 text-red-200" />
                 01 53 33 03 33
               </p>
-              <button
-                type="button"
-                onClick={() => copyText("01 53 33 03 33")}
-                className="inline-flex h-7 w-7 items-center justify-center rounded-md border border-white/30 bg-white/10 text-white transition hover:bg-white/20"
-                aria-label="Copier le numéro de téléphone"
-                title="Copier"
-              >
-                <CopyIcon className="h-4 w-4 cursor-pointer" />
-              </button>
+              <CopyButton
+                value="01 53 33 03 33"
+                arialabel="Copier le numéro de téléphone"
+              />
             </div>
           </div>
 
