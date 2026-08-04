@@ -13,7 +13,7 @@ export default function ImageSlide() {
   return (
     <div
       ref={containerRef}
-      className="relative mx-auto min-h-[220px] w-full max-w-[974px] overflow-hidden rounded-xl shadow-lg max-sm:min-h-[320px]"
+      className="relative mx-auto min-h-55 w-full max-w-243.5 overflow-hidden rounded-xl shadow-lg max-sm:min-h-80"
       style={{
         aspectRatio: "974 / 362",
         height: "auto",

@@ -19,7 +19,7 @@ export default function LocationSection() {
 
       <div>
         <ImageSlide />
-        <div className="mx-auto mt-6 w-full max-w-[974px]">
+        <div className="mx-auto mt-6 w-full max-w-243.5">
           <PerspectiveButton text="Google" href="" />
         </div>
       </div>
