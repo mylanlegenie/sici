@@ -28,16 +28,24 @@
   }
   @keyframes slide-navbar{
     from{
-      width: 0vw;
+      transform: scaleX(0);
     }
     to{
-      width: 70vw;
+      transform: scaleX(1);
     }
   }
   
 }
 
-.nav-slide{
+.nav-slide::after {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 60vw;
+  height: 2px;
+  background-color: var(--color-white);
+  content: "";
+  transform-origin: left;
   animation: slide-navbar 1s ease-out forwards;
 }
 
