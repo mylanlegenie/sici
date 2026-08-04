@@ -102,8 +102,8 @@ export default function MarqueeHome() {
           />
         ))}
       </Marquee>
-      <div className="from-background pointer-events-none absolute inset-x-0 top-0 h-1/4 bg-linear-to-b"></div>
-      <div className="from-background pointer-events-none absolute inset-x-0 bottom-0 h-1/4 bg-linear-to-t"></div>
+      <div className="pointer-events-none absolute inset-x-0 top-0 h-1/4 bg-linear-to-b from-white"></div>
+      <div className="pointer-events-none absolute inset-x-0 bottom-0 h-1/4 bg-linear-to-t from-white"></div>
     </div>
   );
 }
