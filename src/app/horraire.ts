@@ -1,4 +1,4 @@
-export const horaires = [
+export const HORRAIRES = [
   ["Lundi", "12h - 22h30"],
   ["Mardi", "12h - 22h30"],
   ["Mercredi", "12h - 22h30"],

@@ -3,18 +3,9 @@ import LocationIcon from "./atoms/icons/LocationIcon";
 import NearbyIcon from "./atoms/icons/NearbyIcon";
 import PhoneIcon from "./atoms/icons/PhoneIcon";
 import CopyButton from "./atoms/CopyButton";
+import { HORRAIRES } from "../horraire";
 
 export default function AboutPage() {
-  const HORRAIRES = [
-    { day: "Lundi", hours: "12h-22h30" },
-    { day: "Mardi", hours: "12h-22h30" },
-    { day: "Mercredi", hours: "12h-22h30" },
-    { day: "Jeudi", hours: "12h-22h30" },
-    { day: "Vendredi", hours: "12h-22h30" },
-    { day: "Samedi", hours: "12h-22h30" },
-    { day: "Dimanche", hours: "12h-22h30" },
-  ];
-
   return (
     <main className="bg-red-500 flex flex-col justify-center items-center mx-auto mb-16 mt-6">
       <div className="flex flex-col items-center justify-center gap-3">
@@ -33,14 +24,14 @@ export default function AboutPage() {
 
           {HORRAIRES.map((horraire) => (
             <div
-              key={horraire.day}
+              key={horraire[0]}
               className="flex flex-col justify-between px-4 text-white"
             >
               <div className="flex flex-row justify-between">
-                <p>{horraire.day}</p>
-                <p>{horraire.hours}</p>
+                <p>{horraire[0]}</p>
+                <p>{horraire[1]}</p>
               </div>
-              {horraire.day !== "Dimanche" && (
+              {horraire[0] !== "Dimanche" && (
                 <div className="h-0.5 w-full bg-white my-2 opacity-50"></div>
               )}
             </div>
