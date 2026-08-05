@@ -37,6 +37,7 @@ const ReviewCard = ({
       <Link
         href={`/menu/${type}/${name}`}
         className="flex flex-col items-center"
+        prefetch={false}
       >
         <div className="flex flex-col items-center">
           <Image
