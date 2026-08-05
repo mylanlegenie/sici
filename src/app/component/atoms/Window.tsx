@@ -17,19 +17,22 @@ export default function Window({
   ];
 
   return (
-    <motion.span
-      initial={{ width: "100vw", height: "0vh", bottom: 0 }}
+    <motion.div
+      initial={{ clipPath: "inset(100% 0 0 0)" }}
       animate={
         isClicked
-          ? { width: "100vw", height: "100vh", top: 0 }
-          : { width: "100vw", height: "0vh", bottom: 0 }
+          ? { clipPath: "inset(0% 0 0 0)" }
+          : { clipPath: "inset(100% 0 0 0)" }
       }
       transition={
         isClicked
           ? { duration: 1, ease: "easeIn" }
           : { duration: 0.8, ease: "anticipate" }
       }
-      className="fixed left-0 bg-red-600 z-49"
+      className={`fixed inset-0 bg-red-600 z-49 ${
+        isClicked ? "pointer-events-auto" : "pointer-events-none"
+      }`}
+      aria-hidden={!isClicked}
     >
       <div className="flex flex-col gap-10 m-20">
         {RUBRIQUES.map((rubrique, index) => {
@@ -47,6 +50,6 @@ export default function Window({
           );
         })}
       </div>
-    </motion.span>
+    </motion.div>
   );
 }

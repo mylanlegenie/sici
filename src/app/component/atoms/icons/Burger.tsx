@@ -17,8 +17,8 @@ export default function Burger({
         transition={{ type: "spring" }}
       ></motion.span>
       <motion.span
-        className={`w-10 bg-white h-0.5 rounded-lg`}
-        animate={isClicked ? { width: 0 } : { width: "2.5rem" }}
+        className="w-10 origin-left bg-white h-0.5 rounded-lg"
+        animate={{ scaleX: isClicked ? 0 : 1 }}
       ></motion.span>
       <motion.span
         className={`w-10 bg-white h-0.5 rounded-lg `}
