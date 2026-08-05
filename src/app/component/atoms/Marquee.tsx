@@ -66,7 +66,7 @@ const ReviewCard = ({
 
 export default function MarqueeHome() {
   return (
-    <div className="relative flex h-96 w-full max-w-2xl flex-row items-center justify-center overflow-hidden rounded-xl border border-white/15 bg-white/95 p-1 shadow-[0_24px_80px_rgba(15,23,42,0.18)] ring-1 ring-black/5 md:h-136 md:rounded-[2rem] md:p-3">
+    <div className="relative flex h-96 w-full max-w-2xl flex-row items-center justify-center overflow-hidden rounded-xl border border-white/15 bg-white/95 p-1 shadow-[0_24px_80px_rgba(15,23,42,0.18)] ring-1 ring-black/5 md:h-136 md:rounded-4xl md:p-3">
       <Marquee
         pauseOnHover
         vertical

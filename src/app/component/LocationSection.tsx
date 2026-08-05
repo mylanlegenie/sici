@@ -4,10 +4,7 @@ import ImageSlide from "./atoms/ImageSlide";
 export default function LocationSection() {
   return (
     <section className="w-[90%] max-w-5xl mx-auto my-12 sm:my-16 relative z-10 text-center px-2 text-gray-900 dark:text-gray-100">
-      <h2
-        className="text-2xl sm:text-3xl md:text-4xl font-bold mb-3 text-white"
-        style={{ fontFamily: "var(--font-tasa)" }}
-      >
+      <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-3 text-white">
         Retrouvez-nous
       </h2>
       <p className="text-white text-sm sm:text-base md:text-lg mb-6 px-2">
