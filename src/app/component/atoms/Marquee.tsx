@@ -40,7 +40,7 @@ const ReviewCard = ({
       >
         <div className="flex flex-col items-center">
           <Image
-            src={image || "/pizza-facade-1.webp"}
+            src={image || "/pizza-slide-1.webp"}
             alt={name}
             width={88}
             height={88}
