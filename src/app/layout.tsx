@@ -10,6 +10,9 @@ const geist = Geist({ subsets: ["latin"], variable: "--font-sans" });
 export const metadata: Metadata = {
   title: "La Sicilienne",
   description: "Restaurant italien à Paris 12ème",
+  verification: {
+    google: "px9hkNhlmh8TeD1PbYDXbTKX0a5TicN4joQoVkWNmg0",
+  },
 };
 
 export default function RootLayout({
