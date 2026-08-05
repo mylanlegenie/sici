@@ -8,10 +8,17 @@ import Footer from "../app/component/Footer";
 const geist = Geist({ subsets: ["latin"], variable: "--font-sans" });
 
 export const metadata: Metadata = {
-  title: "La Sicilienne",
-  description: "Restaurant italien à Paris 12ème",
+  metadataBase: new URL("https://www.lasicilienne.fr"),
+  title: "La Sicilienne - Restaurant italien à Paris 12ème",
+  description:
+    "Pizzas et spécialités italiennes au 6 rue Dagorno, dans le 12ème arrondissement de Paris.",
   verification: {
     google: "px9hkNhlmh8TeD1PbYDXbTKX0a5TicN4joQoVkWNmg0",
+  },
+  formatDetection: {
+    email: false,
+    address: false,
+    telephone: false,
   },
 };
 

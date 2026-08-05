@@ -3,6 +3,7 @@ import { cn } from "@/lib/utils";
 import { Marquee } from "../../../magicui/marquee";
 import { pizzas, salades } from "../../plat";
 import Link from "next/link";
+import { toSlug } from "@/lib/slug";
 const reviews = [...pizzas, ...salades].filter((x) => x.bestsellers === true);
 const firstRow = reviews.slice(0, reviews.length / 2);
 const secondRow = reviews.slice(reviews.length / 2);
@@ -35,7 +36,7 @@ const ReviewCard = ({
       )}
     >
       <Link
-        href={`/menu/${type}/${name}`}
+        href={`/menu/${type}/${toSlug(name)}`}
         className="flex flex-col items-center"
         prefetch={false}
       >
@@ -71,6 +72,7 @@ export default function MarqueeHome() {
       <Marquee
         pauseOnHover
         vertical
+        repeat={2}
         className="p-1 [--duration:10s] [--gap:0.75rem] md:p-2 md:[--gap:1.25rem]"
       >
         {firstRow.map((review) => (
@@ -89,6 +91,7 @@ export default function MarqueeHome() {
         reverse
         pauseOnHover
         vertical
+        repeat={2}
         className="p-1 [--duration:10s] [--gap:0.75rem] md:p-2 md:[--gap:1.25rem]"
       >
         {secondRow.map((review) => (

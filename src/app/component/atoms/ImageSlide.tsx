@@ -1,14 +1,32 @@
 "use client";
-import { motion, useInView } from "motion/react";
-import { useRef } from "react";
-
 import Image from "next/image";
+import { useEffect, useRef, useState } from "react";
 
-const MotionImage = motion.create(Image);
+const MAP_EMBED_URL =
+  "https://www.google.com/maps?q=La%20Sicilienne%2C%206%20rue%20Dagorno%2C%2075012%20Paris&output=embed";
 
 export default function ImageSlide() {
-  const containerRef = useRef(null);
-  const inView = useInView(containerRef, { once: true, margin: "-50px" });
+  const containerRef = useRef<HTMLDivElement>(null);
+  const [shouldLoadMap, setShouldLoadMap] = useState(false);
+  const [isMapReady, setIsMapReady] = useState(false);
+
+  useEffect(() => {
+    const container = containerRef.current;
+    if (!container) return;
+
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setShouldLoadMap(true);
+          observer.disconnect();
+        }
+      },
+      { threshold: 0.05 },
+    );
+
+    observer.observe(container);
+    return () => observer.disconnect();
+  }, []);
 
   return (
     <div
@@ -19,33 +37,38 @@ export default function ImageSlide() {
         height: "auto",
       }}
     >
-      <iframe
-        title="Localisation de La Sicilienne"
-        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d41986.00609450645!2d2.464657439453113!3d48.874886317986814!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e6734ae1c8dabd%3A0xff7b1228e00744e4!2sLe%20Tiger%20Asian%20FOOD!5e0!3m2!1sfr!2sfr!4v1753626946544!5m2!1sfr!2sfr"
-        className="absolute inset-0 z-0 h-full w-full rounded-xl border-4 border-white"
-        loading="lazy"
-        referrerPolicy="no-referrer-when-downgrade"
-      />
-      <MotionImage
+      {shouldLoadMap && (
+        <iframe
+          title="Localisation de La Sicilienne"
+          src={MAP_EMBED_URL}
+          className="absolute inset-0 z-0 h-full w-full rounded-xl border-4 border-white"
+          loading="lazy"
+          referrerPolicy="no-referrer-when-downgrade"
+          onLoad={() => setIsMapReady(true)}
+        />
+      )}
+      <Image
         src="/pizza-slide-1.webp"
         alt="Pizza margherita italienne de La Sicilienne aux tomates et au basilic"
         width={487}
         height={362}
-        className="absolute top-0 left-0 h-full w-1/2 object-cover z-10"
-        initial={{ x: "0%" }}
-        animate={inView ? { x: "-100%" } : { x: "0%" }}
-        transition={{ duration: 1.2, ease: "easeInOut" }}
+        sizes="(max-width: 640px) 36vw, (max-width: 1350px) 40vw, 487px"
+        quality={60}
+        className={`image-slide-panel absolute left-0 top-0 z-10 h-full w-1/2 object-cover ${
+          isMapReady ? "image-slide-panel-left-open" : ""
+        }`}
       />
 
-      <MotionImage
+      <Image
         src="/pizza-slide-2.webp"
         alt="Pizza margherita italienne de La Sicilienne aux tomates et au basilic"
         width={487}
         height={362}
-        className="absolute top-0 right-0 h-full w-1/2 object-cover z-10"
-        initial={{ x: "0%" }}
-        animate={inView ? { x: "100%" } : { x: "0%" }}
-        transition={{ duration: 1.2, ease: "easeInOut" }}
+        sizes="(max-width: 640px) 36vw, (max-width: 1350px) 40vw, 487px"
+        quality={60}
+        className={`image-slide-panel absolute right-0 top-0 z-10 h-full w-1/2 object-cover ${
+          isMapReady ? "image-slide-panel-right-open" : ""
+        }`}
       />
     </div>
   );

@@ -1,4 +1,3 @@
-import { motion } from "motion/react";
 export default function Burger({
   isClicked,
   onClick,
@@ -7,24 +6,19 @@ export default function Burger({
   onClick: () => void;
 }) {
   return (
-    <div
-      className="flex flex-col gap-2 cursor-pointer select-none border sm:mr-10 mr-3 border-white rounded-full p-5 hover:bg-red-500fff transition-colors z-50"
+    <button
+      type="button"
+      className={`burger-button z-50 mr-3 flex cursor-pointer select-none flex-col gap-2 rounded-full border border-white p-5 sm:mr-10 ${
+        isClicked ? "burger-button-open" : ""
+      }`}
       onClick={onClick}
+      aria-label={isClicked ? "Fermer le menu" : "Ouvrir le menu"}
+      aria-expanded={isClicked}
+      aria-controls="site-menu"
     >
-      <motion.span
-        className={`w-10 bg-white h-0.5 rounded-lg`}
-        animate={isClicked ? { rotate: "45deg", translateY: "10px" } : {}}
-        transition={{ type: "spring" }}
-      ></motion.span>
-      <motion.span
-        className={`w-10 bg-white h-0.5 rounded-lg`}
-        animate={isClicked ? { width: 0 } : { width: "2.5rem" }}
-      ></motion.span>
-      <motion.span
-        className={`w-10 bg-white h-0.5 rounded-lg `}
-        animate={isClicked ? { rotate: "-45deg", translateY: "-10px" } : {}}
-        transition={{ type: "spring" }}
-      ></motion.span>
-    </div>
+      <span className="burger-line h-0.5 w-10 rounded-lg bg-white" />
+      <span className="burger-line h-0.5 w-10 rounded-lg bg-white" />
+      <span className="burger-line h-0.5 w-10 rounded-lg bg-white" />
+    </button>
   );
 }

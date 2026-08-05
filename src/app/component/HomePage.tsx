@@ -15,11 +15,11 @@ export default function HomePage() {
         </div>
         <Link
           target="_blank"
+          rel="noopener noreferrer"
           href="https://www.tripadvisor.fr/Restaurant_Review-g187147-d12326598-Reviews-La_Sicilienne_Pizzeria-Paris_Ile_de_France.html"
+          className="button-3d"
         >
-          <button className="button-3d">
-            <span>Mettez un avis !</span>
-          </button>
+          <span>Mettez un avis !</span>
         </Link>
       </section>
       <section className="home-reveal home-on-view mx-auto mt-20 grid w-[80vw] gap-8 lg:grid-cols-[1.2fr_0.8fr]">

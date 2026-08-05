@@ -1,16 +1,13 @@
 import { desserts, pizzas, salades } from "../plat";
 import Image from "next/image";
+import { toSlug } from "@/lib/slug";
 interface PlatPageProps {
   name: string;
 }
 
-function normalize(value: string) {
-  return value.trim().toLowerCase();
-}
-
 export default function PlatPage({ name }: PlatPageProps) {
   const item = [...pizzas, ...salades, ...desserts].find(
-    (plat) => normalize(plat.name) === normalize(name),
+    (plat) => toSlug(plat.name) === toSlug(name),
   );
   const allergenes = item?.allergenes ?? [];
 
@@ -21,17 +18,18 @@ export default function PlatPage({ name }: PlatPageProps) {
           <div className="mx-auto w-full md:w-[40vw]">
             <Image
               className="mx-auto h-auto w-full max-w-125 rounded-2xl bg-black"
-              src=""
+              src={item.image || "/pizza-slide-1.webp"}
               width={500}
               height={500}
+              sizes="(max-width: 768px) 90vw, 40vw"
               alt={item.name}
             />
           </div>
           <div className="my-8 h-0.5 w-full rounded-full bg-white md:mx-10 md:my-0 md:h-130 md:w-0.5" />
           <div className="mx-auto flex w-full flex-col justify-center md:w-[30vw]">
-            <h2 className="text-3xl font-semibold leading-tight tracking-tight text-white sm:text-4xl">
+            <h1 className="text-3xl font-semibold leading-tight tracking-tight text-white sm:text-4xl">
               {item.name}
-            </h2>
+            </h1>
             <strong className="mt-4 text-base font-semibold text-white/90">
               5€
             </strong>
