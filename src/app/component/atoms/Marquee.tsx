@@ -2,6 +2,7 @@ import Image from "next/image";
 import { cn } from "@/lib/utils";
 import { Marquee } from "../../../magicui/marquee";
 import { pizzas, salades } from "../../plat";
+import toSlug from "../../../app/slug";
 import Link from "next/link";
 const reviews = [...pizzas, ...salades].filter((x) => x.bestsellers === true);
 const firstRow = reviews.slice(0, reviews.length / 2);
@@ -35,7 +36,7 @@ const ReviewCard = ({
       )}
     >
       <Link
-        href={`/menu/${type}/${name}`}
+        href={`/menu/${type}/${toSlug(name)}`}
         className="flex flex-col items-center"
         prefetch={false}
       >
