@@ -28,7 +28,7 @@ export default function ImageSlide() {
       {shouldLoadMap && (
         <iframe
           title="Localisation de La Sicilienne"
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d41986.00609450645!2d2.464657439453113!3d48.874886317986814!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e6734ae1c8dabd%3A0xff7b1228e00744e4!2sLe%20Tiger%20Asian%20FOOD!5e0!3m2!1sfr!2sfr!4v1753626946544!5m2!1sfr!2sfr"
+          src="https://www.google.com/maps?q=La+Sicilienne,+Rue+Dagorno,+75012+Paris&z=17&output=embed"
           className="absolute inset-0 z-0 h-full w-full rounded-xl border-4 border-white"
           loading="lazy"
           referrerPolicy="no-referrer-when-downgrade"
