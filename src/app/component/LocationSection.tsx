@@ -3,7 +3,7 @@ import ImageSlide from "./atoms/ImageSlide";
 
 export default function LocationSection() {
   return (
-    <section className="w-[90%] max-w-5xl mx-auto my-12 sm:my-16 relative z-10 text-center px-2 text-gray-900 dark:text-gray-100">
+    <section className="relative z-10 mx-auto mb-12 mt-20 w-[80vw] max-w-5xl px-2 text-center text-gray-900 sm:mb-16 dark:text-gray-100">
       <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-3 text-white">
         Retrouvez-nous
       </h2>

@@ -37,9 +37,11 @@ export default function HomePage() {
 
         <div className="home-reveal home-on-view home-right mx-auto flex w-full max-w-md flex-col justify-center rounded-[2rem] border border-white/10 bg-linear-to-br from-white/10 to-white/5 p-5 text-center shadow-[0_20px_60px_rgba(0,0,0,0.18)] backdrop-blur-sm">
           <div className="flex flex-col items-center">
-            <h2 className="text-4xl font-bold uppercase tracking-tight text-white">
-              Menu
-            </h2>
+            <Link href="/menu/pizza">
+              <h2 className="text-4xl font-bold uppercase tracking-tight text-white">
+                Menu
+              </h2>
+            </Link>
             <p className="mt-4 max-w-sm text-base leading-7 text-white/75">
               Découvrez notre sélection de plats italiens, préparés avec des
               ingrédients frais et authentiques.
@@ -49,9 +51,7 @@ export default function HomePage() {
           <div className="mt-6 h-px w-full bg-linear-to-r from-white/0 via-white/30 to-white/0" />
         </div>
       </section>
-      <section className="mx-auto mt-20 flex w-[80vw] flex-col items-center justify-center gap-6 text-center">
-        <LocationSection />
-      </section>
+      <LocationSection />
     </main>
   );
 }
