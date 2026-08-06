@@ -16,7 +16,7 @@ export default function Window({
   ];
 
   return (
-    <motion.span
+    <motion.div
       initial={{ width: "100vw", height: "0vh", bottom: 0 }}
       animate={
         isClicked
@@ -46,6 +46,6 @@ export default function Window({
           );
         })}
       </div>
-    </motion.span>
+    </motion.div>
   );
 }
