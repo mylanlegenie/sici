@@ -1,22 +1,23 @@
 import PlatDetailsPage from "../../../component/PlatDetailsPage";
 import { salades } from "../../../plat";
+import toSlug from "../../../slug";
 
 type PageProps = {
   params: {
-    nom: string;
+    name: string;
   };
 };
 export function generateStaticParams() {
   return salades.map((salad) => ({
-    name: salad.name,
+    name: toSlug(salad.name),
   }));
 }
 export default async function Page({ params }: PageProps) {
-  const { nom } = await params;
+  const { name } = await params;
 
   return (
     <>
-      <PlatDetailsPage name={nom} />
+      <PlatDetailsPage name={name} />
     </>
   );
 }
