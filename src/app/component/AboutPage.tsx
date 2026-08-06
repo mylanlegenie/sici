@@ -7,7 +7,7 @@ import { HORRAIRES } from "../horraire";
 
 export default function AboutPage() {
   return (
-    <main className="mx-auto mb-12 mt-6 flex flex-col items-center justify-center bg-red-500 sm:mb-16">
+    <section className="mx-auto mb-12 mt-6 flex flex-col items-center justify-center bg-red-500 sm:mb-16">
       <div className="flex flex-col items-center justify-center gap-3">
         <h1 className="text-3xl font-bold text-white sm:text-4xl">À Propos</h1>
         <div className="h-1 w-32 rounded-full bg-white sm:w-40"></div>
@@ -73,7 +73,8 @@ export default function AboutPage() {
 
           <div className="mt-6 space-y-2">
             <h2 className="flex items-center gap-3 text-sm font-semibold uppercase tracking-wide text-white sm:text-base">
-              <NearbyIcon className="h-5 w-5 shrink-0 text-red-200" />À proximité
+              <NearbyIcon className="h-5 w-5 shrink-0 text-red-200" />À
+              proximité
             </h2>
             <div className="flex items-center gap-2 text-sm font-medium text-white/85 sm:text-base">
               <p>Metro Bel-Air, Nation Daumesnil</p>
@@ -81,6 +82,6 @@ export default function AboutPage() {
           </div>
         </section>
       </div>
-    </main>
+    </section>
   );
 }
