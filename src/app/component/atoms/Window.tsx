@@ -16,8 +16,10 @@ export default function Window({
   ];
 
   return (
-    <motion.div
+    <motion.nav
+      id="menu-principal"
       initial={{ width: "100vw", height: "0vh", bottom: 0 }}
+      inert={!isClicked}
       animate={
         isClicked
           ? { width: "100vw", height: "100vh", top: 0, overflow: "visible" }
@@ -46,6 +48,6 @@ export default function Window({
           );
         })}
       </div>
-    </motion.div>
+    </motion.nav>
   );
 }
