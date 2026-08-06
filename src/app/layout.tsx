@@ -29,12 +29,14 @@ export default function RootLayout({
         geist.variable,
       )}
     >
-      <body className="min-h-full flex flex-col">
-        <main className="bg-red-500 pb-6">
+      <body className="min-h-full flex flex-col bg-red-500">
+        <header className="h-20 flex w-full justify-between items-center mt-10">
           <NavBar />
-          {children}
-        </main>
-        <Footer />
+        </header>
+        <main className="pb-6">{children}</main>
+        <footer className="mx-auto w-full border-t border-white/20 py-6 px-5 text-sm text-white/70 bg-red-500">
+          <Footer />
+        </footer>
       </body>
     </html>
   );
