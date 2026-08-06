@@ -20,8 +20,8 @@ export default function Window({
       initial={{ width: "100vw", height: "0vh", bottom: 0 }}
       animate={
         isClicked
-          ? { width: "100vw", height: "100vh", top: 0 }
-          : { width: "100vw", height: "0vh", bottom: 0 }
+          ? { width: "100vw", height: "100vh", top: 0, overflow: "visible" }
+          : { width: "100vw", height: "0vh", bottom: 0, overflow: "hidden" }
       }
       transition={
         isClicked
