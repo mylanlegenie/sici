@@ -1,9 +1,4 @@
-import {
-  desserts,
-  labelsAllergenes,
-  pizzas,
-  salades,
-} from "../plat";
+import { desserts, labelsAllergenes, pizzas, salades } from "../plat";
 import Image from "next/image";
 interface PlatPageProps {
   name: string;
@@ -113,38 +108,38 @@ export default function PlatPage({ name }: PlatPageProps) {
           </div>
 
           <section
-            className="mt-10 rounded-2xl border border-white/20 bg-red-600 p-5 shadow-lg sm:p-7"
+            className="mt-10 rounded-2xl bg-white p-5 shadow-lg sm:p-7"
             aria-labelledby="nutrition-title"
           >
             <h3
               id="nutrition-title"
-              className="text-2xl font-bold text-white sm:text-3xl"
+              className="text-2xl font-bold text-zinc-900 sm:text-3xl"
             >
               Informations nutritionnelles
             </h3>
 
-            <dl className="mt-5 border-t border-white/30">
+            <dl className="mt-5 border-t border-zinc-200">
               {valeursNutritionnelles.map(
                 ({ label, value, detailLabel, detailValue }) => (
-                <div
-                  key={label}
-                  className="border-b border-dashed border-white/30 py-4"
-                >
-                  <div className="flex items-center justify-between gap-5">
-                    <dt className="text-base font-medium text-white sm:text-lg">
-                      {label}
-                    </dt>
-                    <dd className="shrink-0 text-right text-base font-semibold text-white sm:text-lg">
-                      {value}
-                    </dd>
-                  </div>
-                  {detailLabel && detailValue ? (
-                    <div className="mt-2 flex items-center justify-between gap-5 text-sm text-white/75 sm:text-base">
-                      <dt>{detailLabel}</dt>
-                      <dd className="shrink-0 text-right">{detailValue}</dd>
+                  <div
+                    key={label}
+                    className="border-b border-dashed border-zinc-300 py-4"
+                  >
+                    <div className="flex items-center justify-between gap-5">
+                      <dt className="text-base font-medium text-zinc-800 sm:text-lg">
+                        {label}
+                      </dt>
+                      <dd className="shrink-0 text-right text-base text-zinc-700 sm:text-lg">
+                        {value}
+                      </dd>
                     </div>
-                  ) : null}
-                </div>
+                    {detailLabel && detailValue ? (
+                      <div className="mt-2 flex items-center justify-between gap-5 text-sm text-zinc-600 sm:text-base">
+                        <dt>{detailLabel}</dt>
+                        <dd className="shrink-0 text-right">{detailValue}</dd>
+                      </div>
+                    ) : null}
+                  </div>
                 ),
               )}
             </dl>
