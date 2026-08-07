@@ -47,6 +47,7 @@ export const labelsAllergenes: Record<keyof Allergenes, string> = {
 
 type PlatBase = {
   name: string;
+  categorie: "Pizza" | "Salade" | "Dessert";
   image: string;
   bestsellers: boolean;
   allergenes: Allergenes;
@@ -71,6 +72,7 @@ type PlatSimple = PlatBase & {
 export const pizzas: Pizza[] = [
   {
     name: "CLASSICA",
+    categorie: "Pizza",
     type: "pizza",
     image: "",
     bestsellers: true,
@@ -106,6 +108,7 @@ export const pizzas: Pizza[] = [
   },
   {
     name: "REGINA",
+    categorie: "Pizza",
     type: "pizza",
     image: "",
     bestsellers: true,
@@ -141,6 +144,7 @@ export const pizzas: Pizza[] = [
   },
   {
     name: "SICILIENNE",
+    categorie: "Pizza",
     type: "pizza",
     image: "",
     bestsellers: true,
@@ -176,6 +180,7 @@ export const pizzas: Pizza[] = [
   },
   {
     name: "CALZONE (soufflée)",
+    categorie: "Pizza",
     type: "pizza",
     image: "",
     bestsellers: false,
@@ -211,6 +216,7 @@ export const pizzas: Pizza[] = [
   },
   {
     name: "ORIENTALE",
+    categorie: "Pizza",
     type: "pizza",
     image: "",
     bestsellers: true,
@@ -246,6 +252,7 @@ export const pizzas: Pizza[] = [
   },
   {
     name: "4 SAISONS",
+    categorie: "Pizza",
     type: "pizza",
     image: "",
     bestsellers: false,
@@ -281,6 +288,7 @@ export const pizzas: Pizza[] = [
   },
   {
     name: "PAYSANNE",
+    categorie: "Pizza",
     type: "pizza",
     image: "",
     bestsellers: true,
@@ -316,6 +324,7 @@ export const pizzas: Pizza[] = [
   },
   {
     name: "RIMINI",
+    categorie: "Pizza",
     type: "pizza",
     image: "",
     bestsellers: false,
@@ -354,6 +363,7 @@ export const pizzas: Pizza[] = [
 export const salades: PlatSimple[] = [
   {
     name: "PALERMO",
+    categorie: "Salade",
     type: "salade",
     image: "",
     bestsellers: false,
@@ -391,6 +401,7 @@ export const salades: PlatSimple[] = [
   },
   {
     name: "PARIGI",
+    categorie: "Salade",
     type: "salade",
     image: "",
     bestsellers: false,
@@ -427,6 +438,7 @@ export const salades: PlatSimple[] = [
   },
   {
     name: "ITALIENNE",
+    categorie: "Salade",
     type: "salade",
     image: "",
     bestsellers: false,
@@ -463,6 +475,7 @@ export const salades: PlatSimple[] = [
   },
   {
     name: "FERMIÈRE",
+    categorie: "Salade",
     type: "salade",
     image: "",
     bestsellers: false,
@@ -499,6 +512,7 @@ export const salades: PlatSimple[] = [
   },
   {
     name: "CHAVIGNOL",
+    categorie: "Salade",
     type: "salade",
     image: "",
     bestsellers: false,
@@ -536,6 +550,7 @@ export const salades: PlatSimple[] = [
   },
   {
     name: "NORVÉGIENNE",
+    categorie: "Salade",
     type: "salade",
     image: "",
     bestsellers: false,
@@ -576,6 +591,7 @@ export const salades: PlatSimple[] = [
 export const desserts: PlatSimple[] = [
   {
     name: "TARTE AU DAIM",
+    categorie: "Dessert",
     type: "dessert",
     image: "",
     bestsellers: false,
@@ -611,6 +627,7 @@ export const desserts: PlatSimple[] = [
   },
   {
     name: "BROWNIE",
+    categorie: "Dessert",
     type: "dessert",
     image: "",
     bestsellers: false,
@@ -646,6 +663,7 @@ export const desserts: PlatSimple[] = [
   },
   {
     name: "TIRAMISU",
+    categorie: "Dessert",
     type: "dessert",
     image: "",
     bestsellers: false,
@@ -681,6 +699,7 @@ export const desserts: PlatSimple[] = [
   },
   {
     name: "PANINI NUTELLA",
+    categorie: "Dessert",
     type: "dessert",
     image: "",
     bestsellers: false,
