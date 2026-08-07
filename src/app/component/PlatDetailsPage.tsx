@@ -1,16 +1,17 @@
 import { desserts, labelsAllergenes, pizzas, salades } from "../plat";
+import toSlug from "../slug";
 import Image from "next/image";
 interface PlatPageProps {
   name: string;
+  categorie?: string;
 }
 
-function normalize(value: string) {
-  return value.trim().toLowerCase();
-}
-
-export default function PlatPage({ name }: PlatPageProps) {
-  const item = [...pizzas, ...salades, ...desserts].find(
-    (plat) => normalize(plat.name) === normalize(name),
+export default function PlatPage({ name, categorie }: PlatPageProps) {
+  const items = [...pizzas, ...salades, ...desserts];
+  const item = items.find(
+    (plat) =>
+      toSlug(plat.name) === toSlug(name) &&
+      (!categorie || toSlug(plat.categorie) === categorie),
   );
   const allergenes = item
     ? Object.entries(item.allergenes)
@@ -72,6 +73,9 @@ export default function PlatPage({ name }: PlatPageProps) {
               <h2 className="text-3xl font-semibold leading-tight tracking-tight text-white sm:text-4xl">
                 {item.name}
               </h2>
+              <p className="mt-2 text-sm font-semibold uppercase tracking-wider text-white/70">
+                {item.categorie}
+              </p>
               <strong className="mt-4 text-base font-semibold text-white/90">
                 5€
               </strong>

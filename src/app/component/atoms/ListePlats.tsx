@@ -21,7 +21,7 @@ export default function Plat({ platType }: PlatsProps) {
             name={item.name}
             price={isPizza ? undefined : item?.price}
             key={item.name}
-            platType={platType}
+            platType={item.categorie}
             sizePrices={
               isPizza
                 ? {
