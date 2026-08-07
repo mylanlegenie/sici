@@ -1,4 +1,4 @@
-import { desserts, labelsAllergenes, pizzas, salades } from "../plat";
+import { desserts, labelsAllergenes, pizza, salades } from "../plat";
 import toSlug from "../slug";
 import Image from "next/image";
 interface PlatPageProps {
@@ -7,7 +7,7 @@ interface PlatPageProps {
 }
 
 export default function PlatPage({ name, categorie }: PlatPageProps) {
-  const items = [...pizzas, ...salades, ...desserts];
+  const items = [...pizza, ...salades, ...desserts];
   const item = items.find(
     (plat) =>
       toSlug(plat.name) === toSlug(name) &&

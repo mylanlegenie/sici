@@ -1,17 +1,13 @@
-import { pizzas, desserts, salades } from "../../plat";
+import { pizza, desserts, salades } from "../../plat";
 import Card from "./Card";
 
 interface PlatsProps {
-  platType: "Pizza" | "Salade" | "Dessert";
+  platType: "pizza" | "salade" | "dessert";
 }
 
 export default function Plat({ platType }: PlatsProps) {
   const data =
-    platType === "Salade"
-      ? salades
-      : platType === "Dessert"
-        ? desserts
-        : pizzas;
+    platType === "salade" ? salades : platType === "dessert" ? desserts : pizza;
   return (
     <div className="mx-auto grid w-full max-w-7xl grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 sm:gap-6">
       {data.map((item) => {

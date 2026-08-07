@@ -69,7 +69,7 @@ type PlatSimple = PlatBase & {
   price: number | null;
 };
 
-export const pizzas: Pizza[] = [
+export const pizza: Pizza[] = [
   {
     name: "CLASSICA",
     categorie: "Pizza",
