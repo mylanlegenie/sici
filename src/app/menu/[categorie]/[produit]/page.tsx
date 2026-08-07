@@ -1,7 +1,7 @@
 import PlatDetailsPage from "../../../component/PlatDetailsPage";
 import { pizza, salades, desserts } from "../../../plat";
 import toSlug from "../../../slug";
-import { notFound } from "next/navigation";
+import { notFound } from "next/dist/client/components/not-found";
 
 type Category = "pizza" | "salade" | "dessert";
 
@@ -38,9 +38,11 @@ export default async function Page({ params }: PageProps) {
     notFound();
   }
 
+  const selectedPlat: Category = category;
+
   return (
     <>
-      <PlatDetailsPage name={produit} categorie={category} />
+      <PlatDetailsPage name={produit} categorie={selectedPlat} />
     </>
   );
 }

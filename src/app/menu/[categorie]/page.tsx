@@ -2,7 +2,7 @@ import TypeList from "../../component/atoms/TypeList";
 import Plats from "../../component/atoms/ListePlats";
 
 import toSlug from "../../slug";
-import { notFound } from "next/navigation";
+import { notFound } from "next/dist/client/components/not-found";
 
 type Category = "dessert" | "pizza" | "salade";
 
@@ -28,10 +28,12 @@ export default async function Page({ params }: PageProps) {
     notFound();
   }
 
+  const selectedPlat: Category = category;
+
   return (
     <>
-      <TypeList selectedPlat={category} />
-      <Plats platType={category} />
+      <TypeList selectedPlat={selectedPlat} />
+      <Plats platType={selectedPlat} />
     </>
   );
 }

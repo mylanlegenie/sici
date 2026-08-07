@@ -1,7 +1,6 @@
-import type { Metadata } from "next";
 import InfoPageLayout from "../component/InfoPageLayout";
 
-export const metadata: Metadata = {
+export const metadata = {
   title: "Confidentialité | La Sicilienne",
   description: "Politique de confidentialité du site La Sicilienne.",
 };
