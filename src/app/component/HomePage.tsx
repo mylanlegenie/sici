@@ -7,8 +7,8 @@ export default function HomePage() {
     <>
       <section className="home-reveal mx-auto my-16 flex h-[60vh] w-[60vw] flex-col items-center justify-center gap-10 space-y-3">
         <div className="relative">
-          <div className="home-reveal home-scale-x home-delay-1 absolute -left-6 top-6 h-24 w-1 origin-top rounded-full bg-white/40 sm:ml-0 ml-2" />
-          <h1 className="home-reveal home-delay-1 whitespace-nowrap sm:text-7xl text-5xl font-medium tracking-tight text-white">
+          <div className="home-reveal home-scale-x home-delay-1 absolute left-0 top-1/2 h-24 w-1 -translate-x-[calc(100%+1rem)] -translate-y-1/2 rounded-full bg-white/40 sm:-left-6 sm:ml-0 ml-2" />
+          <h1 className="home-reveal home-delay-1 whitespace-nowrap sm:text-7xl  min-[420px]:text-5xl min-[340px]:text-4xl text-3xl font-medium tracking-tight text-white">
             <span className="block">La Sicilienne,</span>
             <span className="block text-white/80">LA Pizzeria du 12ème</span>
           </h1>

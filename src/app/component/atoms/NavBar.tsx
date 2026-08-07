@@ -13,7 +13,7 @@ export default function NavBar() {
       <div className="nav-slide relative">
         <Link
           href="/"
-          className="text-white font-bold tracking-widest p-2 md:text-7xl text-4xl select-none cursor-pointer"
+          className="text-white font-bold tracking-widest p-2 md:text-7xl min-[380px]:text-4xl text-3xl select-none cursor-pointer"
         >
           {name.split("").map((letter, index) => (
             <motion.span
