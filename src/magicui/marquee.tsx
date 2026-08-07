@@ -1,36 +1,36 @@
-import { type ComponentPropsWithoutRef } from "react"
+import { type ComponentPropsWithoutRef } from "react";
 
-import { cn } from "@/lib/utils"
+import { cn } from "@/lib/utils";
 
 interface MarqueeProps extends ComponentPropsWithoutRef<"div"> {
   /**
    * Optional CSS class name to apply custom styles
    */
-  className?: string
+  className?: string;
   /**
    * Whether to reverse the animation direction
    * @default false
    */
-  reverse?: boolean
+  reverse?: boolean;
   /**
    * Whether to pause the animation on hover
    * @default false
    */
-  pauseOnHover?: boolean
+  pauseOnHover?: boolean;
   /**
    * Content to be displayed in the marquee
    */
-  children: React.ReactNode
+  children: React.ReactNode;
   /**
    * Whether to animate vertically instead of horizontally
    * @default false
    */
-  vertical?: boolean
+  vertical?: boolean;
   /**
    * Number of times to repeat the content
    * @default 4
    */
-  repeat?: number
+  repeat?: number;
 }
 
 export function Marquee({
@@ -39,7 +39,7 @@ export function Marquee({
   pauseOnHover = false,
   children,
   vertical = false,
-  repeat = 4,
+  repeat = 3,
   ...props
 }: MarqueeProps) {
   return (
@@ -51,7 +51,7 @@ export function Marquee({
           "flex-row": !vertical,
           "flex-col": vertical,
         },
-        className
+        className,
       )}
     >
       {Array(repeat)
@@ -70,5 +70,5 @@ export function Marquee({
           </div>
         ))}
     </div>
-  )
+  );
 }
