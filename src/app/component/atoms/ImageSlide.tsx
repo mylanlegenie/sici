@@ -36,7 +36,7 @@ export default function ImageSlide() {
       )}
       <MotionImage
         src="/pizza-slide-1.webp"
-        alt="Pizza margherita italienne de La Sicilienne aux tomates et au basilic"
+        alt=""
         width={487}
         height={362}
         sizes={SLIDE_IMAGE_SIZES}
@@ -49,7 +49,7 @@ export default function ImageSlide() {
 
       <MotionImage
         src="/pizza-slide-2.webp"
-        alt="Pizza margherita italienne de La Sicilienne aux tomates et au basilic"
+        alt=""
         width={487}
         height={362}
         sizes={SLIDE_IMAGE_SIZES}
