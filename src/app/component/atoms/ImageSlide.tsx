@@ -37,6 +37,7 @@ export default function ImageSlide() {
       <MotionImage
         src="/pizza-slide-1.webp"
         alt=""
+        aria-hidden="true"
         width={487}
         height={362}
         sizes={SLIDE_IMAGE_SIZES}
