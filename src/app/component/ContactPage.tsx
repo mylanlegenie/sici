@@ -5,11 +5,11 @@ import PhoneIcon from "./atoms/icons/PhoneIcon";
 import CopyButton from "./atoms/CopyButton";
 import { HORRAIRES } from "../horraire";
 
-export default function AboutPage() {
+export default function ContactPage() {
   return (
     <section className="mx-auto mb-12 mt-6 flex flex-col items-center justify-center bg-red-500 sm:mb-16">
       <div className="flex flex-col items-center justify-center gap-3">
-        <h1 className="text-3xl font-bold text-white sm:text-4xl">À Propos</h1>
+        <h1 className="text-3xl font-bold text-white sm:text-4xl">Contact</h1>
         <div className="h-1 w-32 rounded-full bg-white sm:w-40"></div>
       </div>
 

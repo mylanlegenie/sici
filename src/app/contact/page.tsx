@@ -1,11 +1,10 @@
 import type { Metadata } from "next";
-import AboutPage from "../component/AboutPage";
-
+import ContactPage from "../component/ContactPage";
 export const metadata: Metadata = {
-  title: "À propos | La Sicilienne",
+  title: "Contact | La Sicilienne",
   description: "Horaires, coordonnées et accès à La Sicilienne.",
 };
 
-export default function About() {
-  return <AboutPage />;
+export default function Contact() {
+  return <ContactPage />;
 }
