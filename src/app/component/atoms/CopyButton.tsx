@@ -35,7 +35,7 @@ export default function CopyButton({
 
       <span aria-live="polite" className="text-sm text-white">
         {status === "success" && "Copié !"}
-        {status === "error" && "Impossible de copier"}
+        {status === "error" && "Erreur"}
       </span>
     </div>
   );

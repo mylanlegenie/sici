@@ -13,7 +13,7 @@ export default function ContactPage() {
     <section className="mx-auto mb-12 mt-6 flex flex-col items-center justify-center bg-red-500 sm:mb-16">
       <div className="flex flex-col items-center justify-center gap-3">
         <h1 className="text-3xl font-bold text-white sm:text-4xl">
-          Contact et Horaires
+          Contact et horaires
         </h1>
         <div className="h-1 w-32 rounded-full bg-white sm:w-40"></div>
       </div>
@@ -27,20 +27,23 @@ export default function ContactPage() {
             </h2>
           </div>
 
-          {HORAIRES.map((horaire) => (
-            <dl
-              key={horaire[0]}
-              className="flex flex-col justify-between text-sm text-white sm:text-base lg:px-4"
-            >
-              <div className="flex items-center justify-between gap-4">
-                <dt>{horaire[0]}</dt>
-                <dd className="shrink-0">{horaire[1]}</dd>
+          <dl className="text-sm text-white sm:text-base lg:px-4">
+            {HORAIRES.map(([jour, heures], index) => (
+              <div key={jour}>
+                <div className="flex items-center justify-between gap-4">
+                  <dt>{jour}</dt>
+                  <dd className="shrink-0">{heures}</dd>
+                </div>
+
+                {index < HORAIRES.length - 1 && (
+                  <div
+                    aria-hidden="true"
+                    className="my-2 h-0.5 w-full bg-white opacity-50"
+                  />
+                )}
               </div>
-              {horaire[0] !== "Dimanche" && (
-                <div className="my-2 h-0.5 w-full bg-white opacity-50"></div>
-              )}
-            </dl>
-          ))}
+            ))}
+          </dl>
         </section>
 
         <section className="h-auto min-w-0 rounded-2xl border-2 border-white p-4 text-white sm:p-5 lg:h-[53vh]">
@@ -52,6 +55,7 @@ export default function ContactPage() {
             <div className="flex items-start justify-between gap-3 font-medium text-white/90">
               <Link
                 target="_blank"
+                rel="noopener noreferrer"
                 href="https://www.google.com/maps/dir/?api=1&destination=6%20rue%20Dagorno%2C%2075012%20Paris"
               >
                 <p className="flex min-w-0 items-start gap-3">
@@ -59,13 +63,11 @@ export default function ContactPage() {
                   <span>{adresse}</span>
                 </p>
               </Link>
-              <span className="shrink-0">
-                <CopyButton value={adresse} ariaLabel="Copier l'adresse" />
-              </span>
+              <CopyButton value={adresse} ariaLabel="Copier l'adresse" />
             </div>
 
             <div className="flex items-start justify-between gap-3 font-medium text-white">
-              <Link target="_blank" href={`tel:${numéro.replace(/\s/g, "")}`}>
+              <Link href={`tel:+33${numéro.replace(/\s/g, "")}`}>
                 <p className="flex min-w-0 items-center gap-3">
                   <PhoneIcon className="h-5 w-5 shrink-0 text-red-200" />
                   <span>{numéro}</span>
