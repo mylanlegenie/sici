@@ -4,6 +4,7 @@ import NearbyIcon from "./atoms/icons/NearbyIcon";
 import PhoneIcon from "./atoms/icons/PhoneIcon";
 import CopyButton from "./atoms/CopyButton";
 import { HORRAIRES } from "../horraire";
+import Link from "next/link";
 
 export default function ContactPage() {
   return (
@@ -47,27 +48,34 @@ export default function ContactPage() {
 
           <div className="mt-4 space-y-4 text-sm sm:text-base">
             <div className="flex items-start justify-between gap-3 font-medium text-white/90">
-              <p className="flex min-w-0 items-start gap-3">
-                <LocationIcon className="h-5 w-5 shrink-0 text-red-200" />
-                <span>6 rue Dagorno, 75012 Paris</span>
-              </p>
+              <Link
+                target="_blank"
+                href="https://www.google.com/maps/dir/?api=1&destination=6%20rue%20Dagorno%2C%2075012%20Paris"
+              >
+                <p className="flex min-w-0 items-start gap-3">
+                  <LocationIcon className="h-5 w-5 shrink-0 text-red-200" />
+                  <span>6 rue Dagorno, 75012 Paris</span>
+                </p>
+              </Link>
               <span className="shrink-0">
                 <CopyButton
                   value="6 rue Dagorno, 75012 Paris"
-                  arialabel="Copier l'adresse"
+                  ariaLabel="Copier l'adresse"
                 />
               </span>
             </div>
 
             <div className="flex items-start justify-between gap-3 font-medium text-white">
-              <p className="flex min-w-0 items-center gap-3">
-                <PhoneIcon className="h-5 w-5 shrink-0 text-red-200" />
-                <span>01 53 33 03 33</span>
-              </p>
+              <Link target="_blank" href="tel:0153330333">
+                <p className="flex min-w-0 items-center gap-3">
+                  <PhoneIcon className="h-5 w-5 shrink-0 text-red-200" />
+                  <span>01 53 33 03 33</span>
+                </p>
+              </Link>
               <span className="shrink-0">
                 <CopyButton
                   value="01 53 33 03 33"
-                  arialabel="Copier le numéro de téléphone"
+                  ariaLabel="Copier le numéro de téléphone"
                 />
               </span>
             </div>
