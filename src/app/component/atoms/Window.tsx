@@ -7,7 +7,7 @@ import { type Dispatch, type SetStateAction, useEffect, useRef } from "react";
 const RUBRIQUES = [
   { title: "Accueil", link: "/" },
   { title: "Menu", link: "/menu/pizza" },
-  { title: "Contact", link: "/contact-et-horaires" },
+  { title: "Contact", link: "/contact" },
 ] as const;
 
 type WindowProps = {
