@@ -51,16 +51,16 @@ const ReviewCard = ({
           <p className="mt-2 text-[0.55rem] font-semibold uppercase tracking-[0.14em] text-neutral-500 md:mt-4 md:text-[0.65rem] md:tracking-[0.22em]">
             {category}
           </p>
-          <figcaption className="mt-1 text-sm font-semibold leading-tight text-neutral-950 md:mt-2 md:text-xl">
+          <h3 className="mt-1 text-sm font-semibold leading-tight text-neutral-950 md:mt-2 md:text-xl">
             {name}
-          </figcaption>
+          </h3>
           <p className="mt-2 rounded-full border border-neutral-200 px-2 py-0.5 text-xs font-medium text-neutral-700 md:mt-3 md:px-3 md:py-1 md:text-sm">
             {prix?.junior != null ? `${prix.junior.toFixed(2)} €` : "N/A"}
           </p>
         </div>
-        <blockquote className="mt-2 line-clamp-2 text-[0.65rem] leading-4 text-neutral-600 md:mt-4 md:line-clamp-3 md:text-sm md:leading-6">
+        <p className="mt-2 line-clamp-2 text-[0.65rem] leading-4 text-neutral-600 md:mt-4 md:line-clamp-3 md:text-sm md:leading-6">
           {description}
-        </blockquote>
+        </p>
       </Link>
     </figure>
   );
