@@ -3,7 +3,7 @@ import LocationIcon from "./atoms/icons/LocationIcon";
 import NearbyIcon from "./atoms/icons/NearbyIcon";
 import PhoneIcon from "./atoms/icons/PhoneIcon";
 import CopyButton from "./atoms/CopyButton";
-import { HORRAIRES } from "../horraire";
+import { HORAIRES } from "../horaire";
 import Link from "next/link";
 
 export default function ContactPage() {
@@ -17,7 +17,7 @@ export default function ContactPage() {
       </div>
 
       <div className="mt-8 grid w-[90vw] max-w-5xl grid-cols-1 gap-5 lg:mt-10 lg:w-[calc(60vw+2rem)] lg:max-w-none lg:grid-cols-2 lg:gap-8">
-        <section className="h-auto min-w-0 rounded-2xl border-2 border-white p-4 lg:h-[53vh] lg:p-0">
+        <section className="h-auto min-w-0 rounded-2xl border-2 border-white p-8 lg:h-[53vh] lg:p-0">
           <div className="mb-6 flex items-center gap-3 lg:mx-4 lg:mb-8 lg:mt-4">
             <ClockIcon />
             <h2 className="text-lg font-bold text-white sm:text-xl">
@@ -25,19 +25,19 @@ export default function ContactPage() {
             </h2>
           </div>
 
-          {HORRAIRES.map((horraire) => (
-            <div
-              key={horraire[0]}
+          {HORAIRES.map((horaire) => (
+            <dl
+              key={horaire[0]}
               className="flex flex-col justify-between text-sm text-white sm:text-base lg:px-4"
             >
               <div className="flex items-center justify-between gap-4">
-                <p>{horraire[0]}</p>
-                <p className="shrink-0">{horraire[1]}</p>
+                <dt>{horaire[0]}</dt>
+                <dd className="shrink-0">{horaire[1]}</dd>
               </div>
-              {horraire[0] !== "Dimanche" && (
+              {horaire[0] !== "Dimanche" && (
                 <div className="my-2 h-0.5 w-full bg-white opacity-50"></div>
               )}
-            </div>
+            </dl>
           ))}
         </section>
 
@@ -82,12 +82,12 @@ export default function ContactPage() {
           </div>
 
           <div className="mt-6 space-y-2">
-            <h2 className="flex items-center gap-3 text-sm font-semibold uppercase tracking-wide text-white sm:text-base">
+            <h3 className="flex items-center gap-3 text-sm font-semibold uppercase tracking-wide text-white sm:text-base">
               <NearbyIcon className="h-5 w-5 shrink-0 text-red-200" />À
               proximité
-            </h2>
+            </h3>
             <div className="flex items-center gap-2 text-sm font-medium text-white/85 sm:text-base">
-              <p>Metro Bel-Air, Nation Daumesnil</p>
+              <p>Métro Bel-Air, Nation et Daumesnil</p>
             </div>
           </div>
         </section>
