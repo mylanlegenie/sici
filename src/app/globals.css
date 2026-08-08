@@ -94,6 +94,31 @@
   .home-reveal {
     animation: none;
   }
+
+  .nav-slide::after,
+  .navbar-letter,
+  .burger-button,
+  .burger-line,
+  .menu-panel,
+  .product-card,
+  .product-card-button,
+  .product-card-image {
+    animation: none !important;
+    transition: none !important;
+    transform: none !important;
+  }
+
+  .burger-line-middle {
+    width: 2.5rem !important;
+  }
+
+  .product-card:hover {
+    transform: none !important;
+  }
+
+  .product-card:hover .product-card-image {
+    transform: none !important;
+  }
 }
 
 .button-3d {

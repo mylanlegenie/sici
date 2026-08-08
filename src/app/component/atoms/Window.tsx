@@ -140,7 +140,7 @@ export default function Window({ isClicked, setIsClicked }: WindowProps) {
           ? { duration: 1, ease: "easeIn" }
           : { duration: 0.8, ease: "anticipate" }
       }
-      className="fixed left-0 z-49 bg-red-600"
+      className="menu-panel fixed left-0 z-49 bg-red-600"
     >
       <section aria-label="Navigation principale">
         <div className="m-6 flex max-w-[calc(100vw-3rem)] flex-col gap-8 sm:m-12 sm:max-w-[calc(100vw-6rem)] sm:gap-10 md:m-20 md:max-w-[calc(100vw-10rem)] mt-20 ">

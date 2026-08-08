@@ -20,6 +20,7 @@ export default function NavBar() {
             <motion.span
               key={index}
               aria-hidden="true"
+              className="navbar-letter inline-block"
               initial={{ opacity: 0, x: -20, scale: 0.3 }}
               animate={{ opacity: 1, x: 0, scale: 1 }}
               transition={{
@@ -27,7 +28,6 @@ export default function NavBar() {
                 delay: index * 0.2,
                 type: "spring",
               }}
-              className="inline-block"
             >
               {letter === " " ? <span>&nbsp;</span> : letter}
             </motion.span>

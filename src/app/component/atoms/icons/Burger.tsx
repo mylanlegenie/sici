@@ -15,24 +15,24 @@ export default function Burger({
       aria-label={isClicked ? "Fermer le menu" : "Ouvrir le menu"}
       aria-expanded={isClicked}
       aria-controls="menu-principal"
-      className="flex flex-col gap-2 cursor-pointer select-none border sm:mr-10 mr-3 border-white rounded-full sm:p-5 p-3 transition-colors z-50 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-white"
+      className="burger-button flex flex-col gap-2 cursor-pointer select-none border sm:mr-10 mr-3 border-white rounded-full sm:p-5 p-3 transition-colors z-50 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-white"
     >
       <motion.span
         aria-hidden="true"
-        className="w-10 bg-white h-0.5 rounded-lg"
+        className="burger-line burger-line-top w-10 bg-white h-0.5 rounded-lg"
         animate={isClicked ? { rotate: "45deg", translateY: "10px" } : {}}
         transition={{ type: "spring" }}
       />
 
       <motion.span
         aria-hidden="true"
-        className="w-10 bg-white h-0.5 rounded-lg"
+        className="burger-line burger-line-middle w-10 bg-white h-0.5 rounded-lg"
         animate={isClicked ? { width: 0 } : { width: "2.5rem" }}
       />
 
       <motion.span
         aria-hidden="true"
-        className="w-10 bg-white h-0.5 rounded-lg"
+        className="burger-line burger-line-bottom w-10 bg-white h-0.5 rounded-lg"
         animate={isClicked ? { rotate: "-45deg", translateY: "-10px" } : {}}
         transition={{ type: "spring" }}
       />
