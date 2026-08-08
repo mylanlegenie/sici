@@ -1,4 +1,4 @@
-import MarqueeHome from "../component/atoms/Marquee";
+import MarqueeHome from "./atoms/Marquee";
 import Link from "next/link";
 import LocationSection from "./LocationSection";
 
