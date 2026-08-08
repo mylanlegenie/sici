@@ -19,6 +19,7 @@ export default function NavBar() {
           {name.split("").map((letter, index) => (
             <motion.span
               key={index}
+              aria-hidden="true"
               initial={{ opacity: 0, x: -20, scale: 0.3 }}
               animate={{ opacity: 1, x: 0, scale: 1 }}
               transition={{
