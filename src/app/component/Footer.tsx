@@ -16,7 +16,10 @@ export default function Footer() {
         <Link href="/confidentialite" className="transition hover:text-white">
           Confidentialité
         </Link>
-        <Link href="/contact" className="transition hover:text-white">
+        <Link
+          href="/contact-et-horaires"
+          className="transition hover:text-white"
+        >
           Contact
         </Link>
       </div>
