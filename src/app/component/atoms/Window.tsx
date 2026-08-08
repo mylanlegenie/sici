@@ -150,7 +150,7 @@ export default function Window({ isClicked, setIsClicked }: WindowProps) {
               key={rubrique.link}
               href={rubrique.link}
               onClick={closeMenu}
-              className="underline-animation relative w-fit max-w-full cursor-pointer break-words text-5xl font-bold text-white select-none sm:text-6xl md:text-7xl"
+              className="underline-animation relative w-fit max-w-full cursor-pointer wrap-break-words text-5xl font-bold text-white select-none sm:text-6xl md:text-7xl"
             >
               {rubrique.title}
             </Link>
