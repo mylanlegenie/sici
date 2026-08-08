@@ -13,6 +13,7 @@ export default function NavBar() {
       <div className="nav-slide relative">
         <Link
           href="/"
+          aria-label="Retour à l’accueil – La Sicilienne"
           className="text-white font-bold tracking-widest p-2 md:text-7xl min-[380px]:text-4xl text-3xl select-none cursor-pointer"
         >
           {name.split("").map((letter, index) => (
@@ -27,7 +28,7 @@ export default function NavBar() {
               }}
               className="inline-block"
             >
-              {letter}
+              {letter === " " ? <span>&nbsp;</span> : letter}
             </motion.span>
           ))}
         </Link>
