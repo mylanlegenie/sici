@@ -64,6 +64,8 @@ export function Marquee({
               "animate-marquee-vertical flex-col": vertical,
               "group-hover:[animation-play-state:paused]": pauseOnHover,
               "[animation-direction:reverse]": reverse,
+              "motion-reduce:hidden": i > 0,
+              "motion-reduce:animate-none": i === 0,
             })}
           >
             {children}
