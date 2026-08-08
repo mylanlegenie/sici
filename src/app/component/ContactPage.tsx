@@ -7,6 +7,8 @@ import { HORAIRES } from "../horaire";
 import Link from "next/link";
 
 export default function ContactPage() {
+  const numéro = "01 53 33 03 33";
+  const adresse = "6 rue Dagorno, 75012 Paris";
   return (
     <section className="mx-auto mb-12 mt-6 flex flex-col items-center justify-center bg-red-500 sm:mb-16">
       <div className="flex flex-col items-center justify-center gap-3">
@@ -54,27 +56,24 @@ export default function ContactPage() {
               >
                 <p className="flex min-w-0 items-start gap-3">
                   <LocationIcon className="h-5 w-5 shrink-0 text-red-200" />
-                  <span>6 rue Dagorno, 75012 Paris</span>
+                  <span>{adresse}</span>
                 </p>
               </Link>
               <span className="shrink-0">
-                <CopyButton
-                  value="6 rue Dagorno, 75012 Paris"
-                  ariaLabel="Copier l'adresse"
-                />
+                <CopyButton value={adresse} ariaLabel="Copier l'adresse" />
               </span>
             </div>
 
             <div className="flex items-start justify-between gap-3 font-medium text-white">
-              <Link target="_blank" href="tel:0153330333">
+              <Link target="_blank" href={`tel:${numéro.replace(/\s/g, "")}`}>
                 <p className="flex min-w-0 items-center gap-3">
                   <PhoneIcon className="h-5 w-5 shrink-0 text-red-200" />
-                  <span>01 53 33 03 33</span>
+                  <span>{numéro}</span>
                 </p>
               </Link>
               <span className="shrink-0">
                 <CopyButton
-                  value="01 53 33 03 33"
+                  value={numéro}
                   ariaLabel="Copier le numéro de téléphone"
                 />
               </span>
