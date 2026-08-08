@@ -18,7 +18,7 @@ export default function LocationSection() {
         <ImageSlide />
         <div className="mx-auto mt-6 w-full max-w-243.5">
           <PerspectiveButton
-            text="Intinéraire Google Maps"
+            text="Itinéraire Google Maps"
             href="https://www.google.com/maps/dir/?api=1&destination=6%20rue%20Dagorno%2C%2075012%20Paris"
           />
         </div>
