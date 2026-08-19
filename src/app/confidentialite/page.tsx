@@ -50,9 +50,10 @@ export default function ConfidentialitePage() {
       <section className="space-y-3">
         <h2 className="text-2xl font-bold text-white">Cookies</h2>
         <p className="leading-7">
-          Si des outils de mesure d&apos;audience ou de services tiers sont
-          ajoutés au site, cette section devra être complétée avec la liste des
-          cookies utilisés et leur finalité.
+          Nous n&apos;utilisons pas de cookies pour collecter des données
+          personnelles. Les cookies techniques nécessaires au fonctionnement du
+          site sont utilisés, mais ils ne collectent pas d'informations
+          personnelles.
         </p>
       </section>
     </InfoPageLayout>

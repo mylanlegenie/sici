@@ -97,7 +97,7 @@ export default function PlatPage({ name, categorie }: PlatPageProps) {
         <span className="font-semibold text-white">{item?.name ?? name}</span>
       </nav>
 
-      <div className="flex flex-col md:flex-row">
+      <div className="flex flex-col md:flex-row md:items-start">
         <div className="mx-auto w-full md:w-[40vw]">
           <Image
             className="mx-auto h-auto w-full max-w-125 rounded-2xl bg-black"
@@ -107,7 +107,7 @@ export default function PlatPage({ name, categorie }: PlatPageProps) {
             alt={item.name}
           />
         </div>
-        <div className="my-8 h-0.5 w-full rounded-full bg-white md:mx-10 md:my-0 md:h-130 md:w-0.5" />
+        <div className="hidden md:block md:mx-10 md:h-[30rem] md:w-px md:bg-white/40" />
         <div className="mx-auto flex w-full flex-col justify-center md:w-[30vw]">
           <h1 className="text-3xl font-semibold leading-tight tracking-tight text-white sm:text-4xl">
             {item.name}
@@ -115,9 +115,44 @@ export default function PlatPage({ name, categorie }: PlatPageProps) {
           <p className="mt-2 text-sm font-semibold uppercase tracking-wider text-white/70">
             {item.categorie}
           </p>
-          <strong className="mt-4 text-base font-semibold text-white/90">
-            5€
-          </strong>
+          {"prices" in item ? (
+            <div className="mt-4 rounded-xl border border-white/15 bg-white/5 p-3 text-white/90 md:p-4">
+              <div className="mb-2 text-[10px] font-medium uppercase tracking-[0.18em] text-white/60 md:text-xs">
+                Prix
+              </div>
+
+              <div className="space-y-2 text-sm">
+                <div className="flex items-center justify-between gap-4 border-b border-white/10 pb-2">
+                  <span>Junior</span>
+                  <strong className="font-semibold text-white">
+                    {item.prices.junior != null
+                      ? `${item.prices.junior.toFixed(2)}€`
+                      : "-"}
+                  </strong>
+                </div>
+                <div className="flex items-center justify-between gap-4 border-b border-white/10 pb-2">
+                  <span>Medium</span>
+                  <strong className="font-semibold text-white">
+                    {item.prices.senior != null
+                      ? `${item.prices.senior.toFixed(2)}€`
+                      : "-"}
+                  </strong>
+                </div>
+                <div className="flex items-center justify-between gap-4">
+                  <span>Grand</span>
+                  <strong className="font-semibold text-white">
+                    {item.prices.mega != null
+                      ? `${item.prices.mega.toFixed(2)}€`
+                      : "-"}
+                  </strong>
+                </div>
+              </div>
+            </div>
+          ) : (
+            <strong className="mt-4 text-base font-semibold text-white/90">
+              {item.price != null ? `${item.price.toFixed(2)}€` : "Prix sur demande"}
+            </strong>
+          )}
           <p className="mt-5 text-base leading-8 text-white/90">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis id
             hendrerit lacus, nec dictum neque. Maecenas id turpis eu metus
