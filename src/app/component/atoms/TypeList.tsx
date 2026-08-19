@@ -15,7 +15,7 @@ export default function TypeList({ selectedPlat }: { selectedPlat: PlatType }) {
             <span
               className={`text-xl font-semibold ${plat === selectedPlat ? "text-red-500" : "text-white"} `}
             >
-              {plat}
+              {plat.charAt(0).toUpperCase() + plat.slice(1)}
             </span>
           </Link>
         ))}
