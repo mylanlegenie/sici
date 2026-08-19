@@ -104,7 +104,7 @@ export default function PlatPage({ name, categorie }: PlatPageProps) {
         <div className="mx-auto w-full md:w-[40vw]">
           {productImage ? (
             <Image
-              className="mx-auto h-auto w-full max-w-[420px] rounded-2xl bg-zinc-900 object-cover shadow-lg md:max-w-[520px]"
+              className="mx-auto h-auto w-full max-w-[420px] rounded-2xl mb-4 bg-zinc-900 object-cover shadow-lg md:max-w-[520px]"
               src={productImage}
               width={500}
               height={500}
