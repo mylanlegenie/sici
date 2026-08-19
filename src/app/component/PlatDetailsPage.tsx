@@ -150,7 +150,9 @@ export default function PlatPage({ name, categorie }: PlatPageProps) {
             </div>
           ) : (
             <strong className="mt-4 text-base font-semibold text-white/90">
-              {item.price != null ? `${item.price.toFixed(2)}€` : "Prix sur demande"}
+              {item.price != null
+                ? `${item.price.toFixed(2)}€`
+                : "Prix sur demande"}
             </strong>
           )}
           <p className="mt-5 text-base leading-8 text-white/90">
