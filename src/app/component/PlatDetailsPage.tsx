@@ -1,10 +1,11 @@
 import Link from "next/link";
-import { desserts, labelsAllergenes, pizza, salades } from "../plat";
+import { labelsAllergenes } from "../plat";
 import toSlug from "../slug";
 import Image from "next/image";
+import { getProductBySlug, type Category } from "../menu/catalog";
 interface PlatPageProps {
   name: string;
-  categorie?: string;
+  categorie?: Category;
 }
 
 const formatCategoryLabel = (value?: string) => {
@@ -20,12 +21,7 @@ const formatCategoryLabel = (value?: string) => {
 };
 
 export default function PlatPage({ name, categorie }: PlatPageProps) {
-  const items = [...pizza, ...salades, ...desserts];
-  const item = items.find(
-    (plat) =>
-      toSlug(plat.name) === toSlug(name) &&
-      (!categorie || toSlug(plat.categorie) === categorie),
-  );
+  const item = getProductBySlug(toSlug(name), categorie);
   const allergenes = item
     ? Object.entries(item.allergenes)
         .filter(([, present]) => present)

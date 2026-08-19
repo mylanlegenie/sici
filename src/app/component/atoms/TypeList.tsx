@@ -1,19 +1,18 @@
-type PlatType = "pizza" | "salade" | "dessert";
 import Link from "next/link";
-export default function TypeList({ selectedPlat }: { selectedPlat: PlatType }) {
-  const TYPE_PLATS: PlatType[] = ["pizza", "salade", "dessert"];
+import { categories, type Category } from "../../menu/catalog";
 
+export default function TypeList({ selectedPlat }: { selectedPlat: Category }) {
   return (
-    <section className="w-[80vw] mx-auto mb-20">
-      <div className="flex items-center justify-center mt-20">
-        {TYPE_PLATS.map((plat) => (
+    <section className="mx-auto mb-20 w-[80vw]">
+      <div className="mt-20 flex items-center justify-center">
+        {categories.map((plat) => (
           <Link
-            href={`/menu/${plat.toLowerCase()}`}
+            href={`/menu/${plat}`}
             key={plat}
-            className={`w-25 h-15 border-white border-2 rounded-xl flex items-center justify-center cursor-pointer mx-2 ${plat === selectedPlat ? "bg-white" : ""}`}
+            className={`mx-2 flex h-15 w-25 cursor-pointer items-center justify-center rounded-xl border-2 border-white ${plat === selectedPlat ? "bg-white" : ""}`}
           >
             <span
-              className={`text-xl font-semibold ${plat === selectedPlat ? "text-red-500" : "text-white"} `}
+              className={`text-xl font-semibold ${plat === selectedPlat ? "text-red-500" : "text-white"}`}
             >
               {plat.charAt(0).toUpperCase() + plat.slice(1)}
             </span>

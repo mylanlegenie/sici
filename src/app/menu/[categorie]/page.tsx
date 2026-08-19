@@ -3,15 +3,13 @@ import Plats from "../../component/atoms/ListePlats";
 
 import toSlug from "../../slug";
 import { notFound } from "next/navigation";
-type Category = "dessert" | "pizza" | "salade";
+import { categories, type Category } from "../catalog";
 
 type PageProps = {
   params: {
     categorie: string;
   };
 };
-
-const categories: Category[] = ["dessert", "pizza", "salade"];
 
 export function generateStaticParams() {
   return categories.map((c) => ({
@@ -21,18 +19,18 @@ export function generateStaticParams() {
 
 export default async function Page({ params }: PageProps) {
   const { categorie } = await params;
-  const category = categories.find((c) => toSlug(c) === categorie);
+  const category = categories.find((c) => toSlug(c) === categorie) as
+    | Category
+    | undefined;
 
   if (!category) {
     notFound();
   }
 
-  const selectedPlat: Category = category;
-
   return (
     <>
-      <TypeList selectedPlat={selectedPlat} />
-      <Plats platType={selectedPlat} />
+      <TypeList selectedPlat={category} />
+      <Plats platType={category} />
     </>
   );
 }
