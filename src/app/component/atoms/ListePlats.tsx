@@ -9,7 +9,7 @@ export default function Plat({ platType }: PlatsProps) {
   const data =
     platType === "salade" ? salades : platType === "dessert" ? desserts : pizza;
   return (
-    <div className="mx-auto grid w-full max-w-7xl grid-cols-2 gap-4 sm:gap-6 lg:grid-cols-3 xl:grid-cols-4">
+    <div className="mx-auto grid w-full max-w-7xl grid-cols-2 sm:gap-6 lg:grid-cols-3 xl:grid-cols-4">
       <h1 className="col-span-full mb-2 sm:text-6xl sm:text-left text-center text-4xl font-bold text-white -mt-10">
         Nos{" "}
         {platType === "pizza"

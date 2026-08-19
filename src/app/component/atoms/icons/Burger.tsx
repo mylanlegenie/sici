@@ -15,7 +15,7 @@ export default function Burger({
       aria-label={isClicked ? "Fermer le menu" : "Ouvrir le menu"}
       aria-expanded={isClicked}
       aria-controls="menu-principal"
-      className="burger-button flex flex-col gap-2 cursor-pointer select-none border sm:mr-10 mr-3 border-white rounded-full sm:p-5 p-3 transition-colors z-50 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-white"
+      className="burger-button flex flex-col gap-2 cursor-pointer select-none border sm:mr-10 mr-3 border-white rounded-full p-5 transition-colors z-50 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-white"
     >
       <motion.span
         aria-hidden="true"

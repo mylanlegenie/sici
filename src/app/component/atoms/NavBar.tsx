@@ -9,12 +9,12 @@ export default function NavBar() {
   const [isClicked, setIsClicked] = useState(false);
 
   return (
-    <nav className="flex w-full items-center justify-between">
-      <div className="nav-slide relative">
+    <nav className="flex w-full items-center justify-between gap-2">
+      <div className="nav-slide relative min-w-0 flex-1 overflow-hidden">
         <Link
           href="/"
           aria-label="Retour à l’accueil – La Sicilienne"
-          className="text-white font-bold tracking-widest p-2 md:text-7xl min-[380px]:text-4xl text-3xl select-none cursor-pointer"
+          className="block cursor-pointer select-none whitespace-nowrap p-2 text-[clamp(2.1rem,6vw,3.5rem)] font-bold leading-none tracking-[0.08em] text-white sm:text-4xl md:text-6xl"
         >
           {name.split("").map((letter, index) => (
             <motion.span

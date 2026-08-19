@@ -5,7 +5,7 @@ import LocationSection from "./LocationSection";
 export default function HomePage() {
   return (
     <>
-      <section className="home-reveal mx-auto my-16 flex h-[60vh] w-[60vw] flex-col items-center justify-center gap-10 space-y-3">
+      <section className="home-reveal mx-auto my-16 flex sm:h-[60vh] h-[40vh] w-[60vw] flex-col items-center justify-center gap-10 space-y-3">
         <div className="relative">
           <div className="home-reveal home-scale-x home-delay-1 absolute left-0 top-1/2 h-24 w-1 -translate-x-[calc(100%+1rem)] -translate-y-1/2 rounded-full bg-white/40 sm:-left-6 sm:ml-0 ml-2" />
           <h1 className="home-reveal home-delay-1 whitespace-nowrap sm:text-7xl  min-[420px]:text-5xl min-[340px]:text-4xl text-3xl font-medium tracking-tight text-white">
@@ -35,17 +35,18 @@ export default function HomePage() {
         </div>
 
         <div className="home-reveal home-on-view home-right mx-auto flex w-full max-w-md flex-col justify-center rounded-[2rem] border border-white/10 bg-linear-to-br from-white/10 to-white/5 p-5 text-center shadow-[0_20px_60px_rgba(0,0,0,0.18)] backdrop-blur-sm">
-          <div className="flex flex-col items-center">
-            <Link href="/menu/pizza">
+          <Link href="/menu/pizza">
+            <div className="flex flex-col items-center">
               <h2 className="text-4xl font-bold uppercase tracking-tight text-white">
                 Menu
               </h2>
-            </Link>
-            <p className="mt-4 max-w-sm text-base leading-7 text-white/75">
-              Découvrez notre sélection de plats italiens, préparés avec des
-              ingrédients frais et authentiques.
-            </p>
-          </div>
+
+              <p className="mt-4 max-w-sm text-base leading-7 text-white/75">
+                Découvrez notre sélection de plats italiens, préparés avec des
+                ingrédients frais et authentiques.
+              </p>
+            </div>
+          </Link>
 
           <div className="mt-6 h-px w-full bg-linear-to-r from-white/0 via-white/30 to-white/0" />
         </div>
