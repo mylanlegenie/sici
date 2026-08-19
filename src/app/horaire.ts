@@ -5,5 +5,5 @@ export const HORAIRES = [
   ["Jeudi", "12h - 22h30"],
   ["Vendredi", "12h - 22h30"],
   ["Samedi", "12h - 22h30"],
-  ["Dimanche", "12h - 22h30"],
+  ["Dimanche", "18h - 22h30"],
 ];

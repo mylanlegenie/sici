@@ -27,6 +27,9 @@ export default function PlatPage({ name, categorie }: PlatPageProps) {
     return null;
   }
 
+  const productImage =
+    item.image && item.image.trim() !== "" ? item.image : null;
+
   const allergenes = Object.entries(item.allergenes)
     .filter(([, present]) => present)
     .map(
@@ -99,13 +102,22 @@ export default function PlatPage({ name, categorie }: PlatPageProps) {
 
       <div className="flex flex-col md:flex-row md:items-start">
         <div className="mx-auto w-full md:w-[40vw]">
-          <Image
-            className="mx-auto h-auto w-full max-w-125 rounded-2xl bg-black"
-            src=""
-            width={500}
-            height={500}
-            alt={item.name}
-          />
+          {productImage ? (
+            <Image
+              className="mx-auto h-auto w-full max-w-[420px] rounded-2xl bg-zinc-900 object-cover shadow-lg md:max-w-[520px]"
+              src={productImage}
+              width={500}
+              height={500}
+              alt={item.name}
+              priority
+            />
+          ) : (
+            <div className="mx-auto flex h-[260px] w-full max-w-[420px] items-center justify-center rounded-2xl bg-black shadow-lg md:h-[420px] md:max-w-[520px]">
+              <span className="text-sm font-medium uppercase tracking-[0.2em] text-white/70">
+                {item.name}
+              </span>
+            </div>
+          )}
         </div>
         <div className="hidden md:block md:mx-10 md:h-[30rem] md:w-px md:bg-white/40" />
         <div className="mx-auto flex w-full flex-col justify-center md:w-[30vw]">

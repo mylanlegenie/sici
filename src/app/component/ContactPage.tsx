@@ -67,7 +67,7 @@ export default function ContactPage() {
             </div>
 
             <div className="flex items-start justify-between gap-3 font-medium text-white">
-              <Link href={`tel:+33${numéro.replace(/\s/g, "")}`}>
+              <Link href={`tel:${numéro.replace(/\s/g, "")}`}>
                 <p className="flex min-w-0 items-center gap-3">
                   <PhoneIcon className="h-5 w-5 shrink-0 text-red-200" />
                   <span>{numéro}</span>
