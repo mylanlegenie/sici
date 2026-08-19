@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { desserts, labelsAllergenes, pizza, salades } from "../plat";
 import toSlug from "../slug";
 import Image from "next/image";
@@ -5,6 +6,18 @@ interface PlatPageProps {
   name: string;
   categorie?: string;
 }
+
+const formatCategoryLabel = (value?: string) => {
+  if (!value) return "Menu";
+
+  const normalized = value.toLowerCase();
+
+  if (normalized === "pizza") return "Pizzas";
+  if (normalized === "salade") return "Salades";
+  if (normalized === "dessert") return "Desserts";
+
+  return value;
+};
 
 export default function PlatPage({ name, categorie }: PlatPageProps) {
   const items = [...pizza, ...salades, ...desserts];
@@ -56,6 +69,35 @@ export default function PlatPage({ name, categorie }: PlatPageProps) {
 
   return (
     <section className="mx-auto mb-12 mt-10 w-[90vw] md:mb-20 md:mt-20 md:w-[80vw]">
+      <nav
+        aria-label="Fil d’Ariane"
+        className="mb-6 flex flex-wrap items-center gap-2 text-base text-white/80 sm:text-lg"
+      >
+        <Link href="/" className="font-medium transition hover:text-white">
+          Accueil
+        </Link>
+        <span aria-hidden="true">/</span>
+        <Link
+          href="/menu/pizza"
+          className="font-medium transition hover:text-white"
+        >
+          Menu
+        </Link>
+        {categorie ? (
+          <>
+            <span aria-hidden="true">/</span>
+            <Link
+              href={`/menu/${categorie}`}
+              className="font-medium transition hover:text-white"
+            >
+              {formatCategoryLabel(categorie)}
+            </Link>
+          </>
+        ) : null}
+        <span aria-hidden="true">/</span>
+        <span className="font-semibold text-white">{item?.name ?? name}</span>
+      </nav>
+
       {item ? (
         <>
           <div className="flex flex-col md:flex-row">
