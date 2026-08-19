@@ -2,8 +2,7 @@ import TypeList from "../../component/atoms/TypeList";
 import Plats from "../../component/atoms/ListePlats";
 
 import toSlug from "../../slug";
-import { notFound } from "next/dist/client/components/not-found";
-
+import { notFound } from "next/navigation";
 type Category = "dessert" | "pizza" | "salade";
 
 type PageProps = {

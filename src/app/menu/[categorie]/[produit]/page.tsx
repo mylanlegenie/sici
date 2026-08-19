@@ -1,8 +1,7 @@
 import PlatDetailsPage from "../../../component/PlatDetailsPage";
 import { pizza, salades, desserts } from "../../../plat";
 import toSlug from "../../../slug";
-import { notFound } from "next/dist/client/components/not-found";
-
+import { notFound } from "next/navigation";
 type Category = "pizza" | "salade" | "dessert";
 
 type PageProps = {
