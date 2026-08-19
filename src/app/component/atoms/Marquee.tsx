@@ -1,7 +1,7 @@
 import Image from "next/image";
 import { cn } from "@/lib/utils";
 import { Marquee } from "../../../magicui/marquee";
-import { pizza, salades } from "../../plat";
+import { pizza, salades, type Category } from "../../plat";
 import toSlug from "../../../app/slug";
 import Link from "next/link";
 const reviews = [...pizza, ...salades].filter((x) => x.bestsellers === true);
@@ -11,15 +11,13 @@ const secondRow = reviews.slice(reviews.length / 2);
 const ReviewCard = ({
   name,
   image,
-  type,
   category,
   prix,
   body,
 }: {
   name: string;
   image?: string;
-  category: string;
-  type: string;
+  category: Category;
   prix?: {
     junior: number | null;
     senior: number | null;
@@ -36,7 +34,7 @@ const ReviewCard = ({
       )}
     >
       <Link
-        href={`/menu/${type}/${toSlug(name)}`}
+        href={`/menu/${category}/${toSlug(name)}`}
         className="flex flex-col items-center"
         prefetch={false}
       >
@@ -76,11 +74,10 @@ export default function MarqueeHome() {
       >
         {firstRow.map((review) => (
           <ReviewCard
-            type={review.type}
             key={review.name}
             name={review.name}
             image={review.image}
-            category={review.type}
+            category={review.categorie}
             prix={"prices" in review ? review.prices : undefined}
             body={"description" in review ? review.description : undefined}
           />
@@ -94,11 +91,10 @@ export default function MarqueeHome() {
       >
         {secondRow.map((review) => (
           <ReviewCard
-            type={review.type}
             key={review.name}
             name={review.name}
             image={review.image}
-            category={"prices" in review ? "Pizza" : "Salade"}
+            category={review.categorie}
             prix={"prices" in review ? review.prices : undefined}
             body={"description" in review ? review.description : undefined}
           />

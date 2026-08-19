@@ -45,9 +45,11 @@ export const labelsAllergenes: Record<keyof Allergenes, string> = {
   mollusques: "Mollusques",
 };
 
+export type Category = "pizza" | "salade" | "dessert";
+
 type PlatBase = {
   name: string;
-  categorie: "Pizza" | "Salade" | "Dessert";
+  categorie: Category;
   image: string;
   bestsellers: boolean;
   allergenes: Allergenes;
@@ -55,7 +57,6 @@ type PlatBase = {
 };
 
 type Pizza = PlatBase & {
-  type: "pizza";
   prices: {
     junior: number | null;
     senior: number | null;
@@ -64,7 +65,6 @@ type Pizza = PlatBase & {
 };
 
 type PlatSimple = PlatBase & {
-  type: "salade" | "dessert";
   description?: string;
   price: number | null;
 };
@@ -72,8 +72,7 @@ type PlatSimple = PlatBase & {
 export const pizza: Pizza[] = [
   {
     name: "CLASSICA",
-    categorie: "Pizza",
-    type: "pizza",
+    categorie: "pizza",
     image: "",
     bestsellers: true,
     allergenes: {
@@ -108,8 +107,7 @@ export const pizza: Pizza[] = [
   },
   {
     name: "REGINA",
-    categorie: "Pizza",
-    type: "pizza",
+    categorie: "pizza",
     image: "",
     bestsellers: true,
     allergenes: {
@@ -144,8 +142,7 @@ export const pizza: Pizza[] = [
   },
   {
     name: "SICILIENNE",
-    categorie: "Pizza",
-    type: "pizza",
+    categorie: "pizza",
     image: "",
     bestsellers: true,
     allergenes: {
@@ -180,8 +177,7 @@ export const pizza: Pizza[] = [
   },
   {
     name: "CALZONE (soufflée)",
-    categorie: "Pizza",
-    type: "pizza",
+    categorie: "pizza",
     image: "",
     bestsellers: false,
     allergenes: {
@@ -216,8 +212,7 @@ export const pizza: Pizza[] = [
   },
   {
     name: "ORIENTALE",
-    categorie: "Pizza",
-    type: "pizza",
+    categorie: "pizza",
     image: "",
     bestsellers: true,
     allergenes: {
@@ -252,8 +247,7 @@ export const pizza: Pizza[] = [
   },
   {
     name: "4 SAISONS",
-    categorie: "Pizza",
-    type: "pizza",
+    categorie: "pizza",
     image: "",
     bestsellers: false,
     allergenes: {
@@ -288,8 +282,7 @@ export const pizza: Pizza[] = [
   },
   {
     name: "PAYSANNE",
-    categorie: "Pizza",
-    type: "pizza",
+    categorie: "pizza",
     image: "",
     bestsellers: true,
     allergenes: {
@@ -324,8 +317,7 @@ export const pizza: Pizza[] = [
   },
   {
     name: "RIMINI",
-    categorie: "Pizza",
-    type: "pizza",
+    categorie: "pizza",
     image: "",
     bestsellers: false,
     allergenes: {
@@ -363,8 +355,7 @@ export const pizza: Pizza[] = [
 export const salades: PlatSimple[] = [
   {
     name: "PALERMO",
-    categorie: "Salade",
-    type: "salade",
+    categorie: "salade",
     image: "",
     bestsellers: false,
     description:
@@ -401,8 +392,7 @@ export const salades: PlatSimple[] = [
   },
   {
     name: "PARIGI",
-    categorie: "Salade",
-    type: "salade",
+    categorie: "salade",
     image: "",
     bestsellers: false,
     description: "Salade de saison, tomates fraîches, jambon, champignons",
@@ -438,8 +428,7 @@ export const salades: PlatSimple[] = [
   },
   {
     name: "ITALIENNE",
-    categorie: "Salade",
-    type: "salade",
+    categorie: "salade",
     image: "",
     bestsellers: false,
     description: "Salade de saison, tomates fraîches, thon, œuf dur, olives",
@@ -475,8 +464,7 @@ export const salades: PlatSimple[] = [
   },
   {
     name: "FERMIÈRE",
-    categorie: "Salade",
-    type: "salade",
+    categorie: "salade",
     image: "",
     bestsellers: false,
     description: "Salade de saison, tomates fraîches, poulet, maïs",
@@ -512,8 +500,7 @@ export const salades: PlatSimple[] = [
   },
   {
     name: "CHAVIGNOL",
-    categorie: "Salade",
-    type: "salade",
+    categorie: "salade",
     image: "",
     bestsellers: false,
     description:
@@ -550,8 +537,7 @@ export const salades: PlatSimple[] = [
   },
   {
     name: "NORVÉGIENNE",
-    categorie: "Salade",
-    type: "salade",
+    categorie: "salade",
     image: "",
     bestsellers: false,
     description:
@@ -591,8 +577,7 @@ export const salades: PlatSimple[] = [
 export const desserts: PlatSimple[] = [
   {
     name: "TARTE AU DAIM",
-    categorie: "Dessert",
-    type: "dessert",
+    categorie: "dessert",
     image: "",
     bestsellers: false,
     allergenes: {
@@ -627,8 +612,7 @@ export const desserts: PlatSimple[] = [
   },
   {
     name: "BROWNIE",
-    categorie: "Dessert",
-    type: "dessert",
+    categorie: "dessert",
     image: "",
     bestsellers: false,
     allergenes: {
@@ -663,8 +647,7 @@ export const desserts: PlatSimple[] = [
   },
   {
     name: "TIRAMISU",
-    categorie: "Dessert",
-    type: "dessert",
+    categorie: "dessert",
     image: "",
     bestsellers: false,
     allergenes: {
@@ -699,8 +682,7 @@ export const desserts: PlatSimple[] = [
   },
   {
     name: "PANINI NUTELLA",
-    categorie: "Dessert",
-    type: "dessert",
+    categorie: "dessert",
     image: "",
     bestsellers: false,
     allergenes: {

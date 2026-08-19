@@ -5,7 +5,7 @@ import Image from "next/image";
 import { getProductBySlug, type Category } from "../menu/catalog";
 interface PlatPageProps {
   name: string;
-  categorie?: Category;
+  categorie: Category;
 }
 
 const formatCategoryLabel = (value?: string) => {
@@ -22,14 +22,17 @@ const formatCategoryLabel = (value?: string) => {
 
 export default function PlatPage({ name, categorie }: PlatPageProps) {
   const item = getProductBySlug(toSlug(name), categorie);
-  const allergenes = item
-    ? Object.entries(item.allergenes)
-        .filter(([, present]) => present)
-        .map(
-          ([allergene]) =>
-            labelsAllergenes[allergene as keyof typeof labelsAllergenes],
-        )
-    : [];
+
+  if (!item) {
+    return null;
+  }
+
+  const allergenes = Object.entries(item.allergenes)
+    .filter(([, present]) => present)
+    .map(
+      ([allergene]) =>
+        labelsAllergenes[allergene as keyof typeof labelsAllergenes],
+    );
   const valeursNutritionnelles = item
     ? [
         {
@@ -94,107 +97,99 @@ export default function PlatPage({ name, categorie }: PlatPageProps) {
         <span className="font-semibold text-white">{item?.name ?? name}</span>
       </nav>
 
-      {item ? (
-        <>
-          <div className="flex flex-col md:flex-row">
-            <div className="mx-auto w-full md:w-[40vw]">
-              <Image
-                className="mx-auto h-auto w-full max-w-125 rounded-2xl bg-black"
-                src=""
-                width={500}
-                height={500}
-                alt={item.name}
-              />
-            </div>
-            <div className="my-8 h-0.5 w-full rounded-full bg-white md:mx-10 md:my-0 md:h-130 md:w-0.5" />
-            <div className="mx-auto flex w-full flex-col justify-center md:w-[30vw]">
-              <h2 className="text-3xl font-semibold leading-tight tracking-tight text-white sm:text-4xl">
-                {item.name}
-              </h2>
-              <p className="mt-2 text-sm font-semibold uppercase tracking-wider text-white/70">
-                {item.categorie}
-              </p>
-              <strong className="mt-4 text-base font-semibold text-white/90">
-                5€
-              </strong>
-              <p className="mt-5 text-base leading-8 text-white/90">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis id
-                hendrerit lacus, nec dictum neque. Maecenas id turpis eu metus
-                malesuada fermentum quis non sem. Cras vel mi elit. Nullam
-                condimentum turpis ut est pulvinar, suscipit vulputate eros
-                fringilla. Praesent at lacus gravida, porttitor risus mattis,
-              </p>
-
-              <div className="mt-5">
-                <p className="text-sm font-semibold uppercase tracking-wide text-white/80">
-                  Allergènes
-                </p>
-                <div className="mt-2 flex flex-wrap gap-2">
-                  {allergenes.length > 0 ? (
-                    allergenes.map((allergene) => (
-                      <span
-                        key={allergene}
-                        className="rounded-full border border-white/30 px-3 py-1 text-xs font-medium text-white/90"
-                      >
-                        {allergene}
-                      </span>
-                    ))
-                  ) : (
-                    <span className="text-sm text-white/75">
-                      Aucun allergène renseigné.
-                    </span>
-                  )}
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <section
-            className="mt-10 rounded-2xl bg-white p-5 shadow-lg sm:p-7"
-            aria-labelledby="nutrition-title"
-          >
-            <h3
-              id="nutrition-title"
-              className="text-2xl font-bold text-zinc-900 sm:text-3xl"
-            >
-              Informations nutritionnelles
-            </h3>
-
-            <dl className="mt-5 border-t border-zinc-200">
-              {valeursNutritionnelles.map(
-                ({ label, value, detailLabel, detailValue }) => (
-                  <div
-                    key={label}
-                    className="border-b border-dashed border-zinc-300 py-4"
-                  >
-                    <div className="flex items-center justify-between gap-5">
-                      <dt className="text-base font-medium text-zinc-800 sm:text-lg">
-                        {label}
-                      </dt>
-                      <dd className="shrink-0 text-right text-base text-zinc-700 sm:text-lg">
-                        {value}
-                      </dd>
-                    </div>
-                    {detailLabel && detailValue ? (
-                      <div className="mt-2 flex items-center justify-between gap-5 text-sm text-zinc-600 sm:text-base">
-                        <dt>{detailLabel}</dt>
-                        <dd className="shrink-0 text-right">{detailValue}</dd>
-                      </div>
-                    ) : null}
-                  </div>
-                ),
-              )}
-            </dl>
-          </section>
-        </>
-      ) : (
-        <>
-          <h2 className="text-3xl font-bold text-red-500">{name}</h2>
-          <p className="mt-4 text-lg text-gray-800">
-            Aucun plat ne correspond à ce nom.
+      <div className="flex flex-col md:flex-row">
+        <div className="mx-auto w-full md:w-[40vw]">
+          <Image
+            className="mx-auto h-auto w-full max-w-125 rounded-2xl bg-black"
+            src=""
+            width={500}
+            height={500}
+            alt={item.name}
+          />
+        </div>
+        <div className="my-8 h-0.5 w-full rounded-full bg-white md:mx-10 md:my-0 md:h-130 md:w-0.5" />
+        <div className="mx-auto flex w-full flex-col justify-center md:w-[30vw]">
+          <h1 className="text-3xl font-semibold leading-tight tracking-tight text-white sm:text-4xl">
+            {item.name}
+          </h1>
+          <p className="mt-2 text-sm font-semibold uppercase tracking-wider text-white/70">
+            {item.categorie}
           </p>
-        </>
-      )}
+          <strong className="mt-4 text-base font-semibold text-white/90">
+            5€
+          </strong>
+          <p className="mt-5 text-base leading-8 text-white/90">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis id
+            hendrerit lacus, nec dictum neque. Maecenas id turpis eu metus
+            malesuada fermentum quis non sem. Cras vel mi elit. Nullam
+            condimentum turpis ut est pulvinar, suscipit vulputate eros
+            fringilla. Praesent at lacus gravida, porttitor risus mattis,
+          </p>
+
+          <div className="mt-5">
+            <p className="text-sm font-semibold uppercase tracking-wide text-white/80">
+              Allergènes
+            </p>
+            {allergenes.length > 0 ? (
+              <ul
+                className="mt-2 flex flex-wrap gap-2"
+                aria-label="Liste des allergènes"
+              >
+                {allergenes.map((allergene) => (
+                  <li
+                    key={allergene}
+                    className="rounded-full border border-white/30 px-3 py-1 text-xs font-medium text-white/90"
+                  >
+                    {allergene}
+                  </li>
+                ))}
+              </ul>
+            ) : (
+              <p className="mt-2 text-sm text-white/75">
+                Aucun allergène renseigné.
+              </p>
+            )}
+          </div>
+        </div>
+      </div>
+
+      <section
+        className="mt-10 rounded-2xl bg-white p-5 shadow-lg sm:p-7"
+        aria-labelledby="nutrition-title"
+      >
+        <h3
+          id="nutrition-title"
+          className="text-2xl font-bold text-zinc-900 sm:text-3xl"
+        >
+          Informations nutritionnelles
+        </h3>
+
+        <dl className="mt-5 border-t border-zinc-200">
+          {valeursNutritionnelles.map(
+            ({ label, value, detailLabel, detailValue }) => (
+              <div
+                key={label}
+                className="border-b border-dashed border-zinc-300 py-4"
+              >
+                <div className="flex items-center justify-between gap-5">
+                  <dt className="text-base font-medium text-zinc-800 sm:text-lg">
+                    {label}
+                  </dt>
+                  <dd className="shrink-0 text-right text-base text-zinc-700 sm:text-lg">
+                    {value}
+                  </dd>
+                </div>
+                {detailLabel && detailValue ? (
+                  <div className="mt-2 flex items-center justify-between gap-5 text-sm text-zinc-600 sm:text-base">
+                    <dt>{detailLabel}</dt>
+                    <dd className="shrink-0 text-right">{detailValue}</dd>
+                  </div>
+                ) : null}
+              </div>
+            ),
+          )}
+        </dl>
+      </section>
     </section>
   );
 }

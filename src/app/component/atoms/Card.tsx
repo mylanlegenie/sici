@@ -24,7 +24,7 @@ export default function Card({
 
   return (
     <article className="product-card cursor-pointer group mt-6 flex min-h-84 sm:w-full w-[90%] sm:mx-0 mx-auto flex-col items-center justify-between rounded-2xl border border-zinc-200 bg-white px-5 py-6 text-center shadow-sm transition duration-300 hover:-translate-y-1 hover:shadow-xl">
-      <Link href={`/menu/${platType.toLowerCase()}/${toSlug(name)}`}>
+      <Link href={`/menu/${platType}/${toSlug(name)}`}>
         <div className="w-full ">
           <Image
             src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='220' height='220' viewBox='0 0 220 220'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop stop-color='%23f5f5f5'/%3E%3Cstop offset='1' stop-color='%23e5e7eb'/%3E%3C/linearGradient%3E%3C/defs%3E%3Ccircle cx='110' cy='110' r='108' fill='url(%23g)'/%3E%3C/svg%3E"

@@ -1,7 +1,7 @@
-import { desserts, pizza, salades } from "../plat";
+import { desserts, pizza, salades, type Category } from "../plat";
 import toSlug from "../slug";
 
-export type Category = "dessert" | "pizza" | "salade";
+export type { Category };
 
 export const categories: Category[] = ["dessert", "pizza", "salade"];
 
