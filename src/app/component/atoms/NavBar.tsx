@@ -14,7 +14,7 @@ export default function NavBar() {
         <Link
           href="/"
           aria-label="Retour à l’accueil – La Sicilienne"
-          className="block cursor-pointer select-none whitespace-nowrap p-3 text-[clamp(1.65rem,7vw,2.25rem)] font-bold leading-none tracking-[0.08em] text-white sm:p-2 sm:text-3xl md:text-6xl"
+          className="block cursor-pointer select-none whitespace-nowrap p-3 text-[clamp(1.65rem,8.25vw,2.55rem)] font-bold leading-none tracking-[0.04em] text-white sm:p-2 sm:text-3xl sm:tracking-[0.08em] md:text-6xl"
         >
           {name.split("").map((letter, index) => (
             <motion.span

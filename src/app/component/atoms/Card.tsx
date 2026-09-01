@@ -54,7 +54,7 @@ export default function Card({
               </span>
             </div>
             <div className="mt-1 flex items-center justify-between">
-              <span>Grand</span>
+              <span>Grande</span>
               <span className="font-semibold text-red-600">
                 {formatPrice(sizePrices.grand)}
               </span>

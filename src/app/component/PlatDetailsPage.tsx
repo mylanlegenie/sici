@@ -92,7 +92,7 @@ export default function PlatPage({ name, categorie }: PlatPageProps) {
                   </strong>
                 </div>
                 <div className="flex items-center justify-between gap-4">
-                  <span>Grand</span>
+                  <span>Grande</span>
                   <strong className="font-semibold text-white">
                     {item.prices.mega != null
                       ? `${item.prices.mega.toFixed(2)}€`
