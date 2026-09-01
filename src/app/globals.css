@@ -60,13 +60,6 @@
     border-bottom: 2px solid var(--color-white);
   }
 
-  .navbar-letter {
-    animation: none !important;
-    opacity: 1 !important;
-    transform: none !important;
-    transition: none !important;
-  }
-
   .nav-slide::after {
     display: none;
   }
