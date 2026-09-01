@@ -22,7 +22,7 @@ export default function HomePage() {
         </Link>
       </section>
       <section className="home-reveal home-on-view mx-auto mt-20 grid w-[80vw] gap-8 lg:grid-cols-[1.2fr_0.8fr]">
-        <div className="home-reveal home-on-view home-left rounded-2xl border border-white/10 bg-white/5 p-3 shadow-[0_20px_60px_rgba(0,0,0,0.18)] backdrop-blur-sm md:rounded-[2rem] md:p-6">
+        <div className="home-reveal home-on-view home-left w-[94vw] max-w-[calc(100vw-1rem)] justify-self-center rounded-2xl border border-white/10 bg-white/5 p-3 shadow-[0_20px_60px_rgba(0,0,0,0.18)] backdrop-blur-sm md:w-auto md:max-w-none md:rounded-[2rem] md:p-6">
           <div className="mb-3 flex items-center gap-2 md:mb-5 md:gap-3">
             <span className="h-2 w-2 rounded-full bg-red-400 md:h-2.5 md:w-2.5" />
             <h2 className="text-2xl font-bold uppercase tracking-[0.1em] text-white md:text-4xl md:tracking-[0.16em]">
