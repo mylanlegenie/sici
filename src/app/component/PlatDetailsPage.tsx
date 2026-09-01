@@ -1,8 +1,9 @@
-import Link from "next/link";
-import { labelsAllergenes } from "../plat";
 import toSlug from "../slug";
 import Image from "next/image";
 import { getProductBySlug, type Category } from "../menu/catalog";
+import UndoIcon from "./atoms/icons/Undo";
+
+import Link from "next/link";
 interface PlatPageProps {
   name: string;
   categorie: Category;
@@ -30,75 +31,15 @@ export default function PlatPage({ name, categorie }: PlatPageProps) {
   const productImage =
     item.image && item.image.trim() !== "" ? item.image : null;
 
-  const allergenes = Object.entries(item.allergenes)
-    .filter(([, present]) => present)
-    .map(
-      ([allergene]) =>
-        labelsAllergenes[allergene as keyof typeof labelsAllergenes],
-    );
-  const valeursNutritionnelles = item
-    ? [
-        {
-          label: "Calories",
-          value: `${item.nutrition.energieKj} kJ · ${item.nutrition.caloriesKcal} kcal`,
-        },
-        {
-          label: "Lipides",
-          value: `${item.nutrition.matieresGrassesG} g`,
-          detailLabel: "dont acides gras saturés",
-          detailValue: `${item.nutrition.acidesGrasSaturesG} g`,
-        },
-        {
-          label: "Glucides",
-          value: `${item.nutrition.glucidesG} g`,
-          detailLabel: "dont sucres",
-          detailValue: `${item.nutrition.sucresG} g`,
-        },
-        {
-          label: "Fibres",
-          value: `${item.nutrition.fibresG} g`,
-        },
-        {
-          label: "Protéines",
-          value: `${item.nutrition.proteinesG} g`,
-        },
-        {
-          label: "Sel",
-          value: `${item.nutrition.selG} g`,
-        },
-      ]
-    : [];
-
   return (
     <section className="mx-auto mb-12 mt-10 w-[90vw] md:mb-20 md:mt-20 md:w-[80vw]">
-      <nav
-        aria-label="Fil d’Ariane"
+      <Link
+        href={"/menu/" + categorie}
         className="mb-6 flex flex-wrap items-center gap-2 text-base text-white/80 sm:text-lg"
       >
-        <Link href="/" className="font-medium transition hover:text-white">
-          Accueil
-        </Link>
-        <span aria-hidden="true">/</span>
-        <Link
-          href="/menu/pizza"
-          className="font-medium transition hover:text-white"
-        >
-          Menu
-        </Link>
-        {categorie ? (
-          <>
-            <span aria-hidden="true">/</span>
-            <Link
-              href={`/menu/${categorie}`}
-              className="font-medium transition hover:text-white"
-            >
-              {formatCategoryLabel(categorie)}
-            </Link>
-          </>
-        ) : null}
-        <span aria-hidden="true">/</span>
-        <span className="font-semibold text-white">{item?.name ?? name}</span>
-      </nav>
+        <UndoIcon className="h-4 w-4" />
+        <span className="font-semibold text-white">Retour au menu</span>
+      </Link>
 
       <div className="flex flex-col md:flex-row md:items-start">
         <div className="mx-auto w-full md:w-[40vw]">
@@ -174,71 +115,8 @@ export default function PlatPage({ name, categorie }: PlatPageProps) {
             condimentum turpis ut est pulvinar, suscipit vulputate eros
             fringilla. Praesent at lacus gravida, porttitor risus mattis,
           </p>
-
-          <div className="mt-5">
-            <p className="text-sm font-semibold uppercase tracking-wide text-white/80">
-              Allergènes
-            </p>
-            {allergenes.length > 0 ? (
-              <ul
-                className="mt-2 flex flex-wrap gap-2"
-                aria-label="Liste des allergènes"
-              >
-                {allergenes.map((allergene) => (
-                  <li
-                    key={allergene}
-                    className="rounded-full border border-white/30 px-3 py-1 text-xs font-medium text-white/90"
-                  >
-                    {allergene}
-                  </li>
-                ))}
-              </ul>
-            ) : (
-              <p className="mt-2 text-sm text-white/75">
-                Aucun allergène renseigné.
-              </p>
-            )}
-          </div>
         </div>
       </div>
-
-      <section
-        className="mt-10 rounded-2xl bg-white p-5 shadow-lg sm:p-7"
-        aria-labelledby="nutrition-title"
-      >
-        <h3
-          id="nutrition-title"
-          className="text-2xl font-bold text-zinc-900 sm:text-3xl"
-        >
-          Informations nutritionnelles
-        </h3>
-
-        <dl className="mt-5 border-t border-zinc-200">
-          {valeursNutritionnelles.map(
-            ({ label, value, detailLabel, detailValue }) => (
-              <div
-                key={label}
-                className="border-b border-dashed border-zinc-300 py-4"
-              >
-                <div className="flex items-center justify-between gap-5">
-                  <dt className="text-base font-medium text-zinc-800 sm:text-lg">
-                    {label}
-                  </dt>
-                  <dd className="shrink-0 text-right text-base text-zinc-700 sm:text-lg">
-                    {value}
-                  </dd>
-                </div>
-                {detailLabel && detailValue ? (
-                  <div className="mt-2 flex items-center justify-between gap-5 text-sm text-zinc-600 sm:text-base">
-                    <dt>{detailLabel}</dt>
-                    <dd className="shrink-0 text-right">{detailValue}</dd>
-                  </div>
-                ) : null}
-              </div>
-            ),
-          )}
-        </dl>
-      </section>
     </section>
   );
 }

@@ -3,10 +3,12 @@ import { motion } from "motion/react";
 
 export default function Burger({
   isClicked,
+  classname,
   onClick,
 }: {
   isClicked: boolean;
   onClick: () => void;
+  classname?: string;
 }) {
   return (
     <button
@@ -15,7 +17,7 @@ export default function Burger({
       aria-label={isClicked ? "Fermer le menu" : "Ouvrir le menu"}
       aria-expanded={isClicked}
       aria-controls="menu-principal"
-      className="burger-button flex flex-col gap-2 cursor-pointer select-none border sm:mr-10 mr-3 border-white rounded-full p-5 transition-colors z-50 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-white"
+      className={`burger-button flex flex-col gap-2 cursor-pointer select-none border sm:mr-10 mr-3 border-white rounded-full p-5 transition-colors z-50 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-white ${classname || ""}`}
     >
       <motion.span
         aria-hidden="true"

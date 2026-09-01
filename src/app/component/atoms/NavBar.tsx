@@ -9,12 +9,12 @@ export default function NavBar() {
   const [isClicked, setIsClicked] = useState(false);
 
   return (
-    <nav className="flex w-full items-center justify-between gap-2">
-      <div className="nav-slide relative min-w-0 flex-1 overflow-hidden">
+    <nav className="navbar-container flex w-full items-center justify-between gap-2">
+      <div className="nav-slide relative w-full overflow-hidden ">
         <Link
           href="/"
           aria-label="Retour à l’accueil – La Sicilienne"
-          className="block cursor-pointer select-none whitespace-nowrap p-2 text-[clamp(2.1rem,6vw,3.5rem)] font-bold leading-none tracking-[0.08em] text-white sm:text-4xl md:text-6xl"
+          className="block cursor-pointer select-none whitespace-nowrap p-3 sm:p-2 text-[clamp(2.8rem,8vw,3.5rem)] font-bold leading-none tracking-[0.08em] text-white sm:text-4xl md:text-6xl"
         >
           {name.split("").map((letter, index) => (
             <motion.span
@@ -34,7 +34,11 @@ export default function NavBar() {
           ))}
         </Link>
       </div>
-      <Burger isClicked={isClicked} onClick={() => setIsClicked(!isClicked)} />
+      <Burger
+        isClicked={isClicked}
+        classname="mb-4"
+        onClick={() => setIsClicked(!isClicked)}
+      />
 
       <Window isClicked={isClicked} setIsClicked={setIsClicked} />
     </nav>
