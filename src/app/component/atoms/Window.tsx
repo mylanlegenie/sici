@@ -25,11 +25,11 @@ export default function Window({ isClicked, setIsClicked }: WindowProps) {
   const menuRef = useRef<HTMLDivElement>(null);
   const firstLinkRef = useRef<HTMLAnchorElement>(null);
   const previouslyFocusedElement = useRef<HTMLElement | null>(null);
-  const [isSmScreen, setIsSmScreen] = useState(false);
+  const [isSmallScreen, setIsSmallScreen] = useState(false);
 
   useEffect(() => {
-    const mediaQuery = window.matchMedia("(min-width: 640px)");
-    const updateScreenSize = () => setIsSmScreen(mediaQuery.matches);
+    const mediaQuery = window.matchMedia("(max-width: 639px)");
+    const updateScreenSize = () => setIsSmallScreen(mediaQuery.matches);
 
     updateScreenSize();
     mediaQuery.addEventListener("change", updateScreenSize);
@@ -154,8 +154,8 @@ export default function Window({ isClicked, setIsClicked }: WindowProps) {
       }
       transition={
         isClicked
-          ? { duration: isSmScreen ? 0.55 : 1, ease: "easeIn" }
-          : { duration: isSmScreen ? 0.4 : 0.8, ease: "anticipate" }
+          ? { duration: isSmallScreen ? 0.8 : 1, ease: "easeIn" }
+          : { duration: isSmallScreen ? 0.8 : 0.8, ease: "anticipate" }
       }
       className="menu-panel fixed left-0 z-49 bg-red-600"
     >

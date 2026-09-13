@@ -9,6 +9,16 @@ interface PlatPageProps {
   categorie: Category;
 }
 
+const categoryLabels: Record<Category, string> = {
+  pizza: "Pizza",
+  salade: "Salade",
+  pate: "Pâtes",
+  assiette: "Assiette",
+  sandwich: "Sandwich",
+  burger: "Burger",
+  dessert: "Dessert",
+};
+
 export default function PlatPage({ name, categorie }: PlatPageProps) {
   const item = getProductBySlug(toSlug(name), categorie);
 
@@ -54,9 +64,40 @@ export default function PlatPage({ name, categorie }: PlatPageProps) {
             {item.name}
           </h1>
           <p className="mt-2 text-sm font-semibold uppercase tracking-wider text-white/70">
-            {item.categorie}
+            {"base" in item
+              ? `Pizza · Base ${item.base === "tomate" ? "sauce tomate" : "crème fraîche"}`
+              : categoryLabels[item.categorie]}
           </p>
-          {"prices" in item ? (
+          {item.ingredients && item.ingredients.length > 0 && (
+            <div className="mt-5">
+              <h2 className="text-sm font-semibold uppercase tracking-wider text-white/70">
+                Ingrédients
+              </h2>
+              <p className="mt-2 text-base leading-7 text-white">
+                {item.ingredients.join(", ")}
+              </p>
+            </div>
+          )}
+          {"options" in item && item.options && item.options.length > 0 ? (
+            <div className="mt-4 rounded-xl border border-white/15 bg-white/5 p-3 text-white/90 md:p-4">
+              <div className="mb-2 text-[10px] font-medium uppercase tracking-[0.18em] text-white/60 md:text-xs">
+                Formats et prix
+              </div>
+              <div className="space-y-2 text-sm">
+                {item.options.map((option, index) => (
+                  <div
+                    key={option.label}
+                    className={`flex items-center justify-between gap-4 ${index < item.options!.length - 1 ? "border-b border-white/10 pb-2" : ""}`}
+                  >
+                    <span>{option.label}</span>
+                    <strong className="font-semibold text-white">
+                      {option.price.toFixed(2)}€
+                    </strong>
+                  </div>
+                ))}
+              </div>
+            </div>
+          ) : "prices" in item ? (
             <div className="mt-4 rounded-xl border border-white/15 bg-white/5 p-3 text-white/90 md:p-4">
               <div className="mb-2 text-[10px] font-medium uppercase tracking-[0.18em] text-white/60 md:text-xs">
                 Prix
@@ -96,13 +137,16 @@ export default function PlatPage({ name, categorie }: PlatPageProps) {
                 : "Prix sur demande"}
             </strong>
           )}
-          <p className="mt-5 text-base leading-8 text-white/90">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis id
-            hendrerit lacus, nec dictum neque. Maecenas id turpis eu metus
-            malesuada fermentum quis non sem. Cras vel mi elit. Nullam
-            condimentum turpis ut est pulvinar, suscipit vulputate eros
-            fringilla. Praesent at lacus gravida, porttitor risus mattis,
-          </p>
+          {item.description && (
+            <div className="mt-5">
+              <h2 className="text-sm font-semibold uppercase tracking-wider text-white/70">
+                Description
+              </h2>
+              <p className="mt-2 text-base leading-8 text-white/90">
+                {item.description}
+              </p>
+            </div>
+          )}
         </div>
       </div>
     </section>

@@ -30,6 +30,10 @@ export function generateStaticParams() {
 const categoryLabels: Record<Category, string> = {
   pizza: "pizza",
   salade: "salade",
+  pate: "plat de pâtes",
+  assiette: "assiette",
+  sandwich: "sandwich",
+  burger: "burger",
   dessert: "dessert",
 };
 
@@ -37,7 +41,8 @@ function getDescription(
   product: NonNullable<ReturnType<typeof getProductBySlug>>,
 ) {
   if ("description" in product && product.description) {
-    return `${product.name} : ${product.description}. Découvrez-la chez La Sicilienne à Paris 12e.`;
+    const description = product.description.replace(/[.!?]+$/, "");
+    return `${product.name} : ${description}. À découvrir chez La Sicilienne à Paris 12e.`;
   }
 
   return `${product.name}, ${categoryLabels[product.categorie]} proposée par La Sicilienne à Paris 12e. Consultez les formats et les prix.`;
@@ -108,7 +113,16 @@ export default async function Page({ params }: PageProps) {
             availability: "https://schema.org/InStock",
             url: absoluteUrl(`/menu/${categorie}/${produit}`),
           }))
-      : product.price != null
+      : product.options && product.options.length > 0
+        ? product.options.map((option) => ({
+            "@type": "Offer",
+            name: option.label,
+            price: option.price.toFixed(2),
+            priceCurrency: "EUR",
+            availability: "https://schema.org/InStock",
+            url: absoluteUrl(`/menu/${categorie}/${produit}`),
+          }))
+        : product.price != null
         ? [
             {
               "@type": "Offer",

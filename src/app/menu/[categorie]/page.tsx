@@ -16,6 +16,10 @@ type PageProps = {
 const categoryLabels: Record<Category, string> = {
   pizza: "Pizzas",
   salade: "Salades",
+  pate: "Pâtes",
+  assiette: "Assiettes",
+  sandwich: "Sandwichs",
+  burger: "Burgers",
   dessert: "Desserts",
 };
 
