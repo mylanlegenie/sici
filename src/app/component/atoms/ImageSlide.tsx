@@ -1,6 +1,6 @@
 "use client";
 import { motion, useInView } from "motion/react";
-import { useRef } from "react";
+import { useRef, useState } from "react";
 
 import Image from "next/image";
 
@@ -9,12 +9,9 @@ const SLIDE_IMAGE_SIZES = "(max-width: 1353px) 36vw, 487px";
 
 export default function ImageSlide() {
   const containerRef = useRef<HTMLDivElement>(null);
+  const [isMapLoaded, setIsMapLoaded] = useState(false);
   const inView = useInView(containerRef, { once: true, margin: "-50px" });
-  // Start the map request shortly before it becomes visible, not on page load.
-  const shouldLoadMap = useInView(containerRef, {
-    once: true,
-    margin: "300px",
-  });
+  const shouldRevealMap = inView && isMapLoaded;
 
   return (
     <div
@@ -25,15 +22,14 @@ export default function ImageSlide() {
         height: "auto",
       }}
     >
-      {shouldLoadMap && (
-        <iframe
-          title="Localisation de La Sicilienne"
-          src="https://www.google.com/maps?q=La+Sicilienne,+Rue+Dagorno,+75012+Paris&z=17&output=embed"
-          className="absolute inset-0 z-0 h-full w-full rounded-xl border-4 border-white"
-          loading="lazy"
-          referrerPolicy="no-referrer-when-downgrade"
-        />
-      )}
+      <iframe
+        title="Localisation de La Sicilienne"
+        src="https://www.google.com/maps?q=La+Sicilienne,+Rue+Dagorno,+75012+Paris&z=17&output=embed"
+        className="absolute inset-0 z-0 h-full w-full rounded-xl border-4 border-white"
+        loading="eager"
+        referrerPolicy="no-referrer-when-downgrade"
+        onLoad={() => setIsMapLoaded(true)}
+      />
       <MotionImage
         src="/pizza-slide-1.webp"
         alt=""
@@ -44,7 +40,7 @@ export default function ImageSlide() {
         quality={65}
         className="absolute top-0 left-0 h-full w-1/2 object-cover z-10"
         initial={{ x: "0%" }}
-        animate={inView ? { x: "-100%" } : { x: "0%" }}
+        animate={shouldRevealMap ? { x: "-100%" } : { x: "0%" }}
         transition={{ duration: 1.2, ease: "easeInOut" }}
       />
 
@@ -57,7 +53,7 @@ export default function ImageSlide() {
         quality={65}
         className="absolute top-0 right-0 h-full w-1/2 object-cover z-10"
         initial={{ x: "0%" }}
-        animate={inView ? { x: "100%" } : { x: "0%" }}
+        animate={shouldRevealMap ? { x: "100%" } : { x: "0%" }}
         transition={{ duration: 1.2, ease: "easeInOut" }}
       />
     </div>

@@ -2,7 +2,13 @@
 
 import Link from "next/link";
 import { motion } from "motion/react";
-import { type Dispatch, type SetStateAction, useEffect, useRef } from "react";
+import {
+  type Dispatch,
+  type SetStateAction,
+  useEffect,
+  useRef,
+  useState,
+} from "react";
 
 const RUBRIQUES = [
   { title: "Accueil", link: "/" },
@@ -19,6 +25,17 @@ export default function Window({ isClicked, setIsClicked }: WindowProps) {
   const menuRef = useRef<HTMLDivElement>(null);
   const firstLinkRef = useRef<HTMLAnchorElement>(null);
   const previouslyFocusedElement = useRef<HTMLElement | null>(null);
+  const [isSmScreen, setIsSmScreen] = useState(false);
+
+  useEffect(() => {
+    const mediaQuery = window.matchMedia("(min-width: 640px)");
+    const updateScreenSize = () => setIsSmScreen(mediaQuery.matches);
+
+    updateScreenSize();
+    mediaQuery.addEventListener("change", updateScreenSize);
+
+    return () => mediaQuery.removeEventListener("change", updateScreenSize);
+  }, []);
 
   useEffect(() => {
     if (!isClicked) {
@@ -137,8 +154,8 @@ export default function Window({ isClicked, setIsClicked }: WindowProps) {
       }
       transition={
         isClicked
-          ? { duration: 1, ease: "easeIn" }
-          : { duration: 0.8, ease: "anticipate" }
+          ? { duration: isSmScreen ? 0.55 : 1, ease: "easeIn" }
+          : { duration: isSmScreen ? 0.4 : 0.8, ease: "anticipate" }
       }
       className="menu-panel fixed left-0 z-49 bg-red-600"
     >
