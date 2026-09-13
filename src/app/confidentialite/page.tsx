@@ -1,8 +1,10 @@
+import type { Metadata } from "next";
 import InfoPageLayout from "../component/InfoPageLayout";
 
-export const metadata = {
-  title: "Confidentialité | La Sicilienne",
+export const metadata: Metadata = {
+  title: "Confidentialité",
   description: "Politique de confidentialité du site La Sicilienne.",
+  alternates: { canonical: "/confidentialite" },
 };
 
 export default function ConfidentialitePage() {
@@ -52,7 +54,7 @@ export default function ConfidentialitePage() {
         <p className="leading-7">
           Nous n&apos;utilisons pas de cookies pour collecter des données
           personnelles. Les cookies techniques nécessaires au fonctionnement du
-          site sont utilisés, mais ils ne collectent pas d'informations
+          site sont utilisés, mais ils ne collectent pas d&apos;informations
           personnelles.
         </p>
       </section>

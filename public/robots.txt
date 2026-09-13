@@ -1,2 +1,5 @@
 User-agent: *
 Allow: /
+
+Sitemap: https://www.lasicilienne.fr/sitemap.xml
+Host: https://www.lasicilienne.fr

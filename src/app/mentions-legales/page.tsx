@@ -2,8 +2,9 @@ import type { Metadata } from "next";
 import InfoPageLayout from "../component/InfoPageLayout";
 
 export const metadata: Metadata = {
-  title: "Mentions légales | La Sicilienne",
+  title: "Mentions légales",
   description: "Mentions légales du site La Sicilienne.",
+  alternates: { canonical: "/mentions-legales" },
 };
 
 export default function MentionsLegalesPage() {

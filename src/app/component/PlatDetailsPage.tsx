@@ -9,18 +9,6 @@ interface PlatPageProps {
   categorie: Category;
 }
 
-const formatCategoryLabel = (value?: string) => {
-  if (!value) return "Menu";
-
-  const normalized = value.toLowerCase();
-
-  if (normalized === "pizza") return "Pizzas";
-  if (normalized === "salade") return "Salades";
-  if (normalized === "dessert") return "Desserts";
-
-  return value;
-};
-
 export default function PlatPage({ name, categorie }: PlatPageProps) {
   const item = getProductBySlug(toSlug(name), categorie);
 
