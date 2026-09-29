@@ -1,6 +1,8 @@
 import MarqueeHome from "./atoms/Marquee";
 import Link from "next/link";
 import LocationSection from "./LocationSection";
+import PhoneIcon from "./atoms/icons/PhoneIcon";
+import { RESTAURANT } from "@/lib/site";
 
 export default function HomePage() {
   return (
@@ -13,13 +15,22 @@ export default function HomePage() {
             <span className="block text-white/80">LA Pizzeria du 12ème</span>
           </h1>
         </div>
-        <Link
-          target="_blank"
-          className="button-3d"
-          href="https://www.tripadvisor.fr/Restaurant_Review-g187147-d12326598-Reviews-La_Sicilienne_Pizzeria-Paris_Ile_de_France.html"
-        >
-          <span>Mettez un avis !</span>
+        <Link className="button-3d" href="/menu/pizza">
+          <span>Voir le Menu</span>
         </Link>
+        <div className="relative">
+          <h2 className="text-2xl font-light text-white/75 md:text-4xl home-reveal home-delay-2">
+            Les Parents l&apos;adorent, les Enfants l&apos;exigent
+          </h2>
+          <Link
+            className="home-reveal home-delay-2 absolute left-1/2 top-full mt-3 inline-flex -translate-x-1/2 items-center gap-2 whitespace-nowrap rounded-full border border-white/20 px-4 py-2 text-sm text-white/75 transition-colors hover:border-white/40 hover:text-white"
+            href={`tel:${RESTAURANT.telephone}`}
+            aria-label="Appeler La Sicilienne"
+          >
+            <PhoneIcon className="h-4 w-4" />
+            <span>Nous appeler</span>
+          </Link>
+        </div>
       </section>
       <section className="home-reveal home-on-view mx-auto mt-20 grid w-[80vw] grid-cols-[minmax(0,1fr)] gap-8 lg:grid-cols-[1.2fr_0.8fr]">
         <div className="home-reveal home-on-view home-left w-[94vw] max-w-[calc(100vw-1rem)] justify-self-center rounded-2xl border border-white/10 bg-white/5 p-3 shadow-[0_20px_60px_rgba(0,0,0,0.18)] backdrop-blur-sm md:w-auto md:max-w-none md:rounded-[2rem] md:p-6">
@@ -43,7 +54,8 @@ export default function HomePage() {
 
               <p className="mt-4 max-w-sm text-base leading-7 text-white/75">
                 Découvrez notre sélection de plats italiens, préparés avec des
-                ingrédients frais et authentiques.
+                ingrédients frais et authentiques.{" "}
+                <strong>Des recettes peaufinées depuis 20 ans !</strong>
               </p>
             </div>
           </Link>
@@ -51,6 +63,33 @@ export default function HomePage() {
           <div className="mt-6 h-px w-full bg-linear-to-r from-white/0 via-white/30 to-white/0" />
         </div>
       </section>
+      <section className="home-reveal home-on-view relative mt-20 overflow-hidden bg-[url('/pizza-slide-1.webp')] bg-cover bg-center py-10">
+        <div className="absolute inset-0 bg-black/65" />
+        <div className="relative">
+          <h2 className="text-2xl text-center font-bold uppercase text-white md:text-5xl mb-5">
+            La Sicilienne, Une Philosophie
+          </h2>
+          <div className="mx-auto mb-8 h-1 w-16 rounded-full bg-red-400" />
+          <p className="mx-auto mb-8 max-w-2xl px-5 text-center text-base leading-7 text-white/75 md:text-lg">
+            Une cuisine italienne généreuse, préparée avec attention et servie
+            simplement, comme on l&apos;aime dans le quartier.
+          </p>
+          <div className="mx-auto flex max-w-4xl flex-row items-stretch justify-center gap-4 px-5 flex-wrap md:flex-nowrap">
+            <p className="home-reveal flex items-center justify-center text-center text-white md:flex-1 [animation-delay:150ms]">
+              La passion pour la cuisine italienne
+            </p>
+            <span className="hidden w-px bg-white/20 md:block" />
+            <p className="home-reveal flex items-center justify-center text-center text-white md:flex-1 [animation-delay:300ms]">
+              Un savoir-faire depuis 20 ans !
+            </p>
+            <span className="hidden w-px bg-white/20 md:block" />
+            <p className="home-reveal flex items-center justify-center text-center text-white md:flex-1 [animation-delay:450ms]">
+              Des produits frais et authentiques
+            </p>
+          </div>
+        </div>
+      </section>
+
       <LocationSection />
     </>
   );
