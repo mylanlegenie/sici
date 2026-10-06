@@ -25,6 +25,7 @@ export default function Plat({ platType }: PlatsProps) {
       return (
         <Card
           name={item.name}
+          image={item.image}
           ingredients={item.ingredients}
           description={item.description}
           options={"options" in item ? item.options : undefined}
@@ -84,8 +85,7 @@ export default function Plat({ platType }: PlatsProps) {
   return (
     <div className="mx-auto grid w-full max-w-7xl grid-cols-2 sm:gap-6 lg:grid-cols-3 xl:grid-cols-4">
       <h1 className="col-span-full mb-2 sm:text-6xl sm:text-left text-center text-4xl font-bold text-white -mt-10">
-        Nos{" "}
-        {categoryLabels[platType]}
+        Nos {categoryLabels[platType]}
       </h1>
 
       {renderCards(data)}

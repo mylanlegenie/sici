@@ -53,7 +53,7 @@ export default function PlatPage({ name, categorie }: PlatPageProps) {
           ) : (
             <div className="mx-auto flex h-[260px] w-full max-w-[420px] items-center justify-center rounded-2xl bg-black shadow-lg md:h-[420px] md:max-w-[520px]">
               <span className="text-sm font-medium uppercase tracking-[0.2em] text-white/70">
-                {item.name}
+                Photo à venir
               </span>
             </div>
           )}

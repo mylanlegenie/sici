@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import toSlug from "../../slug";
 
 type SizePrices = {
   junior: number | null;
@@ -10,10 +11,9 @@ type PriceOption = {
   label: string;
   price: number;
 };
-import toSlug from "../../slug";
-
 export default function Card({
   name,
+  image,
   ingredients,
   description,
   options,
@@ -22,6 +22,7 @@ export default function Card({
   sizePrices,
 }: {
   name: string;
+  image?: string;
   ingredients?: string[];
   description?: string;
   options?: PriceOption[];
@@ -38,6 +39,7 @@ export default function Card({
     ingredients && ingredients.length > 0
       ? ingredients.join(", ")
       : description;
+  const productImage = image && image.trim() !== "" ? image : null;
 
   return (
     <Link href={`/menu/${platType}/${toSlug(name)}`}>
@@ -45,13 +47,19 @@ export default function Card({
         <div
           className={`w-full ${hasMultiplePrices ? "" : "flex flex-1 flex-col"}`}
         >
-          <Image
-            src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='220' height='220' viewBox='0 0 220 220'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop stop-color='%23f5f5f5'/%3E%3Cstop offset='1' stop-color='%23e5e7eb'/%3E%3C/linearGradient%3E%3C/defs%3E%3Ccircle cx='110' cy='110' r='108' fill='url(%23g)'/%3E%3C/svg%3E"
-            alt={name}
-            width={180}
-            height={180}
-            className="product-card-image mx-auto cursor-pointer rounded-full border border-zinc-200 object-cover p-1 transition duration-300 group-hover:scale-105"
-          />
+          {productImage ? (
+            <Image
+              src={productImage}
+              alt={name}
+              width={180}
+              height={180}
+              className="product-card-image mx-auto cursor-pointer rounded-full border border-zinc-200 object-cover p-1 transition duration-300 group-hover:scale-105"
+            />
+          ) : (
+            <div className="product-card-image mx-auto flex h-[180px] w-[180px] items-center justify-center rounded-full border border-zinc-200 bg-zinc-100 p-1 text-center text-xs font-semibold uppercase tracking-wider text-zinc-500">
+              Photo à venir
+            </div>
+          )}
 
           <h3 className="mb-2 line-clamp-2 text-lg font-semibold tracking-tight text-zinc-900">
             {name}
