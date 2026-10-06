@@ -365,6 +365,15 @@ export const salades: PlatSimple[] = [
     description: "Une salade marine aux crevettes et au saumon fumé, accompagnée de citron.",
     price: 8,
   },
+  {
+    name: "SALADE VERTE",
+    categorie: "salade",
+    image: "/images-plat/verte.webp",
+    bestsellers: false,
+    ingredients: ["salade verte"],
+    description: "Une salade verte fraîche et légère.",
+    price: 4,
+  },
 ];
 
 export const pates: PlatSimple[] = [
