@@ -53,10 +53,12 @@ export default function Card({
               alt={name}
               width={180}
               height={180}
+              sizes="180px"
+              quality={65}
               className="product-card-image mx-auto cursor-pointer rounded-full border border-zinc-200 object-cover p-1 transition duration-300 group-hover:scale-105"
             />
           ) : (
-            <div className="product-card-image mx-auto flex h-[180px] w-[180px] items-center justify-center rounded-full border border-zinc-200 bg-zinc-100 p-1 text-center text-xs font-semibold uppercase tracking-wider text-zinc-500">
+            <div className="product-card-image mx-auto flex h-[180px] w-[180px] items-center justify-center rounded-full border border-zinc-200 bg-zinc-100 p-1 text-center text-[10px] font-semibold uppercase tracking-wider text-zinc-500 sm:text-xs">
               Photo à venir
             </div>
           )}

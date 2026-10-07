@@ -42,7 +42,7 @@ export const pizza: Pizza[] = [
     name: "CLASSICA",
     categorie: "pizza",
     base: "tomate",
-    image: "/images-plat/classica.webp",
+    image: "",
     bestsellers: true,
     ingredients: ["mozzarella", "origan"],
     description: "La pizza classique par excellence, simple et parfumée à l’origan.",
