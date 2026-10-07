@@ -642,6 +642,14 @@ export const desserts: PlatSimple[] = [
     price: 3,
   },
   {
+    name: "TIRAMISU",
+    categorie: "dessert",
+    image: "",
+    bestsellers: false,
+    description: "Un dessert italien classique à base de mascarpone, de café et de biscuits.",
+    price: 3.5,
+  },
+  {
     name: "BROWNIE",
     categorie: "dessert",
     image: "",
