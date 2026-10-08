@@ -17,6 +17,7 @@ const categoryLabels: Record<Category, string> = {
   sandwich: "Sandwich",
   burger: "Burger",
   dessert: "Dessert",
+  boisson: "Boisson",
 };
 
 export default function PlatPage({ name, categorie }: PlatPageProps) {

@@ -21,6 +21,7 @@ const categoryLabels: Record<Category, string> = {
   sandwich: "Sandwichs",
   burger: "Burgers",
   dessert: "Desserts",
+  boisson: "Boissons",
 };
 
 export function generateStaticParams() {

@@ -5,7 +5,8 @@ export type Category =
   | "assiette"
   | "sandwich"
   | "burger"
-  | "dessert";
+  | "dessert"
+  | "boisson";
 export type PizzaBase = "tomate" | "creme";
 
 type PlatBase = {
@@ -236,7 +237,7 @@ export const pizza: Pizza[] = [
     bestsellers: false,
     ingredients: ["mozzarella", "champignons", "artichauts", "oignons", "olives"],
     description: "Une composition végétarienne généreuse en légumes et en mozzarella.",
-    prices: { junior: 8.5, senior: 13, mega: 18 },
+    prices: tomatoPrices,
   },
   {
     name: "CAMPIONE",
@@ -365,22 +366,13 @@ export const salades: PlatSimple[] = [
     description: "Une salade marine aux crevettes et au saumon fumé, accompagnée de citron.",
     price: 8,
   },
-  {
-    name: "SALADE VERTE",
-    categorie: "salade",
-    image: "/images-plat/verte.webp",
-    bestsellers: false,
-    ingredients: ["salade verte"],
-    description: "Une salade verte fraîche et légère.",
-    price: 4,
-  },
 ];
 
 export const pates: PlatSimple[] = [
   {
     name: "CARBONARA",
     categorie: "pate",
-    image: "",
+    image: "/images-plat/carbonara.webp",
     bestsellers: false,
     ingredients: [
       "tagliatelles ou penne",
@@ -395,7 +387,7 @@ export const pates: PlatSimple[] = [
   {
     name: "FRUITS DE MER",
     categorie: "pate",
-    image: "",
+    image: "/images-plat/pate-fruits-de-mer.webp",
     bestsellers: false,
     ingredients: [
       "tagliatelles ou penne",
@@ -409,7 +401,7 @@ export const pates: PlatSimple[] = [
   {
     name: "4 FROMAGES",
     categorie: "pate",
-    image: "/images-plat/4-fromages.webp",
+    image: "/images-plat/pate-4-fromages.webp",
     bestsellers: false,
     ingredients: [
       "tagliatelles ou penne",
@@ -423,7 +415,7 @@ export const pates: PlatSimple[] = [
   {
     name: "BOLOGNAISE",
     categorie: "pate",
-    image: "",
+    image: "/images-plat/pate-bolognaise.webp",
     bestsellers: false,
     ingredients: [
       "tagliatelles ou penne",
@@ -438,7 +430,7 @@ export const pates: PlatSimple[] = [
   {
     name: "PESTO",
     categorie: "pate",
-    image: "",
+    image: "/images-plat/pesto.webp",
     bestsellers: false,
     ingredients: ["tagliatelles ou penne", "sauce pesto"],
     description:
@@ -531,22 +523,13 @@ export const assiettes: PlatSimple[] = [
       "Une escalope de poulet marinée servie avec salade, tomate, riz et frites.",
     price: 11,
   },
-  {
-    name: "POTATOES",
-    categorie: "assiette",
-    image: "",
-    bestsellers: false,
-    ingredients: ["potatoes"],
-    description: "Une barquette de potatoes dorées et croustillantes.",
-    price: 3.5,
-  },
 ];
 
 export const sandwichs: PlatSimple[] = [
   {
     name: "CHICKEN CHIKA",
     categorie: "sandwich",
-    image: "",
+    image: "/images-plat/chicken-chika.webp",
     bestsellers: false,
     ingredients: [
       "salade",
@@ -572,7 +555,7 @@ export const sandwichs: PlatSimple[] = [
   {
     name: "AMERICAN CHEDDAR",
     categorie: "sandwich",
-    image: "",
+    image: "/images-plat/american-cheddar.webp",
     bestsellers: false,
     ingredients: [
       "salade",
@@ -625,9 +608,9 @@ export const burgers: PlatSimple[] = [
     categorie: "burger",
     image: "",
     bestsellers: false,
-    ingredients: ["poisson pané", "cheddar", "salade", "tomate", "potatoes"],
+    ingredients: ["poisson pané", "cheddar", "salade", "tomate", "frites"],
     description:
-      "Un burger au poisson pané et au cheddar, servi avec des potatoes.",
+      "Un burger au poisson pané et au cheddar, servi avec des frites.",
     price: 8,
   },
 ];
@@ -642,20 +625,20 @@ export const desserts: PlatSimple[] = [
     price: 3,
   },
   {
-    name: "TIRAMISU",
-    categorie: "dessert",
-    image: "",
-    bestsellers: false,
-    description: "Un dessert italien classique à base de mascarpone, de café et de biscuits.",
-    price: 3.5,
-  },
-  {
     name: "BROWNIE",
     categorie: "dessert",
     image: "",
     bestsellers: false,
     description: "Un brownie fondant au chocolat.",
     price: 3,
+  },
+  {
+    name: "TIRAMISU",
+    categorie: "dessert",
+    image: "",
+    bestsellers: false,
+    description: "Un dessert italien classique à base de mascarpone, de café et de biscuits.",
+    price: 3.5,
   },
   {
     name: "SALADE DE FRUITS",
@@ -700,5 +683,32 @@ export const desserts: PlatSimple[] = [
       { label: "500 ml", price: 7 },
     ],
     price: null,
+  },
+];
+
+export const boissons: PlatSimple[] = [
+  {
+    name: "BOISSON 33CL",
+    categorie: "boisson",
+    image: "",
+    bestsellers: false,
+    description: "Boisson fraîche en bouteille ou canette de 33 cl.",
+    price: 1.5,
+  },
+  {
+    name: "BOISSON 1,5L",
+    categorie: "boisson",
+    image: "",
+    bestsellers: false,
+    description: "Boisson fraîche en bouteille de 1,5 L.",
+    price: 2.5,
+  },
+  {
+    name: "BOISSON 2L",
+    categorie: "boisson",
+    image: "",
+    bestsellers: false,
+    description: "Boisson fraîche en bouteille de 2 L.",
+    price: 3,
   },
 ];

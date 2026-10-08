@@ -35,6 +35,7 @@ const categoryLabels: Record<Category, string> = {
   sandwich: "sandwich",
   burger: "burger",
   dessert: "dessert",
+  boisson: "boisson",
 };
 
 function getDescription(
@@ -123,16 +124,16 @@ export default async function Page({ params }: PageProps) {
             url: absoluteUrl(`/menu/${categorie}/${produit}`),
           }))
         : product.price != null
-        ? [
-            {
-              "@type": "Offer",
-              price: product.price.toFixed(2),
-              priceCurrency: "EUR",
-              availability: "https://schema.org/InStock",
-              url: absoluteUrl(`/menu/${categorie}/${produit}`),
-            },
-          ]
-        : undefined;
+          ? [
+              {
+                "@type": "Offer",
+                price: product.price.toFixed(2),
+                priceCurrency: "EUR",
+                availability: "https://schema.org/InStock",
+                url: absoluteUrl(`/menu/${categorie}/${produit}`),
+              },
+            ]
+          : undefined;
 
   const structuredData = {
     "@context": "https://schema.org",

@@ -13,6 +13,7 @@ const categoryLabels: Record<Exclude<Category, "pizza">, string> = {
   sandwich: "Sandwichs",
   burger: "Burgers",
   dessert: "Desserts",
+  boisson: "Boissons",
 };
 
 export default function Plat({ platType }: PlatsProps) {

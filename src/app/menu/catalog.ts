@@ -1,6 +1,7 @@
 import {
   assiettes,
   burgers,
+  boissons,
   desserts,
   pates,
   pizza,
@@ -20,6 +21,7 @@ export const categories: Category[] = [
   "sandwich",
   "burger",
   "dessert",
+  "boisson",
 ];
 
 export type Product =
@@ -29,7 +31,8 @@ export type Product =
   | (typeof assiettes)[number]
   | (typeof sandwichs)[number]
   | (typeof burgers)[number]
-  | (typeof desserts)[number];
+  | (typeof desserts)[number]
+  | (typeof boissons)[number];
 
 export function getProductsByCategory(category: Category): Product[] {
   switch (category) {
@@ -47,6 +50,8 @@ export function getProductsByCategory(category: Category): Product[] {
       return burgers;
     case "dessert":
       return desserts;
+    case "boisson":
+      return boissons;
     default:
       return [];
   }
@@ -66,6 +71,7 @@ export function getProductBySlug(
         ...sandwichs,
         ...burgers,
         ...desserts,
+        ...boissons,
       ];
 
   return products.find((product) => toSlug(product.name) === productSlug);
