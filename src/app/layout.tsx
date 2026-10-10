@@ -5,6 +5,8 @@ import { cn } from "@/lib/utils";
 import NavBar from "../app/component/atoms/NavBar";
 import Footer from "../app/component/Footer";
 import JsonLd from "./component/JsonLd";
+import { Analytics } from "@vercel/analytics/next";
+
 import {
   absoluteUrl,
   RESTAURANT,
@@ -153,6 +155,16 @@ export default function RootLayout({
         <link rel="icon" href="/favicon.ico" sizes="50x50" />
       </head>
       <body className="min-h-full flex flex-col bg-red-500">
+        <Analytics />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
+        />
+        <JsonLd data={structuredData} />
+        <header className="h-20 flex w-full justify-between items-center mt-10">
+          <NavBar />
+        </header>
+        <Analytics />
         <JsonLd data={structuredData} />
         <header className="h-20 flex w-full justify-between items-center mt-10">
           <NavBar />
