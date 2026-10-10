@@ -7,7 +7,7 @@ export type Category =
   | "burger"
   | "dessert"
   | "boisson";
-export type PizzaBase = "tomate" | "creme";
+export type PizzaBase = "tomate" | "creme" | "barbecue";
 
 type PlatBase = {
   name: string;
@@ -37,6 +37,7 @@ type PlatSimple = PlatBase & {
 
 const tomatoPrices = { junior: 9.5, senior: 13, mega: 18 };
 const creamPrices = { junior: 9.5, senior: 13.5, mega: 19.5 };
+const barbecuePrices = { junior: 9.5, senior: 13.5, mega: 19.5 };
 
 export const pizza: Pizza[] = [
   {
@@ -123,7 +124,7 @@ export const pizza: Pizza[] = [
     name: "CAPRI",
     categorie: "pizza",
     base: "tomate",
-    image: "",
+    image: "/images-plat/capri.webp",
     bestsellers: false,
     ingredients: ["mozzarella", "chèvre", "tomates séchées", "basilic"],
     description: "Une pizza ensoleillée au chèvre, aux tomates séchées et au basilic.",
@@ -223,7 +224,7 @@ export const pizza: Pizza[] = [
     name: "PALERMO",
     categorie: "pizza",
     base: "tomate",
-    image: "",
+    image: "/images-plat/palermo.webp",
     bestsellers: false,
     ingredients: ["mozzarella", "poivrons", "chorizo", "œuf", "olives"],
     description: "Une pizza colorée et relevée au chorizo, poivrons, œuf et olives.",
@@ -233,7 +234,7 @@ export const pizza: Pizza[] = [
     name: "JARDINO",
     categorie: "pizza",
     base: "tomate",
-    image: "",
+    image: "/images-plat/jardino.webp",
     bestsellers: false,
     ingredients: ["mozzarella", "champignons", "artichauts", "oignons", "olives"],
     description: "Une composition végétarienne généreuse en légumes et en mozzarella.",
@@ -309,13 +310,33 @@ export const pizza: Pizza[] = [
     description: "Une pizza généreuse à la poitrine fumée, aux pommes de terre et aux oignons.",
     prices: creamPrices,
   },
+  {
+    name: "TEXANE",
+    categorie: "pizza",
+    base: "barbecue",
+    image: "/images-plat/barbecue.webp",
+    bestsellers: false,
+    ingredients: ["mozzarella", "viande hachée", "lardons", "oignons"],
+    description: "Une pizza généreuse à la viande hachée, aux lardons et aux oignons sur une base barbecue.",
+    prices: barbecuePrices,
+  },
+  {
+    name: "BORA BORA",
+    categorie: "pizza",
+    base: "barbecue",
+    image: "/images-plat/borabora.webp",
+    bestsellers: false,
+    ingredients: ["mozzarella", "viande hachée", "merguez", "œuf"],
+    description: "Une pizza relevée à la viande hachée, aux merguez et à l’œuf sur une base barbecue.",
+    prices: barbecuePrices,
+  },
 ];
 
 export const salades: PlatSimple[] = [
   {
     name: "PALERMO",
     categorie: "salade",
-    image: "",
+    image: "/images-plat/verte.webp",
     bestsellers: false,
     ingredients: ["salade de saison", "tomates fraîches", "poivrons grillés", "artichauts", "mozzarella"],
     description: "Une salade méditerranéenne colorée aux poivrons grillés, artichauts et mozzarella.",
@@ -333,7 +354,7 @@ export const salades: PlatSimple[] = [
   {
     name: "ITALIENNE",
     categorie: "salade",
-    image: "/images-plat/italienne.webp",
+    image: "/images-plat/salade-italienne.webp",
     bestsellers: false,
     ingredients: ["salade de saison", "tomates fraîches", "thon", "œuf dur", "olives"],
     description: "Une salade complète d’inspiration italienne au thon, à l’œuf dur et aux olives.",
@@ -342,7 +363,7 @@ export const salades: PlatSimple[] = [
   {
     name: "FERMIÈRE",
     categorie: "salade",
-    image: "/images-plat/fermiere.webp",
+    image: "/images-plat/salade-fermière.webp",
     bestsellers: false,
     ingredients: ["salade de saison", "tomates fraîches", "poulet", "maïs"],
     description: "Une salade douce et équilibrée au poulet, aux tomates fraîches et au maïs.",

@@ -68,7 +68,7 @@ export default function PlatPage({ name, categorie }: PlatPageProps) {
           </h1>
           <p className="mt-2 text-sm font-semibold uppercase tracking-wider text-white/70">
             {"base" in item
-              ? `Pizza · Base ${item.base === "tomate" ? "sauce tomate" : "crème fraîche"}`
+              ? `Pizza · Base ${item.base === "tomate" ? "sauce tomate" : item.base === "creme" ? "crème fraîche" : "sauce barbecue"}`
               : categoryLabels[item.categorie]}
           </p>
           {item.ingredients && item.ingredients.length > 0 && (

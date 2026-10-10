@@ -49,6 +49,7 @@ export default function Plat({ platType }: PlatsProps) {
   if (platType === "pizza") {
     const tomatoPizzas = pizza.filter((item) => item.base === "tomate");
     const creamPizzas = pizza.filter((item) => item.base === "creme");
+    const barbecuePizzas = pizza.filter((item) => item.base === "barbecue");
 
     return (
       <div className="mx-auto w-full max-w-7xl">
@@ -77,6 +78,18 @@ export default function Plat({ platType }: PlatsProps) {
           </h2>
           <div className="grid grid-cols-2 sm:gap-6 lg:grid-cols-3 xl:grid-cols-4">
             {renderCards(creamPizzas)}
+          </div>
+        </section>
+
+        <section className="mt-14" aria-labelledby="pizzas-barbecue">
+          <h2
+            id="pizzas-barbecue"
+            className="rounded-xl bg-orange-700 px-5 py-3 text-2xl font-bold text-white sm:text-3xl"
+          >
+            Base sauce barbecue
+          </h2>
+          <div className="grid grid-cols-2 sm:gap-6 lg:grid-cols-3 xl:grid-cols-4">
+            {renderCards(barbecuePizzas)}
           </div>
         </section>
       </div>
