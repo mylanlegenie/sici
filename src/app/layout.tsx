@@ -164,11 +164,6 @@ export default function RootLayout({
         <header className="h-20 flex w-full justify-between items-center mt-10">
           <NavBar />
         </header>
-        <Analytics />
-        <JsonLd data={structuredData} />
-        <header className="h-20 flex w-full justify-between items-center mt-10">
-          <NavBar />
-        </header>
         <main className="pb-6">{children}</main>
         <footer className="mx-auto w-full border-t border-white/20 py-6 px-5 text-sm text-white/70 bg-red-500">
           <Footer />
