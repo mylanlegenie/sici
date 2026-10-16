@@ -1,5 +1,6 @@
 import MarqueeHome from "./atoms/Marquee";
 import Link from "next/link";
+import Image from "next/image";
 import LocationSection from "./LocationSection";
 import PhoneIcon from "./atoms/icons/PhoneIcon";
 import { RESTAURANT } from "@/lib/site";
@@ -63,7 +64,16 @@ export default function HomePage() {
           <div className="mt-6 h-px w-full bg-linear-to-r from-white/0 via-white/30 to-white/0" />
         </div>
       </section>
-      <section className="home-reveal home-on-view relative mt-20 overflow-hidden bg-[url('/pizza-slide-1.webp')] bg-cover bg-center py-10">
+      <section className="home-reveal home-on-view relative mt-20 overflow-hidden py-10">
+        <Image
+          src="/pizza-slide-1.webp"
+          alt=""
+          aria-hidden="true"
+          fill
+          sizes="100vw"
+          quality={65}
+          className="object-cover object-center"
+        />
         <div className="absolute inset-0 bg-black/65" />
         <div className="relative">
           <h2 className="text-2xl text-center font-bold uppercase text-white md:text-5xl mb-5">
