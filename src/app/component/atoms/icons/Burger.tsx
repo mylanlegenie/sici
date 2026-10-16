@@ -1,5 +1,5 @@
 "use client";
-import { motion } from "motion/react";
+import { m } from "motion/react";
 
 export default function Burger({
   isClicked,
@@ -19,20 +19,20 @@ export default function Burger({
       aria-controls="menu-principal"
       className={`burger-button flex flex-col gap-2 cursor-pointer select-none border sm:mr-10 mr-3 border-white rounded-full p-5 transition-colors z-50 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-white ${classname || ""}`}
     >
-      <motion.span
+      <m.span
         aria-hidden="true"
         className="burger-line burger-line-top w-10 bg-white h-0.5 rounded-lg"
         animate={isClicked ? { rotate: "45deg", translateY: "10px" } : {}}
         transition={{ type: "spring" }}
       />
 
-      <motion.span
+      <m.span
         aria-hidden="true"
         className="burger-line burger-line-middle w-10 bg-white h-0.5 rounded-lg"
         animate={isClicked ? { width: 0 } : { width: "2.5rem" }}
       />
 
-      <motion.span
+      <m.span
         aria-hidden="true"
         className="burger-line burger-line-bottom w-10 bg-white h-0.5 rounded-lg"
         animate={isClicked ? { rotate: "-45deg", translateY: "-10px" } : {}}

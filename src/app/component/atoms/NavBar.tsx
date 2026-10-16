@@ -1,5 +1,5 @@
 "use client";
-import { motion } from "motion/react";
+import { LazyMotion, domAnimation, m } from "motion/react";
 import { useState } from "react";
 import Window from "./Window";
 import Burger from "./icons/Burger";
@@ -9,38 +9,40 @@ export default function NavBar() {
   const [isClicked, setIsClicked] = useState(false);
 
   return (
-    <nav className="navbar-container flex w-full items-center justify-between gap-2">
-      <div className="nav-slide relative w-full overflow-hidden ">
-        <Link
-          href="/"
-          aria-label="Retour à l’accueil – La Sicilienne"
-          className="block cursor-pointer select-none whitespace-nowrap p-3 text-[clamp(1.65rem,8.25vw,2.55rem)] font-bold leading-none tracking-[0.04em] text-white sm:p-2 sm:text-3xl sm:tracking-[0.08em] md:text-6xl"
-        >
-          {name.split("").map((letter, index) => (
-            <motion.span
-              key={index}
-              aria-hidden="true"
-              className="navbar-letter inline-block"
-              initial={{ opacity: 0, x: -20, scale: 0.3 }}
-              animate={{ opacity: 1, x: 0, scale: 1 }}
-              transition={{
-                duration: 0.4,
-                delay: index * 0.2,
-                type: "spring",
-              }}
-            >
-              {letter === " " ? <span>&nbsp;</span> : letter}
-            </motion.span>
-          ))}
-        </Link>
-      </div>
-      <Burger
-        isClicked={isClicked}
-        classname="mb-4"
-        onClick={() => setIsClicked(!isClicked)}
-      />
+    <LazyMotion features={domAnimation}>
+      <nav className="navbar-container flex w-full items-center justify-between gap-2">
+        <div className="nav-slide relative w-full overflow-hidden ">
+          <Link
+            href="/"
+            aria-label="Retour à l’accueil – La Sicilienne"
+            className="block cursor-pointer select-none whitespace-nowrap p-3 text-[clamp(1.65rem,8.25vw,2.55rem)] font-bold leading-none tracking-[0.04em] text-white sm:p-2 sm:text-3xl sm:tracking-[0.08em] md:text-6xl"
+          >
+            {name.split("").map((letter, index) => (
+              <m.span
+                key={index}
+                aria-hidden="true"
+                className="navbar-letter inline-block"
+                initial={{ opacity: 0, x: -20, scale: 0.3 }}
+                animate={{ opacity: 1, x: 0, scale: 1 }}
+                transition={{
+                  duration: 0.4,
+                  delay: index * 0.2,
+                  type: "spring",
+                }}
+              >
+                {letter === " " ? <span>&nbsp;</span> : letter}
+              </m.span>
+            ))}
+          </Link>
+        </div>
+        <Burger
+          isClicked={isClicked}
+          classname="mb-4"
+          onClick={() => setIsClicked(!isClicked)}
+        />
 
-      <Window isClicked={isClicked} setIsClicked={setIsClicked} />
-    </nav>
+        <Window isClicked={isClicked} setIsClicked={setIsClicked} />
+      </nav>
+    </LazyMotion>
   );
 }

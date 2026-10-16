@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { motion } from "motion/react";
+import { m } from "motion/react";
 import {
   type Dispatch,
   type SetStateAction,
@@ -138,7 +138,7 @@ export default function Window({ isClicked, setIsClicked }: WindowProps) {
   };
 
   return (
-    <motion.div
+    <m.div
       ref={menuRef}
       id="menu-principal"
       role="dialog"
@@ -174,6 +174,6 @@ export default function Window({ isClicked, setIsClicked }: WindowProps) {
           ))}
         </div>
       </section>
-    </motion.div>
+    </m.div>
   );
 }
