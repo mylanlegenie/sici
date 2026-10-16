@@ -2,6 +2,10 @@ import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
   reactCompiler: true,
+  experimental: {
+    // Include styles in the HTML to avoid a render-blocking CSS request.
+    inlineCss: true,
+  },
   async headers() {
     return [
       {
