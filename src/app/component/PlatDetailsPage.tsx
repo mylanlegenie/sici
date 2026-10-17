@@ -48,7 +48,7 @@ export default function PlatPage({ name, categorie }: PlatPageProps) {
               src={productImage}
               width={500}
               height={500}
-              sizes="(max-width: 767px) min(90vw, 420px), 520px"
+              sizes="(max-width: 467px) 90vw, (max-width: 767px) 420px, (max-width: 1299px) 40vw, 520px"
               quality={65}
               alt={item.name}
               preload

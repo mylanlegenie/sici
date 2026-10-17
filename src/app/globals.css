@@ -152,7 +152,9 @@
   --😀😀😀: #ef444463;
   cursor: pointer;
   width: 250px;
+  max-width: calc(100vw - 2rem);
   height: 70px;
+  flex-shrink: 0;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -166,7 +168,7 @@
   border-radius: .75rem;
   box-shadow: 0 8px 0 var(--color-red-600);
   transform: skew(-10deg);
-  transition: all .1s ease;
+  transition: transform .1s ease, box-shadow .1s ease, letter-spacing .1s ease;
   filter: drop-shadow(0 15px 20px var(--😀😀😀));
 }
 

@@ -47,7 +47,9 @@ const nextConfig: NextConfig = {
     ];
   },
   images: {
-    formats: ["image/avif", "image/webp"],
+    // Keep cold image requests fast: these sources are already WebP.
+    formats: ["image/webp"],
+    deviceSizes: [420, 520, 640, 750, 828, 1040, 1080, 1200, 1920, 2048, 3840],
     qualities: [65, 75],
     minimumCacheTTL: 31536000,
   },
