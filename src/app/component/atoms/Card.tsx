@@ -42,7 +42,11 @@ export default function Card({
   const productImage = image && image.trim() !== "" ? image : null;
 
   return (
-    <Link className="min-w-0" href={`/menu/${platType}/${toSlug(name)}`}>
+    <Link
+      className="min-w-0"
+      href={`/menu/${platType}/${toSlug(name)}`}
+      prefetch={true}
+    >
       <article className="product-card cursor-pointer group mt-6 flex min-h-96 sm:w-full w-[90%] sm:mx-0 mx-auto flex-col items-center justify-between rounded-2xl border border-zinc-200 bg-white px-3 py-5 text-center shadow-sm transition duration-300 hover:-translate-y-1 hover:shadow-xl sm:px-5 sm:py-6">
         <div
           className={`w-full ${hasMultiplePrices ? "" : "flex flex-1 flex-col"}`}

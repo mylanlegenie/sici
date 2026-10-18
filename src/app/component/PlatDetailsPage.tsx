@@ -51,7 +51,8 @@ export default function PlatPage({ name, categorie }: PlatPageProps) {
               sizes="(max-width: 467px) 90vw, (max-width: 767px) 420px, (max-width: 1299px) 40vw, 520px"
               quality={65}
               alt={item.name}
-              preload
+              loading="eager"
+              fetchPriority="high"
             />
           ) : (
             <div className="mx-auto flex h-[260px] w-full max-w-[420px] items-center justify-center rounded-2xl bg-black shadow-lg md:h-[420px] md:max-w-[520px]">
