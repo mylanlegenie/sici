@@ -74,7 +74,7 @@ export const pizza: Pizza[] = [
     name: "CALZONE (soufflée)",
     categorie: "pizza",
     base: "tomate",
-    image: "/images-plat/pizza-calzone-soufflee.webp",
+    image: "/images-plat/pizza-calzone.webp",
     bestsellers: false,
     ingredients: ["mozzarella", "jambon ou viande hachée", "œuf"],
     description: "Une pizza soufflée et fondante, proposée au jambon ou à la viande hachée.",
