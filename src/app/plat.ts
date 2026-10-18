@@ -184,7 +184,7 @@ export const pizza: Pizza[] = [
     name: "3 JAMBONS",
     categorie: "pizza",
     base: "tomate",
-    image: "/images-plat/pizza-3-jambons.webp",
+    image: "",
     bestsellers: false,
     ingredients: ["mozzarella", "jambon", "poitrine fumée", "chorizo"],
     description: "Une pizza généreuse réunissant jambon, poitrine fumée et chorizo.",
@@ -294,7 +294,7 @@ export const pizza: Pizza[] = [
     name: "MARINA",
     categorie: "pizza",
     base: "creme",
-    image: "/images-plat/pizza-marina.webp",
+    image: "",
     bestsellers: false,
     ingredients: ["mozzarella", "noix de Saint-Jacques"],
     description: "Une pizza crémeuse et raffinée garnie de mozzarella et de noix de Saint-Jacques.",
@@ -372,7 +372,7 @@ export const salades: PlatSimple[] = [
   {
     name: "CHAVIGNOL",
     categorie: "salade",
-    image: "/images-plat/salade-chavignol.webp",
+    image: "",
     bestsellers: false,
     ingredients: ["salade de saison", "tomates fraîches", "crottin en toast", "lardons"],
     description: "Une salade gourmande au crottin chaud sur toast et aux lardons.",
@@ -381,7 +381,7 @@ export const salades: PlatSimple[] = [
   {
     name: "NORVÉGIENNE",
     categorie: "salade",
-    image: "/images-plat/salade-norvegienne.webp",
+    image: "",
     bestsellers: false,
     ingredients: ["salade de saison", "tomates fraîches", "crevettes", "saumon fumé", "citron"],
     description: "Une salade marine aux crevettes et au saumon fumé, accompagnée de citron.",
@@ -489,7 +489,7 @@ export const assiettes: PlatSimple[] = [
   {
     name: "MERGUEZ",
     categorie: "assiette",
-    image: "/images-plat/assiette-merguez.webp",
+    image: "",
     bestsellers: false,
     ingredients: ["salade", "tomate", "riz", "trois merguez", "frites"],
     description:
@@ -531,7 +531,7 @@ export const assiettes: PlatSimple[] = [
   {
     name: "ESCALOPE",
     categorie: "assiette",
-    image: "/images-plat/assiette-escalope.webp",
+    image: "",
     bestsellers: false,
     ingredients: [
       "salade",
@@ -611,7 +611,7 @@ export const burgers: PlatSimple[] = [
   {
     name: "DOUBLE CHEESE",
     categorie: "burger",
-    image: "/images-plat/burger-double-cheese.webp",
+    image: "",
     bestsellers: false,
     ingredients: [
       "deux steaks hachés",
@@ -627,7 +627,7 @@ export const burgers: PlatSimple[] = [
   {
     name: "FISH BURGER",
     categorie: "burger",
-    image: "/images-plat/burger-fish-burger.webp",
+    image: "",
     bestsellers: false,
     ingredients: ["poisson pané", "cheddar", "salade", "tomate", "frites"],
     description:
@@ -640,7 +640,7 @@ export const desserts: PlatSimple[] = [
   {
     name: "MOUSSE AU CHOCOLAT",
     categorie: "dessert",
-    image: "/images-plat/dessert-mousse-au-chocolat.webp",
+    image: "",
     bestsellers: false,
     description: "Une mousse au chocolat onctueuse et gourmande.",
     price: 3,
@@ -648,7 +648,7 @@ export const desserts: PlatSimple[] = [
   {
     name: "BROWNIE",
     categorie: "dessert",
-    image: "/images-plat/dessert-brownie.webp",
+    image: "",
     bestsellers: false,
     description: "Un brownie fondant au chocolat.",
     price: 3,
@@ -656,7 +656,7 @@ export const desserts: PlatSimple[] = [
   {
     name: "TIRAMISU",
     categorie: "dessert",
-    image: "/images-plat/dessert-tiramisu.webp",
+    image: "",
     bestsellers: false,
     description: "Un dessert italien classique à base de mascarpone, de café et de biscuits.",
     price: 3.5,
@@ -664,7 +664,7 @@ export const desserts: PlatSimple[] = [
   {
     name: "SALADE DE FRUITS",
     categorie: "dessert",
-    image: "/images-plat/dessert-salade-de-fruits.webp",
+    image: "",
     bestsellers: false,
     description: "Une salade de fruits fraîche et colorée.",
     price: 3,
@@ -672,7 +672,7 @@ export const desserts: PlatSimple[] = [
   {
     name: "TARTE AU CITRON",
     categorie: "dessert",
-    image: "/images-plat/dessert-tarte-au-citron.webp",
+    image: "",
     bestsellers: false,
     description: "Une tarte au citron acidulée sur une pâte croustillante.",
     price: 3,
@@ -680,7 +680,7 @@ export const desserts: PlatSimple[] = [
   {
     name: "TARTE AUX POMMES",
     categorie: "dessert",
-    image: "/images-plat/dessert-tarte-aux-pommes.webp",
+    image: "",
     bestsellers: false,
     description: "Une tarte aux pommes douce et fondante.",
     price: 3,
@@ -688,7 +688,7 @@ export const desserts: PlatSimple[] = [
   {
     name: "PANNA COTTA",
     categorie: "dessert",
-    image: "/images-plat/dessert-panna-cotta.webp",
+    image: "",
     bestsellers: false,
     description: "Une panna cotta fraîche et crémeuse.",
     price: 3,
@@ -696,7 +696,7 @@ export const desserts: PlatSimple[] = [
   {
     name: "HÄAGEN-DAZS",
     categorie: "dessert",
-    image: "/images-plat/dessert-haagen-dazs.webp",
+    image: "",
     bestsellers: false,
     description: "Une glace Häagen-Dazs proposée en deux formats.",
     options: [
@@ -711,7 +711,7 @@ export const boissons: PlatSimple[] = [
   {
     name: "BOISSON 33CL",
     categorie: "boisson",
-    image: "/images-plat/boisson-boisson-33cl.webp",
+    image: "",
     bestsellers: false,
     description: "Boisson fraîche en bouteille ou canette de 33 cl.",
     price: 1.5,
@@ -719,7 +719,7 @@ export const boissons: PlatSimple[] = [
   {
     name: "BOISSON 1,5L",
     categorie: "boisson",
-    image: "/images-plat/boisson-boisson-1-5l.webp",
+    image: "",
     bestsellers: false,
     description: "Boisson fraîche en bouteille de 1,5 L.",
     price: 2.5,
@@ -727,7 +727,7 @@ export const boissons: PlatSimple[] = [
   {
     name: "BOISSON 2L",
     categorie: "boisson",
-    image: "/images-plat/boisson-boisson-2l.webp",
+    image: "",
     bestsellers: false,
     description: "Boisson fraîche en bouteille de 2 L.",
     price: 3,
