@@ -294,7 +294,7 @@ export const pizza: Pizza[] = [
     name: "MARINA",
     categorie: "pizza",
     base: "creme",
-    image: "",
+    image: "/images-plat/pizza-marina.webp",
     bestsellers: false,
     ingredients: ["mozzarella", "noix de Saint-Jacques"],
     description: "Une pizza crémeuse et raffinée garnie de mozzarella et de noix de Saint-Jacques.",
@@ -640,7 +640,7 @@ export const desserts: PlatSimple[] = [
   {
     name: "MOUSSE AU CHOCOLAT",
     categorie: "dessert",
-    image: "",
+    image: "/images-plat/dessert-mousse-au-chocolat.webp",
     bestsellers: false,
     description: "Une mousse au chocolat onctueuse et gourmande.",
     price: 3,
@@ -648,7 +648,7 @@ export const desserts: PlatSimple[] = [
   {
     name: "BROWNIE",
     categorie: "dessert",
-    image: "",
+    image: "/images-plat/dessert-brownie.webp",
     bestsellers: false,
     description: "Un brownie fondant au chocolat.",
     price: 3,
@@ -656,7 +656,7 @@ export const desserts: PlatSimple[] = [
   {
     name: "TIRAMISU",
     categorie: "dessert",
-    image: "",
+    image: "/images-plat/dessert-tiramisu.webp",
     bestsellers: false,
     description: "Un dessert italien classique à base de mascarpone, de café et de biscuits.",
     price: 3.5,
@@ -664,7 +664,7 @@ export const desserts: PlatSimple[] = [
   {
     name: "SALADE DE FRUITS",
     categorie: "dessert",
-    image: "",
+    image: "/images-plat/dessert-salade-de-fruits.webp",
     bestsellers: false,
     description: "Une salade de fruits fraîche et colorée.",
     price: 3,
@@ -672,7 +672,7 @@ export const desserts: PlatSimple[] = [
   {
     name: "TARTE AU CITRON",
     categorie: "dessert",
-    image: "",
+    image: "/images-plat/dessert-tarte-au-citron.webp",
     bestsellers: false,
     description: "Une tarte au citron acidulée sur une pâte croustillante.",
     price: 3,
@@ -680,7 +680,7 @@ export const desserts: PlatSimple[] = [
   {
     name: "TARTE AUX POMMES",
     categorie: "dessert",
-    image: "",
+    image: "/images-plat/dessert-tarte-aux-pommes.webp",
     bestsellers: false,
     description: "Une tarte aux pommes douce et fondante.",
     price: 3,
@@ -688,7 +688,7 @@ export const desserts: PlatSimple[] = [
   {
     name: "PANNA COTTA",
     categorie: "dessert",
-    image: "",
+    image: "/images-plat/dessert-panna-cotta.webp",
     bestsellers: false,
     description: "Une panna cotta fraîche et crémeuse.",
     price: 3,
