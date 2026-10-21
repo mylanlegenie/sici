@@ -531,7 +531,7 @@ export const assiettes: PlatSimple[] = [
   {
     name: "ESCALOPE",
     categorie: "assiette",
-    image: "",
+    image: "/images-plat/assiette-escalope.webp",
     bestsellers: false,
     ingredients: [
       "salade",
