@@ -184,7 +184,7 @@ export const pizza: Pizza[] = [
     name: "3 JAMBONS",
     categorie: "pizza",
     base: "tomate",
-    image: "",
+    image: "/images-plat/pizza-3-jambon.webp",
     bestsellers: false,
     ingredients: ["mozzarella", "jambon", "poitrine fumée", "chorizo"],
     description: "Une pizza généreuse réunissant jambon, poitrine fumée et chorizo.",
@@ -372,7 +372,7 @@ export const salades: PlatSimple[] = [
   {
     name: "CHAVIGNOL",
     categorie: "salade",
-    image: "",
+    image: "/images-plat/salade-chavignol.webp",
     bestsellers: false,
     ingredients: ["salade de saison", "tomates fraîches", "crottin en toast", "lardons"],
     description: "Une salade gourmande au crottin chaud sur toast et aux lardons.",
@@ -381,7 +381,7 @@ export const salades: PlatSimple[] = [
   {
     name: "NORVÉGIENNE",
     categorie: "salade",
-    image: "",
+    image: "/images-plat/salade-norvégienne.webp",
     bestsellers: false,
     ingredients: ["salade de saison", "tomates fraîches", "crevettes", "saumon fumé", "citron"],
     description: "Une salade marine aux crevettes et au saumon fumé, accompagnée de citron.",
@@ -489,7 +489,7 @@ export const assiettes: PlatSimple[] = [
   {
     name: "MERGUEZ",
     categorie: "assiette",
-    image: "",
+    image: "/images-plat/assiette-merguez.webp",
     bestsellers: false,
     ingredients: ["salade", "tomate", "riz", "trois merguez", "frites"],
     description:
@@ -611,7 +611,7 @@ export const burgers: PlatSimple[] = [
   {
     name: "DOUBLE CHEESE",
     categorie: "burger",
-    image: "",
+    image: "/images-plat/burger-double-cheese.webp",
     bestsellers: false,
     ingredients: [
       "deux steaks hachés",
@@ -627,7 +627,7 @@ export const burgers: PlatSimple[] = [
   {
     name: "FISH BURGER",
     categorie: "burger",
-    image: "",
+    image: "/images-plat/burger-fish.webp",
     bestsellers: false,
     ingredients: ["poisson pané", "cheddar", "salade", "tomate", "frites"],
     description:
