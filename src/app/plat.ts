@@ -284,7 +284,7 @@ export const pizza: Pizza[] = [
     name: "VENEZIA",
     categorie: "pizza",
     base: "creme",
-    image: "/images-plat/pizza-venezia.webp",
+    image: "/images-plat/pizza-venezia-7205b6d7.webp",
     bestsellers: false,
     ingredients: ["mozzarella", "saumon fumé", "citron"],
     description: "Une recette délicate au saumon fumé et au citron sur une base crème fraîche.",
@@ -711,7 +711,7 @@ export const boissons: PlatSimple[] = [
   {
     name: "BOISSON 33CL",
     categorie: "boisson",
-    image: "",
+    image: "/images-plat/boissons-cannettes.webp",
     bestsellers: false,
     description: "Boisson fraîche en bouteille ou canette de 33 cl.",
     price: 1.5,
