@@ -44,7 +44,7 @@ export const pizza: Pizza[] = [
     name: "CLASSICA",
     categorie: "pizza",
     base: "tomate",
-    image: "/images-plat/pizza-classica.webp",
+    image: "/images-plat/pizza-classica-v2.webp",
     bestsellers: true,
     ingredients: ["mozzarella", "origan"],
     description: "La pizza classique par excellence, simple et parfumée à l’origan.",
@@ -54,7 +54,7 @@ export const pizza: Pizza[] = [
     name: "REGINA",
     categorie: "pizza",
     base: "tomate",
-    image: "/images-plat/pizza-regina.webp",
+    image: "/images-plat/pizza-regina-v2.webp",
     bestsellers: true,
     ingredients: ["mozzarella", "jambon", "champignons"],
     description: "Une pizza généreuse qui associe jambon et champignons à la mozzarella.",
@@ -64,7 +64,7 @@ export const pizza: Pizza[] = [
     name: "SICILIENNE",
     categorie: "pizza",
     base: "tomate",
-    image: "/images-plat/pizza-sicilienne.webp",
+    image: "/images-plat/pizza-sicilienne-v2.webp",
     bestsellers: true,
     ingredients: ["mozzarella", "viande hachée", "pommes de terre", "oignons"],
     description: "La spécialité maison, généreusement garnie de viande hachée et de pommes de terre.",
@@ -74,7 +74,7 @@ export const pizza: Pizza[] = [
     name: "CALZONE (soufflée)",
     categorie: "pizza",
     base: "tomate",
-    image: "/images-plat/pizza-calzone.webp",
+    image: "/images-plat/pizza-calzone-v2.webp",
     bestsellers: false,
     ingredients: ["mozzarella", "jambon ou viande hachée", "œuf"],
     description: "Une pizza soufflée et fondante, proposée au jambon ou à la viande hachée.",
@@ -84,7 +84,7 @@ export const pizza: Pizza[] = [
     name: "PAYSANNE",
     categorie: "pizza",
     base: "tomate",
-    image: "/images-plat/pizza-paysanne.webp",
+    image: "/images-plat/pizza-paysanne-v2.webp",
     bestsellers: true,
     ingredients: ["mozzarella", "lardons", "oignons", "œuf"],
     description: "Une recette rustique et gourmande aux lardons, oignons et œuf.",
@@ -94,7 +94,7 @@ export const pizza: Pizza[] = [
     name: "CHÈVRE MIEL",
     categorie: "pizza",
     base: "tomate",
-    image: "/images-plat/pizza-chevre-miel.webp",
+    image: "/images-plat/pizza-chevre-miel-v2.webp",
     bestsellers: false,
     ingredients: ["mozzarella", "chèvre", "jambon", "miel"],
     description: "Un accord sucré-salé entre le fromage de chèvre, le jambon et le miel.",
@@ -104,7 +104,7 @@ export const pizza: Pizza[] = [
     name: "PARMIGIANA",
     categorie: "pizza",
     base: "tomate",
-    image: "/images-plat/pizza-parmigiana.webp",
+    image: "/images-plat/pizza-parmigiana-v2.webp",
     bestsellers: false,
     ingredients: ["mozzarella", "jambon", "aubergines", "œuf"],
     description: "Une pizza savoureuse aux aubergines, jambon et œuf, gratinée à la mozzarella.",
@@ -114,7 +114,7 @@ export const pizza: Pizza[] = [
     name: "NAPOLITAINE",
     categorie: "pizza",
     base: "tomate",
-    image: "/images-plat/pizza-napolitaine.webp",
+    image: "/images-plat/pizza-napolitaine-v2.webp",
     bestsellers: false,
     ingredients: ["mozzarella", "anchois", "câpres", "olives"],
     description: "Une recette méditerranéenne relevée par les anchois, les câpres et les olives.",
@@ -124,7 +124,7 @@ export const pizza: Pizza[] = [
     name: "CAPRI",
     categorie: "pizza",
     base: "tomate",
-    image: "/images-plat/pizza-capri.webp",
+    image: "/images-plat/pizza-capri-v2.webp",
     bestsellers: false,
     ingredients: ["mozzarella", "chèvre", "tomates séchées", "basilic"],
     description: "Une pizza ensoleillée au chèvre, aux tomates séchées et au basilic.",
@@ -134,7 +134,7 @@ export const pizza: Pizza[] = [
     name: "DAUPHINE",
     categorie: "pizza",
     base: "tomate",
-    image: "/images-plat/pizza-dauphine.webp",
+    image: "/images-plat/pizza-dauphine-v2.webp",
     bestsellers: false,
     ingredients: ["mozzarella", "pommes de terre", "chèvre", "jambon"],
     description: "Une composition généreuse aux pommes de terre, au chèvre et au jambon.",
@@ -144,7 +144,7 @@ export const pizza: Pizza[] = [
     name: "GORGONZOLA",
     categorie: "pizza",
     base: "tomate",
-    image: "/images-plat/pizza-gorgonzola.webp",
+    image: "/images-plat/pizza-gorgonzola-v2.webp",
     bestsellers: false,
     ingredients: ["mozzarella", "jambon", "gorgonzola", "origan"],
     description: "Une pizza de caractère au gorgonzola, adoucie par la mozzarella et le jambon.",
@@ -154,7 +154,7 @@ export const pizza: Pizza[] = [
     name: "4 FROMAGES",
     categorie: "pizza",
     base: "tomate",
-    image: "/images-plat/pizza-4-fromages.webp",
+    image: "/images-plat/pizza-4-fromages-v2.webp",
     bestsellers: false,
     ingredients: ["mozzarella", "chèvre", "gorgonzola", "parmesan", "brie"],
     description: "Une pizza intensément fromagère réunissant mozzarella, chèvre, gorgonzola, parmesan et brie.",
@@ -164,7 +164,7 @@ export const pizza: Pizza[] = [
     name: "BOURSIN",
     categorie: "pizza",
     base: "tomate",
-    image: "/images-plat/pizza-boursin.webp",
+    image: "/images-plat/pizza-boursin-v2.webp",
     bestsellers: false,
     ingredients: ["mozzarella", "viande hachée", "Boursin", "oignons"],
     description: "Une recette crémeuse et généreuse à la viande hachée, au Boursin et aux oignons.",
@@ -174,7 +174,7 @@ export const pizza: Pizza[] = [
     name: "4 SAISONS",
     categorie: "pizza",
     base: "tomate",
-    image: "/images-plat/pizza-4-saisons.webp",
+    image: "/images-plat/pizza-4-saisons-v2.webp",
     bestsellers: false,
     ingredients: ["mozzarella", "jambon", "champignons", "artichauts", "olives"],
     description: "Un grand classique garni de jambon, champignons, artichauts et olives.",
@@ -184,7 +184,7 @@ export const pizza: Pizza[] = [
     name: "3 JAMBONS",
     categorie: "pizza",
     base: "tomate",
-    image: "/images-plat/pizza-3-jambon.webp",
+    image: "/images-plat/pizza-3-jambon-v2.webp",
     bestsellers: false,
     ingredients: ["mozzarella", "jambon", "poitrine fumée", "chorizo"],
     description: "Une pizza généreuse réunissant jambon, poitrine fumée et chorizo.",
@@ -194,7 +194,7 @@ export const pizza: Pizza[] = [
     name: "ORIENTALE",
     categorie: "pizza",
     base: "tomate",
-    image: "/images-plat/pizza-orientale.webp",
+    image: "/images-plat/pizza-orientale-v2.webp",
     bestsellers: true,
     ingredients: ["mozzarella", "merguez", "poivrons", "œuf", "olives"],
     description: "Une recette relevée à la merguez, accompagnée de poivrons, d’œuf et d’olives.",
@@ -204,7 +204,7 @@ export const pizza: Pizza[] = [
     name: "KEBAB",
     categorie: "pizza",
     base: "tomate",
-    image: "/images-plat/pizza-kebab.webp",
+    image: "/images-plat/pizza-kebab-v2.webp",
     bestsellers: false,
     ingredients: ["mozzarella", "tomates fraîches", "viande kebab", "oignons", "poivrons"],
     description: "Une pizza copieuse à la viande kebab, aux tomates fraîches, oignons et poivrons.",
@@ -214,7 +214,7 @@ export const pizza: Pizza[] = [
     name: "TORINO",
     categorie: "pizza",
     base: "tomate",
-    image: "/images-plat/pizza-torino.webp",
+    image: "/images-plat/pizza-torino-v2.webp",
     bestsellers: false,
     ingredients: ["mozzarella", "thon", "champignons", "œuf", "olives"],
     description: "Une recette complète au thon, aux champignons, à l’œuf et aux olives.",
@@ -224,7 +224,7 @@ export const pizza: Pizza[] = [
     name: "PALERMO",
     categorie: "pizza",
     base: "tomate",
-    image: "/images-plat/pizza-palermo.webp",
+    image: "/images-plat/pizza-palermo-v2.webp",
     bestsellers: false,
     ingredients: ["mozzarella", "poivrons", "chorizo", "œuf", "olives"],
     description: "Une pizza colorée et relevée au chorizo, poivrons, œuf et olives.",
@@ -234,7 +234,7 @@ export const pizza: Pizza[] = [
     name: "JARDINO",
     categorie: "pizza",
     base: "tomate",
-    image: "/images-plat/pizza-jardino.webp",
+    image: "/images-plat/pizza-jardino-v2.webp",
     bestsellers: false,
     ingredients: ["mozzarella", "champignons", "artichauts", "oignons", "olives"],
     description: "Une composition végétarienne généreuse en légumes et en mozzarella.",
@@ -244,7 +244,7 @@ export const pizza: Pizza[] = [
     name: "CAMPIONE",
     categorie: "pizza",
     base: "tomate",
-    image: "/images-plat/pizza-campione.webp",
+    image: "/images-plat/pizza-campione-v2.webp",
     bestsellers: false,
     ingredients: ["mozzarella", "viande hachée", "champignons", "œuf"],
     description: "Une pizza gourmande à la viande hachée, aux champignons et à l’œuf.",
@@ -254,7 +254,7 @@ export const pizza: Pizza[] = [
     name: "RENOIR",
     categorie: "pizza",
     base: "tomate",
-    image: "/images-plat/pizza-renoir.webp",
+    image: "/images-plat/pizza-renoir-v2.webp",
     bestsellers: false,
     ingredients: ["mozzarella", "chorizo", "merguez", "viande hachée"],
     description: "Une recette généreuse et relevée réunissant chorizo, merguez et viande hachée.",
@@ -264,7 +264,7 @@ export const pizza: Pizza[] = [
     name: "PESCATORI",
     categorie: "pizza",
     base: "tomate",
-    image: "/images-plat/pizza-pescatori.webp",
+    image: "/images-plat/pizza-pescatori-v2.webp",
     bestsellers: false,
     ingredients: ["mozzarella", "fruits de mer", "tomates fraîches", "persil", "citron"],
     description: "Une pizza marine et fraîche aux fruits de mer, relevée de persil et de citron.",
@@ -274,7 +274,7 @@ export const pizza: Pizza[] = [
     name: "RIMINI",
     categorie: "pizza",
     base: "creme",
-    image: "/images-plat/pizza-rimini.webp",
+    image: "/images-plat/pizza-rimini-v2.webp",
     bestsellers: false,
     ingredients: ["mozzarella", "crème fraîche", "poulet", "champignons"],
     description: "Une pizza crémeuse au poulet et aux champignons, gratinée à la mozzarella.",
@@ -284,7 +284,7 @@ export const pizza: Pizza[] = [
     name: "VENEZIA",
     categorie: "pizza",
     base: "creme",
-    image: "/images-plat/pizza-venezia.webp",
+    image: "/images-plat/pizza-venezia-v2.webp",
     bestsellers: false,
     ingredients: ["mozzarella", "saumon fumé", "citron"],
     description: "Une recette délicate au saumon fumé et au citron sur une base crème fraîche.",
@@ -294,7 +294,7 @@ export const pizza: Pizza[] = [
     name: "MARINA",
     categorie: "pizza",
     base: "creme",
-    image: "/images-plat/pizza-marina.webp",
+    image: "/images-plat/pizza-marina-v2.webp",
     bestsellers: false,
     ingredients: ["mozzarella", "noix de Saint-Jacques"],
     description: "Une pizza crémeuse et raffinée garnie de mozzarella et de noix de Saint-Jacques.",
@@ -304,7 +304,7 @@ export const pizza: Pizza[] = [
     name: "MILANO",
     categorie: "pizza",
     base: "creme",
-    image: "/images-plat/pizza-milano.webp",
+    image: "/images-plat/pizza-milano-v2.webp",
     bestsellers: false,
     ingredients: ["mozzarella", "poitrine fumée", "pommes de terre", "oignons"],
     description: "Une pizza généreuse à la poitrine fumée, aux pommes de terre et aux oignons.",
@@ -314,7 +314,7 @@ export const pizza: Pizza[] = [
     name: "TEXANE",
     categorie: "pizza",
     base: "barbecue",
-    image: "/images-plat/pizza-texane.webp",
+    image: "/images-plat/pizza-texane-v2.webp",
     bestsellers: false,
     ingredients: ["mozzarella", "viande hachée", "lardons", "oignons"],
     description: "Une pizza généreuse à la viande hachée, aux lardons et aux oignons sur une base barbecue.",
@@ -324,7 +324,7 @@ export const pizza: Pizza[] = [
     name: "BORA BORA",
     categorie: "pizza",
     base: "barbecue",
-    image: "/images-plat/pizza-bora-bora.webp",
+    image: "/images-plat/pizza-bora-bora-v2.webp",
     bestsellers: false,
     ingredients: ["mozzarella", "viande hachée", "merguez", "œuf"],
     description: "Une pizza relevée à la viande hachée, aux merguez et à l’œuf sur une base barbecue.",
@@ -336,7 +336,7 @@ export const salades: PlatSimple[] = [
   {
     name: "Salade Verte",
     categorie: "salade",
-    image: "/images-plat/salade-salade-verte.webp",
+    image: "/images-plat/salade-salade-verte-v2.webp",
     bestsellers: false,
     ingredients: ["salade de saison", ],
     description: "Une salade verte cueillis avec amour.",
@@ -345,7 +345,7 @@ export const salades: PlatSimple[] = [
   {
     name: "PARIGI",
     categorie: "salade",
-    image: "/images-plat/salade-parigi.webp",
+    image: "/images-plat/salade-parigi-v2.webp",
     bestsellers: false,
     ingredients: ["salade de saison", "tomates fraîches", "jambon", "champignons"],
     description: "Une salade fraîche et généreuse garnie de jambon et de champignons.",
@@ -354,7 +354,7 @@ export const salades: PlatSimple[] = [
   {
     name: "ITALIENNE",
     categorie: "salade",
-    image: "/images-plat/salade-italienne.webp",
+    image: "/images-plat/salade-italienne-v2.webp",
     bestsellers: false,
     ingredients: ["salade de saison", "tomates fraîches", "thon", "œuf dur", "olives"],
     description: "Une salade complète d’inspiration italienne au thon, à l’œuf dur et aux olives.",
@@ -363,7 +363,7 @@ export const salades: PlatSimple[] = [
   {
     name: "FERMIÈRE",
     categorie: "salade",
-    image: "/images-plat/salade-fermiere.webp",
+    image: "/images-plat/salade-fermiere-v2.webp",
     bestsellers: false,
     ingredients: ["salade de saison", "tomates fraîches", "poulet", "maïs"],
     description: "Une salade douce et équilibrée au poulet, aux tomates fraîches et au maïs.",
@@ -372,7 +372,7 @@ export const salades: PlatSimple[] = [
   {
     name: "CHAVIGNOL",
     categorie: "salade",
-    image: "/images-plat/salade-chavignol.webp",
+    image: "/images-plat/salade-chavignol-v2.webp",
     bestsellers: false,
     ingredients: ["salade de saison", "tomates fraîches", "crottin en toast", "lardons"],
     description: "Une salade gourmande au crottin chaud sur toast et aux lardons.",
@@ -381,7 +381,7 @@ export const salades: PlatSimple[] = [
   {
     name: "NORVÉGIENNE",
     categorie: "salade",
-    image: "/images-plat/salade-norvégienne.webp",
+    image: "/images-plat/salade-norvégienne-v2.webp",
     bestsellers: false,
     ingredients: ["salade de saison", "tomates fraîches", "crevettes", "saumon fumé", "citron"],
     description: "Une salade marine aux crevettes et au saumon fumé, accompagnée de citron.",
@@ -393,7 +393,7 @@ export const pates: PlatSimple[] = [
   {
     name: "CARBONARA",
     categorie: "pate",
-    image: "/images-plat/pate-carbonara.webp",
+    image: "/images-plat/pate-carbonara-v2.webp",
     bestsellers: false,
     ingredients: [
       "tagliatelles ou penne",
@@ -408,7 +408,7 @@ export const pates: PlatSimple[] = [
   {
     name: "FRUITS DE MER",
     categorie: "pate",
-    image: "/images-plat/pate-fruits-de-mer.webp",
+    image: "/images-plat/pate-fruits-de-mer-v2.webp",
     bestsellers: false,
     ingredients: [
       "tagliatelles ou penne",
@@ -422,7 +422,7 @@ export const pates: PlatSimple[] = [
   {
     name: "4 FROMAGES",
     categorie: "pate",
-    image: "/images-plat/pate-4-fromages.webp",
+    image: "/images-plat/pate-4-fromages-v2.webp",
     bestsellers: false,
     ingredients: [
       "tagliatelles ou penne",
@@ -436,7 +436,7 @@ export const pates: PlatSimple[] = [
   {
     name: "BOLOGNAISE",
     categorie: "pate",
-    image: "/images-plat/pate-bolognaise.webp",
+    image: "/images-plat/pate-bolognaise-v2.webp",
     bestsellers: false,
     ingredients: [
       "tagliatelles ou penne",
@@ -451,7 +451,7 @@ export const pates: PlatSimple[] = [
   {
     name: "PESTO",
     categorie: "pate",
-    image: "/images-plat/pate-pesto.webp",
+    image: "/images-plat/pate-pesto-v2.webp",
     bestsellers: false,
     ingredients: ["tagliatelles ou penne", "sauce pesto"],
     description:
@@ -461,7 +461,7 @@ export const pates: PlatSimple[] = [
   {
     name: "LASAGNE",
     categorie: "pate",
-    image: "/images-plat/pate-lasagne.webp",
+    image: "/images-plat/pate-lasagne-v2.webp",
     bestsellers: false,
     ingredients: [
       "bœuf haché",
@@ -479,7 +479,7 @@ export const assiettes: PlatSimple[] = [
   {
     name: "CHICKEN",
     categorie: "assiette",
-    image: "/images-plat/assiette-chicken.webp",
+    image: "/images-plat/assiette-chicken-v2.webp",
     bestsellers: false,
     ingredients: ["salade", "tomate", "riz", "poulet mariné", "frites"],
     description:
@@ -489,7 +489,7 @@ export const assiettes: PlatSimple[] = [
   {
     name: "MERGUEZ",
     categorie: "assiette",
-    image: "/images-plat/assiette-merguez.webp",
+    image: "/images-plat/assiette-merguez-v2.webp",
     bestsellers: false,
     ingredients: ["salade", "tomate", "riz", "trois merguez", "frites"],
     description:
@@ -499,7 +499,7 @@ export const assiettes: PlatSimple[] = [
   {
     name: "CHICKEN STRIPS",
     categorie: "assiette",
-    image: "/images-plat/assiette-chicken-strips.webp",
+    image: "/images-plat/assiette-chicken-strips-v2.webp",
     bestsellers: false,
     ingredients: [
       "salade",
@@ -515,7 +515,7 @@ export const assiettes: PlatSimple[] = [
   {
     name: "CHICKEN WINGS",
     categorie: "assiette",
-    image: "/images-plat/assiette-chicken-wings.webp",
+    image: "/images-plat/assiette-chicken-wings-v2.webp",
     bestsellers: false,
     ingredients: [
       "salade",
@@ -531,7 +531,7 @@ export const assiettes: PlatSimple[] = [
   {
     name: "ESCALOPE",
     categorie: "assiette",
-    image: "/images-plat/assiette-escalope.webp",
+    image: "/images-plat/assiette-escalope-v2.webp",
     bestsellers: false,
     ingredients: [
       "salade",
@@ -550,7 +550,7 @@ export const sandwichs: PlatSimple[] = [
   {
     name: "CHICKEN CHIKA",
     categorie: "sandwich",
-    image: "/images-plat/sandwich-chicken-chika.webp",
+    image: "/images-plat/sandwich-chicken-chika-v2.webp",
     bestsellers: false,
     ingredients: [
       "salade",
@@ -566,7 +566,7 @@ export const sandwichs: PlatSimple[] = [
   {
     name: "MERGUEZ",
     categorie: "sandwich",
-    image: "/images-plat/sandwich-merguez.webp",
+    image: "/images-plat/sandwich-merguez-v2.webp",
     bestsellers: false,
     ingredients: ["salade", "tomate", "merguez", "olives", "frites"],
     description:
@@ -576,7 +576,7 @@ export const sandwichs: PlatSimple[] = [
   {
     name: "AMERICAN CHEDDAR",
     categorie: "sandwich",
-    image: "/images-plat/sandwich-american-cheddar.webp",
+    image: "/images-plat/sandwich-american-cheddar-v2.webp",
     bestsellers: false,
     ingredients: [
       "salade",
@@ -592,7 +592,7 @@ export const sandwichs: PlatSimple[] = [
   {
     name: "TENDERS",
     categorie: "sandwich",
-    image: "/images-plat/sandwich-tenders.webp",
+    image: "/images-plat/sandwich-tenders-v2.webp",
     bestsellers: false,
     ingredients: [
       "salade",
@@ -611,7 +611,7 @@ export const burgers: PlatSimple[] = [
   {
     name: "DOUBLE CHEESE",
     categorie: "burger",
-    image: "/images-plat/burger-double-cheese.webp",
+    image: "/images-plat/burger-double-cheese-v2.webp",
     bestsellers: false,
     ingredients: [
       "deux steaks hachés",
@@ -627,7 +627,7 @@ export const burgers: PlatSimple[] = [
   {
     name: "FISH BURGER",
     categorie: "burger",
-    image: "/images-plat/burger-fish.webp",
+    image: "/images-plat/burger-fish-v2.webp",
     bestsellers: false,
     ingredients: ["poisson pané", "cheddar", "salade", "tomate", "frites"],
     description:
@@ -640,7 +640,7 @@ export const desserts: PlatSimple[] = [
   {
     name: "MOUSSE AU CHOCOLAT",
     categorie: "dessert",
-    image: "/images-plat/dessert-mousse-au-chocolat.webp",
+    image: "/images-plat/dessert-mousse-au-chocolat-v2.webp",
     bestsellers: false,
     description: "Une mousse au chocolat onctueuse et gourmande.",
     price: 3,
@@ -648,7 +648,7 @@ export const desserts: PlatSimple[] = [
   {
     name: "BROWNIE",
     categorie: "dessert",
-    image: "/images-plat/dessert-brownie.webp",
+    image: "/images-plat/dessert-brownie-v2.webp",
     bestsellers: false,
     description: "Un brownie fondant au chocolat.",
     price: 3,
@@ -656,7 +656,7 @@ export const desserts: PlatSimple[] = [
   {
     name: "TIRAMISU",
     categorie: "dessert",
-    image: "/images-plat/dessert-tiramisu.webp",
+    image: "/images-plat/dessert-tiramisu-v2.webp",
     bestsellers: false,
     description: "Un dessert italien classique à base de mascarpone, de café et de biscuits.",
     price: 3.5,
@@ -664,7 +664,7 @@ export const desserts: PlatSimple[] = [
   {
     name: "SALADE DE FRUITS",
     categorie: "dessert",
-    image: "/images-plat/dessert-salade-de-fruits.webp",
+    image: "/images-plat/dessert-salade-de-fruits-v2.webp",
     bestsellers: false,
     description: "Une salade de fruits fraîche et colorée.",
     price: 3,
@@ -672,7 +672,7 @@ export const desserts: PlatSimple[] = [
   {
     name: "TARTE AU CITRON",
     categorie: "dessert",
-    image: "/images-plat/dessert-tarte-au-citron.webp",
+    image: "/images-plat/dessert-tarte-au-citron-v2.webp",
     bestsellers: false,
     description: "Une tarte au citron acidulée sur une pâte croustillante.",
     price: 3,
@@ -680,7 +680,7 @@ export const desserts: PlatSimple[] = [
   {
     name: "TARTE AUX POMMES",
     categorie: "dessert",
-    image: "/images-plat/dessert-tarte-aux-pommes.webp",
+    image: "/images-plat/dessert-tarte-aux-pommes-v2.webp",
     bestsellers: false,
     description: "Une tarte aux pommes douce et fondante.",
     price: 3,
@@ -688,7 +688,7 @@ export const desserts: PlatSimple[] = [
   {
     name: "PANNA COTTA",
     categorie: "dessert",
-    image: "/images-plat/dessert-panna-cotta.webp",
+    image: "/images-plat/dessert-panna-cotta-v2.webp",
     bestsellers: false,
     description: "Une panna cotta fraîche et crémeuse.",
     price: 3,
@@ -711,7 +711,7 @@ export const boissons: PlatSimple[] = [
   {
     name: "BOISSON 33CL",
     categorie: "boisson",
-    image: "/images-plat/boissons-cannettes.webp",
+    image: "/images-plat/boissons-cannettes-v2.webp",
     bestsellers: false,
     description: "Boisson fraîche en bouteille ou canette de 33 cl.",
     price: 1.5,

@@ -62,7 +62,7 @@ export const metadata: Metadata = {
     description: SITE_DESCRIPTION,
     images: [
       {
-        url: "/pizza-slide-1.webp",
+        url: "/pizza-slide-1-v2.webp",
         width: 842,
         height: 702,
         alt: "Pizza de La Sicilienne à Paris 12e",
@@ -73,7 +73,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "La Sicilienne | Pizzeria à Paris 12e",
     description: SITE_DESCRIPTION,
-    images: ["/pizza-slide-1.webp"],
+    images: ["/pizza-slide-1-v2.webp"],
   },
   verification: {
     google: "px9hkNhlmh8TeD1PbYDXbTKX0a5TicN4joQoVkWNmg0",
@@ -98,8 +98,8 @@ const structuredData = {
       name: RESTAURANT.name,
       url: SITE_URL,
       image: [
-        absoluteUrl("/pizza-slide-1.webp"),
-        absoluteUrl("/pizza-slide-2.webp"),
+        absoluteUrl("/pizza-slide-1-v2.webp"),
+        absoluteUrl("/pizza-slide-2-v2.webp"),
       ],
       telephone: RESTAURANT.telephone,
       priceRange: RESTAURANT.priceRange,
@@ -152,7 +152,7 @@ export default function RootLayout({
       )}
     >
       <head>
-        <link rel="icon" href="/favicon.ico" sizes="50x50" />
+        <link rel="icon" href="/favicon-v2.ico" sizes="50x50" />
       </head>
       <body className="min-h-full flex flex-col bg-red-500">
         <Analytics />

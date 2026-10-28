@@ -66,7 +66,7 @@ export default function HomePage() {
       </section>
       <section className="home-reveal home-on-view relative mt-20 overflow-hidden py-10">
         <Image
-          src="/pizza-slide-1.webp"
+          src="/pizza-slide-1-v2.webp"
           alt=""
           aria-hidden="true"
           fill

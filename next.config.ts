@@ -18,7 +18,7 @@ const nextConfig: NextConfig = {
         ],
       },
       {
-        source: "/pizza-slide-1.webp",
+        source: "/favicon-v2.ico",
         headers: [
           {
             key: "Cache-Control",
@@ -27,7 +27,16 @@ const nextConfig: NextConfig = {
         ],
       },
       {
-        source: "/pizza-slide-2.webp",
+        source: "/pizza-slide-1-v2.webp",
+        headers: [
+          {
+            key: "Cache-Control",
+            value: "public, max-age=3600, s-maxage=3600",
+          },
+        ],
+      },
+      {
+        source: "/pizza-slide-2-v2.webp",
         headers: [
           {
             key: "Cache-Control",

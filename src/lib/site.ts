@@ -6,7 +6,7 @@ export const SITE_DESCRIPTION =
   "Pizzeria et restaurant italien au 6 rue Dagorno, dans le 12e arrondissement de Paris. Découvrez nos pizzas, salades et desserts.";
 
 export const OPEN_GRAPH_IMAGE = {
-  url: "/pizza-slide-1.webp",
+  url: "/pizza-slide-1-v2.webp",
   width: 842,
   height: 702,
   alt: "Pizza de La Sicilienne à Paris 12e",

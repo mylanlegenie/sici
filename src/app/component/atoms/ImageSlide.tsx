@@ -31,7 +31,7 @@ export default function ImageSlide() {
         onLoad={() => setIsMapLoaded(true)}
       />
       <MotionImage
-        src="/pizza-slide-1.webp"
+        src="/pizza-slide-1-v2.webp"
         alt=""
         aria-hidden="true"
         width={487}
@@ -45,7 +45,7 @@ export default function ImageSlide() {
       />
 
       <MotionImage
-        src="/pizza-slide-2.webp"
+        src="/pizza-slide-2-v2.webp"
         alt=""
         width={487}
         height={362}

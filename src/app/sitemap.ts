@@ -10,8 +10,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: "weekly",
       priority: 1,
       images: [
-        absoluteUrl("/pizza-slide-1.webp"),
-        absoluteUrl("/pizza-slide-2.webp"),
+        absoluteUrl("/pizza-slide-1-v2.webp"),
+        absoluteUrl("/pizza-slide-2-v2.webp"),
       ],
     },
     {
