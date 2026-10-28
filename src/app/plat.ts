@@ -284,7 +284,7 @@ export const pizza: Pizza[] = [
     name: "VENEZIA",
     categorie: "pizza",
     base: "creme",
-    image: "/images-plat/pizza-venezia-7205b6d7.webp",
+    image: "/images-plat/pizza-venezia.webp",
     bestsellers: false,
     ingredients: ["mozzarella", "saumon fumé", "citron"],
     description: "Une recette délicate au saumon fumé et au citron sur une base crème fraîche.",
