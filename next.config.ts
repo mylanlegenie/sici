@@ -22,7 +22,7 @@ const nextConfig: NextConfig = {
         headers: [
           {
             key: "Cache-Control",
-            value: "public, max-age=2592000, s-maxage=2592000",
+            value: "public, max-age=3600, s-maxage=3600",
           },
         ],
       },
@@ -31,7 +31,7 @@ const nextConfig: NextConfig = {
         headers: [
           {
             key: "Cache-Control",
-            value: "public, max-age=2592000, s-maxage=2592000",
+            value: "public, max-age=3600, s-maxage=3600",
           },
         ],
       },
@@ -40,7 +40,7 @@ const nextConfig: NextConfig = {
         headers: [
           {
             key: "Cache-Control",
-            value: "public, max-age=2592000, s-maxage=2592000",
+            value: "public, max-age=3600, s-maxage=3600",
           },
         ],
       },
@@ -51,7 +51,7 @@ const nextConfig: NextConfig = {
     formats: ["image/webp"],
     deviceSizes: [420, 520, 640, 750, 828, 1040, 1080, 1200, 1920, 2048, 3840],
     qualities: [65, 75],
-    minimumCacheTTL: 2592000,
+    minimumCacheTTL: 3600,
   },
 };
 
